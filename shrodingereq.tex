@@ -1,0 +1,142 @@
+\section{Schrödinger equation}
+\subsection{Time evolution}
+In qm time is a paramter and not and observable/operator.
+$H$ labels a state given at a time. This implies that we may
+envirage that, if a physical system is represented by
+$|\alpha>$ at the time $t_0$, at a later time, the state may
+differ. The new "evolved" state from $t_0$ to $t$ can be
+denoted by
+$$
+|\alpha,t_0;t>, \quad t \geq t_0
+$$
+such that
+$$
+|\alpha,t_0;t_0> = |\alpha>
+$$
+The transition from $|\alpha>$ to $|\alpha,t_0;t>$ is given
+by the so-called time-evolution operator $\hat{U}(t,t_0)$,
+such that
+\begin{equation}
+  |\alpha,t_0;t> = \hat{U}(t,t_0) |\alpha>
+  \label{equ:2.1}
+\end{equation}
+The time-evolution operator has the following properties:
+\begin{itemize}
+  \item Unitarity. Suppose that at $t_0$ $|\alpha>$ is
+    expanded in terms of the (orthonormal) eigenstates $|a>$
+    of some observable $A$
+    \begin{equation}
+      |\alpha> = \sum_a |a><a|\alpha,t_0;t> = \sum_a
+      c_a(t_0)|a>
+      \label{equ:2.2}
+    \end{equation}
+    Thus, at a later time $t > t_0$ we have
+    \begin{equation}
+      |\alpha,t_0;t> = \sum_a c_a(t) |a>
+      \label{equ:2.3}
+    \end{equation}
+    where $c_a(t)$ is the prob. amp. of finding $|\alpha>$
+    at $|a>$.
+    Although we expect that in general for any particular
+    $a$, the prob. amplitudes differ,
+    $$-
+      c_a(t) \neq c_a(t_0)
+    $$
+    the sum of all probabilies must be unity at all times,
+    i.e.,
+    \begin{equation}
+      \sum_a |c_a(t)|^2 = \sum_a |c_a(t_0)|^2 = 1
+      \label{equ:2.4}
+    \end{equation}
+    (as long as the states $|\alpha>$ and $|a>$ are
+    "correctly" normalized).
+    This implies that
+    \begin{equation}
+      <\alpha|\alpha> = \sum_{a'} \sum_a c_{a'}^*(t_0)
+      <a'|a>  c_a(t_0) = \sum_a |c_a(t_0)|^2 = 1
+      \label{equ:2.5}
+    \end{equation}
+    and consequently
+    \begin{equation}
+      <\alpha,t_0;t|\alpha,t_0;t> = \sum_a |c_a(t)|^2 = 1
+      \label{equ:2.6}
+    \end{equation}
+    That is, the state $|\alpha>$ remain normalized at all
+    times. For terms of \ref{equ:2.1}, this is satisfied as
+    long as
+    \begin{equation}
+      \hat{U^\dagg}(t, t_0) \hat{U}(t,t_0) = 1
+      \label{equ:2.7}
+    \end{equation}
+  \item Time composition:
+    \begin{equation}
+      \hat{U}(t_2,t_0) = \hat{U}(t_2,t_1) \hat{U}(t_1,t_0)
+      \qquad t_0 < t_1 < t_2
+      \label{equ:2.8}
+    \end{equation}
+  \item Infinitesimal form. We can also propose an
+    infinitesimal form for $\hat{U}(t,t_0)$, such that
+    \begin{equation}
+      |\alpha,t_0;t_0 + dt> = \hat{U}(t_0+dt,t_0) |\alpha>,
+      \qquad \lim_{dt \to 0} \hat{U}(t_0+dt,t_0) = 1
+      \label{equ:2.9}
+    \end{equation}
+    We can note that this together with the previous
+    properties is satisfied if
+    \begin{equation}
+      \hat{U}(t_0+dt,t_0) = 1- i\hat{\Omega)dt}
+      \label{equ:2.10}
+    \end{equation}
+    when $\hat{\Omega}$ is a Hermitian operator.
+    This can be shown as follows. Notice that
+    \begin{align*}
+      \hat{U^\dagg} (t_0+dt,t_0) \hat{U}(t_0+dt,t_0) &= 
+      (1+ i\hat{\Omega)dt})(1- i\hat{\Omega)dt})\\
+      &=
+      1+i(\hat{\Omega^\dagg}-\hat{\Omega})dt + O(dt^2)
+    \end{align*}
+    which equals the identity as long as $\hat{\Omega} =
+    \hat{\Omega^\dagg}$ (Hermitian) and $dt^2$ is
+    negligilble. Furthermore, the time composition is also
+    direct
+    \begin{align*}
+      \hat{U}(t_0+dt_1+dt_2,t_0+dt_1)\hat{U}(t_0+dt_1,t_0)
+      &= (1-i\hat{\Omega}dt_2)(1-i\hat{\Omega}dt_1) \\
+      &= 1-i\hat{\Omega}(dt_2+dt_1) + O(dt_1dt_2)\\
+      &= \hat{U}(t_0+dt_1+dt_2,t_0)
+    \end{align*}
+    Borrwing from classical mechanics the idea that the
+    Hamiltonian $H$ is the generator of time evolution, we
+    can asser that
+    \begin{equation}
+      \hat{\Omega} = \frac{\hat{H}}{\hbar}
+      \label{equ:2.11}
+    \end{equation}
+    which has the righ dimensions of frequency. Therefore,
+    we obtain
+    \begin{equation}
+      \hat{U}(t_0+dt,t_0) = 1 -\frac{i}{\hbar}\hat{H}dt
+      \label{equ:2.12}
+    \end{equation}
+    for (\ref{equ:2.11}) we have used $\hbar$ to get the
+    right dimensions, recalling the Planck radiation $E =
+    \hbar \omega$.
+\end{itemize}
+These properties lead to and interesting differential
+quation. Using the time decomposition property, we see that
+\begin{equation}
+  \hat{U}(t+dt,t_0) = \hat{U}(t+dt,t) \hat{U}(t,t_0) =
+  (1-\frac{i}{\hbar}\hat{H}dt)\hat{U}(t,t_0)
+  \label{equ:2.13}
+\end{equation}
+Note now that
+\begin{equation}
+  \hat{U}(t+dt,t_0)-\hat{U}(t,t_0) = - \frac{i}{\hbar}
+  \hat{H}dt \hat{U}(t,t_0)
+  \label{equ:2.14}
+\end{equation}
+which implies
+$$
+i\hbar \frac{\hat{U}(t+dt,t_0)-\hat{U}(t,t_0)}{dt} =
+\hat{H}\hat{U}(t,t_0)
+$$
