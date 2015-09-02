@@ -140,3 +140,158 @@ $$
 i\hbar \frac{\hat{U}(t+dt,t_0)-\hat{U}(t,t_0)}{dt} =
 \hat{H}\hat{U}(t,t_0)
 $$
+that can be written in the differential form
+\begin{equation}
+  i\hbar \frac{\partial}{\partial t}\hat{U}(t_0,t) = \hat{H}
+  \hat{U}(t,t_0)
+  \label{equ:2.15}
+\end{equation}
+This is the Schrödinger equation for the time-evolution
+operator and is the most fundamental equation of quantum
+mechanics.
+Multiplying (\ref{equ:2.15}) by the ket $|\alpha> =
+%todo no entiendo que es lo que dice el antes del we find
+|\alpha,t_0;t_1>$, we find
+$$
+i\hbar \frac{\partia}{\partial t} \hat{U}(t,t,0) |\alpha> =
+\hat{H}\hat{U}(t,t_0) |\alpha>
+$$
+\begin{equation}
+  i\hbar \frac{\partial}{\partial t} |\alpha,t_0;t> =
+  \hat{H}|\alpha,t_0;t>
+  \label{equ:2.16}
+\end{equation}
+which is the Schrödinger eq. for a state.
+
+The Hamiltonian $\hat{H}$ has in principle an arbitrary form
+(it can be an abstract op., or a differential op., or have
+matrix form) and be time-dependent or time-independent. We
+can straightforwardly obtain the form of $\hat{U}(t,t_0)$
+for a time-independent Hamiltonian by solving (\ref{2.15}):
+\begin{equation}
+  \hat{U}(t,t_0) = \exp(-\frac{i}{\hbar}H(t-t_0))
+  \label{equ:2.17}
+\end{equation}
+which makes sense in general as the series
+\begin{equation}
+  \hat{U}(t,t_0) = 1 -
+  \frac{i}{\hbar}\hat{H}(t-t_0)+\frac{1}{2!}\Big(\frac{-i}{\hbar}\hat{H}(t-t_0)\Big)^2
+  \label{equ:2.18}
+\end{equation}
+A time-dependent Hamiltonian is more complicated. We must
+distinguish two cases:
+\begin{itemize}
+  \item when $[\hat{H}(t_1), \hat{H}(t_2)] = 0$, and
+  \item when $[\hat{H}(t_1), \hat{H}(t_2)] \neq 0$
+\end{itemize}
+In the former case, the solution of (\ref{equ:2.15}) reads
+\begin{equation}
+  \hat{U}(t,t_0) = \exp\Big(-\frac{i}{\hbar}\int_{t_0}^t dt'
+  \, \hat{H}(t')\Big)
+  \label{equ:2.19}
+\end{equation}
+%% todo a partir de aquí saúl volvió a escrbir 2.18
+To solve (\ref{equ:2.15}) when $[\hat{H}(t_1), \hat{H}(t_2)]
+\neq 0$, we first point out that this differential equation
+can be restated as
+$$
+\hat{U}(t,t_0) \bigg|_{t=t_0}^t = 
+-\frac{i}{\hbar} \int_{t_0}^t dt' \,
+\hat{H}(t')\hat{U}(t',t_0)
+$$
+recalling that $\hat{U}(t_0,t_0) = 1$ we then have
+\begin{equation}
+  \hat{U}(t,t_0) = 1 - \frac{i}{\hbar} \int_{t_0}^t dt' \,
+  \hat{H}(t')\hat{U}(t',t_0)
+  \label{equ:2.20}
+\end{equation}
+By iteration, we can find the approximate solution
+% todo arreglar este desmadre con la numeración
+% todo me dí cuenta de que estoy usando mal los bigg
+\begin{align}
+  \hat{U}(t,t_0) &= 1 - \frac{i}{\hbar} \int_{t_0}^t dt'\,
+  \hat{H}(t')\bbigr[1 - \frac{i}{\hbar}
+  \int_{t_0}^{t'} dt'\, \hat{H}(t'')\hat{U}(t'',t_0)\biggl]
+  \\
+  &=
+  1 - \frac{i}{\hbar} \int_{t_0}^t dt' \, \hat{H}(t') + 
+  \biggl(\frac{-i}{\hbar}\biggr)^2 \int_{t_0}^t dt' \,
+  \int_{t_0}^{t'} dt'' \, \hat{H}(t') \hat{H}(t'')
+  \hat{U}(t'',t_0)\\
+  &=
+  1 + \sum_{n=1}^{\infty} 
+  \biggl(\frac{-i}{\hbar}\biggr)^n
+  \int_{t_0}^t dt_1\,
+  \int_{t_0}^{t_1} dt_2\,
+  \cdots
+  \int_{t_0}^{n-1} dt_n\,
+  \hat{H}(t_1) \hat{H}(t_2) \cdots \hat{H}(t_n)
+  %% todo poner 2.21
+\end{align}
+well-known as the Dyson series.
+\subsection{Time evolution of stationary energy eigenstates}
+Let us suppose that the Hamiltonian is time-independent. We
+would like to figure out the evolution of an arbitrary state
+$|\alpha>$. This is particularly simple if we expand
+$|\alpha>$ in the basis of eigenstates $|a>$ of an operator
+$\hat{A}$, such that
+\begin{equation}
+  [\hat{A}, \hat{H}] = 0
+  \label{equ:2.22}
+\end{equation}
+i.e., compatible with $\hat{H}$. It follows that $\{|a>\}$
+are energy eigenstates too, whose energy eigenvalues are
+\begin{equation}
+  \hat{H} |a> = E_a |a>
+  \label{equ:2.23}
+\end{equation}
+
+Expanding the time-evolution operator in the states $|a>$,
+we find
+%% todo areglar el alig para la numeración
+\begin{align*}
+  \hat{U}(t, 0) = \exp\Big(-\frac{i}{\hbar} \hat{H}t\Big) &= 
+  \sum_{a'} |a'><a'| \exp(-i \hat{H} t / \hbar) \sum_a
+  |a><a|\\
+  &=
+  \sum_{a,a'} |a'><a| <a'|\exp(-i\hat{H}t/\hbar) |a>\\
+  % todo insertar braces
+  &=
+  \sum_a \exp(-i E_a t /\hbar) |a><a|
+  %% todo numeración 2.23
+\end{align*}
+Now expanding $|\alpha>$ in the basis of energy eigenstates,
+we see that
+\begin{align*}
+|\alpha> &= \sum_a <a|\alpha> |a> = \sum_a c_a(t=0) |a> \\
+  \Rightarrow |\alpha;t> &= U(t,0) |\alpha> = \sum_{a'}
+  \exp\Big(-i E_{a'}t/\hbar\Big) |a'><a'|a> c_a(t=0) \\
+  &=
+  \sum_a c_a(t= 0) \exp(-iE_a t/\hbar) |a>\\
+  % todo poner símbolo definición
+  = \sum_a c_a(t) |a>
+  % 2.24
+\end{align*}
+where we realize the time evolution of the expansion
+coefficients.
+
+Notice that for $|\alpha> = |a>$, we find that
+\begin{equation}
+  |a;t> = \exp(-i E_a t/\hbar) |a>
+  \label{equ:2.25}
+\end{equation}
+so that any simultaneous eigenstate of $H$ and $A$ remains
+so at all time.
+\subsection{Expectation values}
+We are interested in the expectation value of an observable
+$B$ in the state
+$$
+  |a;t> = \hat{U}(t,0) |a>
+$$
+as given in (\ref{equ:2.26}). The expectation value is
+computed as
+$$
+<\hat{B}> = <a|\hat{U}^{\dagg}(t,0) \hat{B} \hat{U}(t,0) |a>
+= 
+<a|\exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) |a>
+$$
