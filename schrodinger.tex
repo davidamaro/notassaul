@@ -65,7 +65,7 @@ The time-evolution operator has the following properties:
     times. For terms of \ref{equ:2.1}, this is satisfied as
     long as
     \begin{equation}
-      \hat{U^\dagg}(t, t_0) \hat{U}(t,t_0) = 1
+      \hat{U^\dagger}(t, t_0) \hat{U}(t,t_0) = 1
       \label{equ:2.7}
     \end{equation}
   \item Time composition:
@@ -90,13 +90,13 @@ The time-evolution operator has the following properties:
     when $\hat{\Omega}$ is a Hermitian operator.
     This can be shown as follows. Notice that
     \begin{align*}
-      \hat{U^\dagg} (t_0+dt,t_0) \hat{U}(t_0+dt,t_0) &= 
+      \hat{U^\dagger} (t_0+dt,t_0) \hat{U}(t_0+dt,t_0) &= 
       (1+ i\hat{\Omega)dt})(1- i\hat{\Omega)dt})\\
       &=
-      1+i(\hat{\Omega^\dagg}-\hat{\Omega})dt + O(dt^2)
+      1+i(\hat{\Omega^\dagger}-\hat{\Omega})dt + O(dt^2)
     \end{align*}
     which equals the identity as long as $\hat{\Omega} =
-    \hat{\Omega^\dagg}$ (Hermitian) and $dt^2$ is
+    \hat{\Omega^\dagger}$ (Hermitian) and $dt^2$ is
     negligilble. Furthermore, the time composition is also
     direct
     \begin{align*}
@@ -153,7 +153,7 @@ Multiplying (\ref{equ:2.15}) by the ket $|\alpha> =
 %todo no entiendo que es lo que dice el antes del we find
 |\alpha,t_0;t_1>$, we find
 $$
-i\hbar \frac{\partia}{\partial t} \hat{U}(t,t,0) |\alpha> =
+i\hbar \frac{\partial}{\partial t} \hat{U}(t,t,0) |\alpha> =
 \hat{H}\hat{U}(t,t_0) |\alpha>
 $$
 \begin{equation}
@@ -210,7 +210,7 @@ By iteration, we can find the approximate solution
 % todo me dí cuenta de que estoy usando mal los bigg
 \begin{align}
   \hat{U}(t,t_0) &= 1 - \frac{i}{\hbar} \int_{t_0}^t dt'\,
-  \hat{H}(t')\bbigr[1 - \frac{i}{\hbar}
+  \hat{H}(t')\biggr[1 - \frac{i}{\hbar}
   \int_{t_0}^{t'} dt'\, \hat{H}(t'')\hat{U}(t'',t_0)\biggl]
   \\
   &=
@@ -291,7 +291,7 @@ $$
 as given in (\ref{equ:2.26}). The expectation value is
 computed as
 $$
-<\hat{B}> = <a|\hat{U}^{\dagg}(t,0) \hat{B} \hat{U}(t,0) |a>
+<\hat{B}> = <a|\hat{U}^{\dagger}(t,0) \hat{B} \hat{U}(t,0) |a>
 = 
 <a|\exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) |a>
 $$
