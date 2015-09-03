@@ -295,3 +295,165 @@ $$
 = 
 <a|\exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) |a>
 $$
+
+Since $U(t,0)$ is a numeric phase, the result is
+\begin{equation}
+  <\hat{B}> = <a;t|\hat{B}|a;t> = <a|\hat{B}|a>
+  \label{equ:2.26}
+\end{equation}
+i.e., expectation values do not change in time for $|\alpha>
+= |a>$. This is why these states are called stationary.
+
+The nonstationary states $|\alpha> = \sum_a c_a(0) |a>$ are
+different. In this case, we have
+\begin{align*}
+  <\hat{B}> &= <\alpha;t|\hat{B}|\alpha;t> =
+  <\alpha|\hat{U}^{\dagger}(t,0)
+  \hat{B}\hat{U}(t,0)|\alpha>\\
+  &=
+  \sum_a \sum_{a'} <a|c^*_a(0) \exp(i E_a t/\hbar)
+  \hat{B}c_{a'}(0)\exp(-i E_{a'} t/\hbar)|a'>\\
+  &=
+  \sum_a \sum_{a'} c_a^*(0) c_{a'}(0) \exp(-i (E_{a'}-E_a)t/
+  \hbar) <a|\hat{B}|a'>\\
+  &=
+  \sum_a \sum_{a'} c_a^*(0) c_{a'}(0) \exp(-i \omega_{a' a}t)
+  <a|\hat{B}|a'>
+  % eq 2.27
+\end{align*}
+where the Bohr's frequency $w_{a'a} =
+\frac{1}{\hbar}(E_{a'}-E_a)$ is the oscillation frequency of
+the expectation value, and $<a|\hat{B}|a'>$ denote the
+matrix elements of the observable $B$ in the basis of $A$.
+
+\subsection{Schrödinger's wave equation}
+\subsubsection{Schrödinger's equation in space
+representation}
+Let us define the position states $|\vec{x}>$ as the
+eigenstates of the position operator $\hat{\vec{x}}$, such
+that
+\begin{equation}
+  \hat{\vec{x}} |\vec{x}'> = \vec{x}'|\vec{x}'>
+  \label{equ:2.28}
+\end{equation}
+Thier orthonormality is given by
+\begin{equation}
+  <\vec{x}|\vec{x}'> = \delta^3(\vec{x}-\vec{x}')
+  \label{equ:2.29}
+  % todo al parecer de nuevo hay un desfase
+\end{equation}
+Expanded in these terms, an arbitrary physical state
+$|\alpha>$ is given by
+$$
+  |\alpha> = \int d^3 x \, |\vec{x}><\vec{x}|\alpha> \equiv
+  \int d^3 \, \psi_{\alpha}(\vec{x}) |\vec{x}>
+$$
+where $\psi_{\alpha}(\vec{x})$ is usually called the wave
+function of the state $|\alpha>$ in the representation of
+positions. Note that the interpretation of
+$\psi_{\alpha}(\vec{x})$ is analogous to that of the
+expansion coefficient $c_a = <a|\alpha>$ of our previous
+discussion, i.e., probability amplitud, such that
+$|\psi_{\alpha}(\vec{x})|^2\, d^3x$ is the probability of
+finding in a narrow region $d^3 x$ around $\vec{x}$.
+
+One may be interested in finding the element
+$<\beta|\hat{A}|\alpha>$ for some states $|\alpha>$,
+$|\beta>$, in the position basis
+\begin{align*}
+  <\beta|\hat{A}|\alpha> &= \int d^3 x\, \int d^3 x'\,
+  <\beta|\vec{x}><\vec{x}|\hat{A}|\vec{x}'><\vec{x}'|\alpha>\\
+  &=\int d^3 x\, \int d^3 x'\,
+  \psi_{\beta}^* <\vec{x}|\hat{A}|\vec{x}'>
+  \psi_{\alpha}(\vec{x}')
+  %% eq 2.30
+\end{align*}
+which depends on the matrix element
+$<\vec{x}|\hat{A}|\vec{x}'>$ of $\hat{A}$. This expression
+is greatly simplified if $\vec{A}$ is a polynomial of the
+operator $\vec{x}$, for example, $\hat{A}$ can take the
+form\footnote{As we shall see, this form corresponds to the
+potential of the harmonic oscillator.}
+in one dimension
+\begin{equation}
+  \hat{A} = \frac{1}{2} m \omega^2 \vec{x}^2
+  \label{equ:2.31}
+\end{equation}
+In this case, the matrix element in (\ref{equ:2.30}) locks
+like
+\begin{align*}
+  <\vec{x}|\hat{A}|\vec{x}'> &\mapsto <x|\hat{A}|x'> =
+  \frac{1}{2} m \omega^2 <x|(\hat{x}^2|x'>) \\
+  &=
+  \frac{1}{2}m\omega^2 <x|(|x'>x'^2) = \frac{1}{2}m\omega^2
+  x'^2<x|x'>\\
+  &=
+  \frac{1}{2}m\omega^2 x'^2 \delta(x-x')
+  %eq 2.32
+\end{align*}
+where we have used (\ref{equ:2.28}) and (\ref{equ:2.29}) in
+ther 1D versions. This expresion can be generalized for
+$\hat{A} = f(\hat{\vec{x}})$ to
+\begin{equation}
+  <\vec{x}|f(\hat{\vec{x}})|\vec{x}'> f(\vec{x}')\delta^3
+  (\vec{x}-\vec{x}')
+  \label{equ:2.33}
+\end{equation}
+and thus we obtain in this case
+\begin{equation}
+  <\beta|\hat{A}|\alpha> = \int d^3x \, \psi_{\beta}^*
+  f(\vec{x}) \psi_{\alpha}(\vec{x})
+  \label{equ:2.34}
+\end{equation}
+To arrive at the wave equation proposed by Schrödinger, we
+need further consider the representation of the momentum
+operator $\hat{\vec{p}}$ in the position basis
+\begin{align*}
+  <\vec{x}|\hat{\vec{p}}|\alpha> &=
+  \int d^3 x' \, <\vec{x}|\vec{x}'>
+  <\vec{x}'|\hat{\vec{p}}|\alpha> = 
+  \int d^3 x' \, \delta^3(\vec{x}-\vec{x}')
+  \int d^3 x'' \, <\vec{x}'|\hat{\vec{p}}|\vec{x}''>
+  <\vec{x}''|\alpha> \\
+  &=
+  \int d^3 x'' \, <\vec{x}|\hat{\vec{p}}|\vec{x}''>
+  \psi_{\alpha}(\vec{x}'')\\
+  &=
+  \int d^3 x'' \delta^3(\vec{x}-\vec{x}') \bigl(-i\hbar
+  \vec{\nabla}''\bigr) \psi_{\alpha}(\vec{x}'')\\
+  &=
+  -i\hbar \vec{\nabla} \psi_{\alpha}(\vec{x})
+  % eq 2.35
+\end{align*}
+Let us now consider the Schrödinger equaiton,
+(\ref{equ:2.16}),
+$$
+  i\hbar \frac{\partial}{\partial t} |\alpha,t_0;t> =
+  \hat{H}|\alpha,t_0;t>
+$$
+in the position representation, with a Hamiltonian operator
+given by
+\begin{equation}
+  \hat{H} = \frac{1}{2m} \hat{\vec{p}}^2 +
+  \hat{V}(\hat{\vec{x}})
+  \label{equ:2.36}
+\end{equation}
+where $\hat{V}(\hat{\vec{x}})$ is a polynomial function of
+$\hat{\vec{x}}$ and, thush, a Hamiltonian operator. From
+(\ref{equ:2.35}), we see that
+\begin{equation}
+  <\vec{x}|\hat{V}(\hat{\vec{x}})|\vec{x}'> =
+  V(\vec{x}'')\delta^3(\vec{x}-\vec{x}')
+  \label{equ:2.37}
+\end{equation}
+Multiplying the Schrödinger equation for states
+(\ref{equ:2.16}) by the bra $<\vec{x}|$ we find
+\begin{align*}
+  i\hbar \frac{\partial}{\partial t} <\vec{x}|\alpha,t_0;t>
+  &=
+  <\vec{x}|\frac{1}{2m} \hat{\vec{p}}^2 |\alpha,t_0;t> +
+  <\vec{x}|\hat{V}(\hat{\vec{x}})|\alpha,t_0;t>\\
+  &=
+  \frac{1}{2m}(-i\hbar \vec{\nabla})^2
+  <\vec{x}|\alpha,t_0;t> + V(\vec{x}) <\vec{x}|\alpha,t_0;t>
+\end{align*}
