@@ -1,6 +1,6 @@
 \section{Schrödinger equation}
 \subsection{Time evolution}
-In qm time is a paramter and not and observable/operator.
+In qm time is a parameter and not an observable/operator.
 $H$ labels a state given at a time. This implies that we may
 envirage that, if a physical system is represented by
 $|\alpha>$ at the time $t_0$, at a later time, the state may
@@ -449,12 +449,275 @@ $\hat{\vec{x}}$ and, thush, a Hamiltonian operator. From
 \end{equation}
 Multiplying the Schrödinger equation for states
 (\ref{equ:2.16}) by the bra $<\vec{x}|$ we find
-\begin{align*}
+\begin{align}
   i\hbar \frac{\partial}{\partial t} <\vec{x}|\alpha,t_0;t>
   &=
   <\vec{x}|\frac{1}{2m} \hat{\vec{p}}^2 |\alpha,t_0;t> +
-  <\vec{x}|\hat{V}(\hat{\vec{x}})|\alpha,t_0;t>\\
+  <\vec{x}|\hat{V}(\hat{\vec{x}})|\alpha,t_0;t>\nonumber\\
   &=
   \frac{1}{2m}(-i\hbar \vec{\nabla})^2
   <\vec{x}|\alpha,t_0;t> + V(\vec{x}) <\vec{x}|\alpha,t_0;t>
-\end{align*}
+  \label{equ:2.38}
+\end{align}
+where we have used (\ref{equ:2.35}) and (\ref{equ:2.34})
+with $<\beta| = <\vec{x}|$. Defining
+\begin{equation}
+  \psi_{\alpha} (\vec{x},t) \equiv <\vec{x}|\alpha,t_0;t>,
+  \label{equ:2.39}
+\end{equation}
+we obtain the time-dependent Schrödinger's wave equation
+\begin{equation}
+  i\hbar \frac{\partial}{\partial t}
+  \psi_{\alpha}(\vec{x},t) =
+  -\frac{\hbar^2}{2m} \vec{\nabla}^2 \psi_{\alpha}
+  (\vec{x},t) +
+  V(\vec{x}) \psi_{\alpha}(\vec{x},t)
+  \label{equ:2.40}
+\end{equation}
+The stationary wave equation is obtained when $|\alpha> =
+|a>$ is an energy eigenstate and thus stationary. From
+(\ref{equ:2.25}) we have that
+\begin{align}
+  <\vec{x}|\alpha;t> = <\vec{x}|a;t> = \exp(-i E_a t/\hbar)
+  <\vec{x}|a> = \exp(-i E_{\alpha}t /\hbar)
+  <\vec{x}|\alpha>\nonumber\\
+  \Leftrightarrow \psi_{\alpha}(\vec{x},t) = \exp(-i
+  E_{\alpha} t/\hbar) \psi_{\alpha}(\vec{x})
+  \label{equ:2.41}
+\end{align}
+where we have defined $\psi_{\alpha}(\vec{x}) \equiv
+<\vec{x}|\alpha>$ in analogy with (\ref{equ:2.39}).
+It then follows that (\ref{equ:2.40}) becomes
+\begin{equation}
+  E_{\alpha} \psi_{\alpha} (\vec{x}) = - \frac{\hbar^2}{2m}
+  \vec{\nabla}^2 \psi_{\alpha} (\vec{x}) + V(\vec{x})
+  \psi_{\alpha} (\vec{x})
+  \label{equ:2.42}
+\end{equation}
+when the time dependence carried by the time-evolution
+operator has been factorized and eliminated.
+\subsubsection{Schrödinger's equation in momentum
+representation}
+As in the configuration space, we can now define the
+eigenstates of the momentum operator $\hat{\vec{p}}$ as
+\begin{equation}
+  \hat{\vec{p}} |\vec{p}'> = \vec{p}' |\vec{p}'>,
+  \label{equ:equ:2.43}
+\end{equation}
+satisfying the orthonormality condition
+\begin{equation}
+  <\vec{p}|\vec{p}'> = \delta^3(\vec{p}-\vec{p}')
+  \label{equ:equ:2.44}
+\end{equation}
+and the completeness relation
+\begin{equation}
+  1 = \int d^3 p |\vec{p}><\vec{p}|
+  \label{equ:2.45}
+\end{equation}
+An arbitrary state in the basis reads
+\begin{equation}
+  |\alpha> = \int d^3\, p |\vec{p}><\vec{p}|\alpha> = \int d^3 |,
+  \phi_{\alpha(\vec{p})}|\vec{p}>
+  \label{equ:2.46}
+\end{equation}
+where we have defined the momentum-space wave function
+\begin{equation}
+  \phi_{\alpha} (\vec{p}) \equiv <\vec{p}|\alpha>
+  \label{equ:2.47}
+\end{equation}
+normalized as
+\begin{equation}
+  \int d^3p \, |\phi_{\alpha}(\vec{p})|^2 = \int d^3p \,
+  <\alpha|\vec{p}><\vec{p}|\alpha> = <\alpha|\alpha> = 1
+  \label{equ:2.48}
+\end{equation}
+if $|\alpha>$ is correctly normalized.
+The wave function $\phi_{\alpha} (\vec{p})$ is related to
+$\psi_{\alpha}(\vec{x})$ by
+\begin{equation}
+  \phi_{\alpha}(\vec{p}) = <\vec{p}|\alpha> = \int d^3x \,
+  <\vec{p}|\vec{x}><\vec{x}|\alpha> = \int d^3 x\,
+  <\vec{p}|\vec{x}>\psi_{\alpha}(\vec{x})
+  \label{equ:2.49}
+\end{equation}
+and conversely
+\begin{equation}
+  \psi_{\alpha}(\vec{x}) = \int d^3 x\, <\vec{x}|\vec{p}>
+  \phi_{\alpha}(\vec{p})
+  \label{equ:2.50}
+\end{equation}
+where $<\vec{p}|\vec{x}> = <\vec{x}|\vec{p}>^*$ is yet
+unknown. To figure out $<\vec{p}|\vec{x}>$, let us compute
+\begin{align}
+  <\vec{x}|\hat{\vec{p}}|\vec{p}> &= \int d^3 x' \,
+  <\vec{x}|\hat{\vec{p}}|\vec{x}'>
+  <\vec{x}'|\vec{p}>\nonumber\\
+  &= -i\hbar \vec{\nabla} <\vec{x}|\vec{p}> \label{equ:2.51}
+\end{align}
+which, using (\ref{equ:2.43}), implies
+\begin{equation}
+  \vec{p} <\vec{x}|\vec{p}> = -i \hbar
+  \vec{\nabla}<\vec{x}|\vec{p}>
+  \label{equ:2.52}
+\end{equation}
+whose solution reads
+\begin{equation}
+  <\vec{x}|\vec{p}> = N \exp(i \vec{p} \cdot \vec{x}/\hbar)
+  \label{equ:2.53}
+\end{equation}
+
+The normalization factor can easily be found by computing
+\begin{align}
+  <\vec{x}|\vec{x}'> &= \int d^3 p \, <\vec{x}|\vec{p}>
+  <\vec{p}|\vec{x}'>\nonumber\\
+  &= N^2 \int d^3 p\, \exp\Bigl(-i \vec{p}\cdot
+  (\vec{x}-\vec{x}')/\hbar\Bigr) \nonumber\\
+  &=
+  N^2 (2\pi \hbar)^3 \delta^3(\vec{x}-\vec{x}')
+  \label{equ:2.54}
+\end{align}
+where the last step is the result of realizing that the
+integral is just a Fourier transform. Notice that the l.h.s.
+is actually just $\delta^3(\vec{x}-\vec{x}')$, which finally
+lead to
+\begin{equation}
+  N^2 = (2\pi\hbar)^{-3}
+  \label{equ:2.55}
+\end{equation}
+Replacing into (\ref{equ:2.53}), we find that
+\begin{equation}
+  <\vec{x}|\vec{p}> = \frac{1}{(2\pi\hbar)^{3/2}} \exp(i
+  \vec{p}\cdot \vec{x}/\hbar)
+  \label{equ:2.56}
+\end{equation}
+It then follows from (\ref{equ:2.49}) and (\ref{2.50}) that
+$\phi_{\alpha}(\vec{p})$ is just the Fourier transform of
+$\psi_{\alpha}(\vec{x})$, and vice versa
+\begin{align}
+  \psi_{\alpha}(\vec{x}) &= \int d^3x \,
+  \frac{1}{2\pi\hbar}^{3/2}
+  \exp\Bigl(i\vec{p}\cdot\vec{x}/\hbar\Bigr)
+  \phi_{\alpha(\vec{p})}\\
+  % todo creo que aquí va un error
+  \phi_{\alpha}(\vec{p}) &= \int d^3x \,
+  \frac{1}{2\pi\hbar}^{3/2}
+  \exp\Bigl(-i\vec{p}\cdot\vec{x}/\hbar\Bigr)
+  \psi_{\alpha}(\vec{x})
+\end{align}
+Let us use these results to find the Schrödinger's wave
+equation in momentum space for the Hamiltonian
+(\ref{equ:2.36}), defining additionally
+\begin{equation}
+  \phi_{\alpha}(\vec{p},t) \equiv <\vec{p}|\alpha,t_0;t>
+  \label{equ:2.58}
+\end{equation}
+We have
+\begin{align}
+  i\hbar \frac{\partial}{\partial t} <\vec{p}|\alpha,t_0;t>
+  &= <\vec{p}|\frac{1}{2m}\hat{\vec{p}}^2|\alpha,t_0;t> +
+  \int d^3 p' \, <\vec{p}|\hat{V}(\hat{\vec{x}}) |\vec{p}'>
+  <\vec{p}'|\alpha,t_0;t> \nonumber \\
+  &=
+  \frac{1}{2m} \vec{p}^2 \phi_{\alpha}(\vec{p},t) +
+  \int d^3 p' \,
+  \int d^3 x\,
+  \int d^3 x'\,
+  <\vec{p}|\vec{x}>
+  <\vec{x}|\hat{V}(\hat{\vec{x}})|\vec{x}'><\vec{x}'|\vec{p}'>
+  \phi_{\alpha}(\vec{p},t)\nonumber\\
+  &=
+  \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) +
+  \frac{1}{(2\phi\hbar)^3}
+  \int d^3 p' \,
+  \int d^3 x\,
+  \int d^3 x'\,
+  \exp(-i\vec{p}\cdot\vec{x}/\hbar)
+  V(\vec{x})\delta^3(\vec{x}-\vec{x}')
+  \exp(i\vec{p}'\cdot\vec{x}'/\hbar)\phi_{\alpha}(\vec{p},t)\nonumber\\
+  \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) +
+  \frac{1}{(2\pi\hbar)^{3/2}}
+  \int d^3 p' \,
+  \int \frac{d^3x}{(2\pi\hbar)^{3/2}}
+  \exp(-i(\vec{p}-\vec{p}')\cdot\vec{x}/\hbar) V(\vec{x})
+  \phi(\vec{p},t)
+  \intertext{which finally yields}
+  i\hbar \frac{\partial}{\partial t} \phi_{\alpha}
+  (\vec{p},t) =
+  \frac{\vec{p}^2}{2m} \phi_{\alpha} + 
+  \frac{1}{(2\pi\hbar)^{3/2}}
+  \int d^3 p' \,
+  V(\vec{p}-\vec{p}') \phi_{\alpha} (\vec{p},t)
+  \label{equ:2.59}
+\end{align}
+where
+\begin{equation}
+  V(\vec{p}-\vec{p}') \equiv \frac{1}{(2\pi\hbar)^{3/2}}
+  \int \, \exp(-i(\vec{p}-\vec{p}'')\cdot \vec{x}/\hbar)
+  V(\vec{x}) \, d^3 x
+  \label{equ:2.60}
+\end{equation}
+\subsubsection{Continuity equation}
+If we let the probability density of a system to be defined
+as
+\begin{equation}
+  \rho \equiv \psi^*_{\alpha}(\vec{x},t)
+  \psi_{\alpha}(\vec{x},t)
+  \label{equ:2.61}
+\end{equation}
+then one easily finds that (omitting for simplicity the
+dependence on $\vec{x}$ \& $t$)
+\begin{align}
+  \frac{\partial \rho}{\partial t} &= \psi_{\alpha}^*
+  \frac{\partial}{\partial t} \psi_{\alpha} +
+  \frac{\partial}{\partial t} \psi_{\alpha}^* \psi_{\alpha}
+  \nonumber \\
+  &=
+  \psi_{\alpha}^* \frac{1}{i\hbar}
+  \bbigl(-\frac{\hbar^2}{2m}\vec{\nabla}^2 \psi_{\alpha} +
+  V\psi_{\alpha}\biggr) - 
+  \frac{1}{i\hbar} \biggl(-\frac{\hbar^2}{2m}\vec{\nabla}^2
+  \psi_{\alpha}^* + V\psi_{\alpha}^* \biggr) \psi_{\alpha}
+  \nonumber \\
+  &=
+  \frac{i\hbar}{2m} \biggl[\psi_{\alpha}^* \vec{\nabla}^2
+  \psi_{\alpha}-\bigl(\vec{\nabla}^2
+\psi_{\alpha}^*\bigr)\psi_{\alpha}\biggr] \nonumber \\
+&=
+%utilizar cancel en la siguiente línea %todo
+\frac{i\hbar}{2m}
+\biggl[
+  \vec{\nabla}\bigl(\psi_{\alpha}^*\cdot
+  \vec{\nabla}\psi_{\alpha}\bigr)-
+  \vec{\nabla}\psi_{\alpha}^* \cdot
+  \vec{\nabla}\psi_{\alpha} -
+  \vec{\nabla}\cdot\bigl((\vec{\nabla}\psi_{\alpha}^*)\psi_{\alpha}\bigr)
+  +
+  \vec{\nabla}\psi_{\alpha}^* \cdot \vec{\nabla}\psi_{\alpha}
+\biggr]\nonumber \\
+&=
+\frac{i\hbar}{2m} \vec{\nabla}\cdot \biggl(\psi_{\alpha}^* 
+\vec{\nabla}\psi_{\alpha} -
+\bigl(\vec{\nabla}\psi_{\alpha}^*\bigr)\psi_{\alpha}
+\biggr) \nonumber\\
+&=
+- \vec{\nabla} \vec{j} \label{equ:2.62}
+\end{align}
+where
+\begin{equation}
+  \vec{j}\equiv
+\biggl(\psi_{\alpha}^* 
+\vec{\nabla}\psi_{\alpha} -
+\bigl(\vec{\nabla}\psi_{\alpha}^*\bigr)\psi_{\alpha}
+\biggr) \frac{i\hbar}{2m}
+  \label{equ:2.63}
+\end{equation}
+Rewriting (\ref{equ:2.62}) in these terms, we find
+\begin{equation}
+  \frac{\partial \rho}{\partial t} + \vec{\nabla}\cdot
+  \vec{j} = 0
+  \label{equ:2.64}
+\end{equation}
+which coincides with the well-known continuity equation for
+a probability density $\rho$ and a probability current
+$\vec{j}$, defined respectively by (\ref{equ:2.61}) \&
+(\ref{equ:2.63})
