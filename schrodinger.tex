@@ -167,7 +167,7 @@ The Hamiltonian $\hat{H}$ has in principle an arbitrary form
 (it can be an abstract op., or a differential op., or have
 matrix form) and be time-dependent or time-independent. We
 can straightforwardly obtain the form of $\hat{U}(t,t_0)$
-for a time-independent Hamiltonian by solving (\ref{2.15}):
+for a time-independent Hamiltonian by solving (\ref{equ:2.15}):
 \begin{equation}
   \hat{U}(t,t_0) = \exp(-\frac{i}{\hbar}H(t-t_0))
   \label{equ:2.17}
@@ -212,12 +212,12 @@ By iteration, we can find the approximate solution
   \hat{U}(t,t_0) &= 1 - \frac{i}{\hbar} \int_{t_0}^t dt'\,
   \hat{H}(t')\biggr[1 - \frac{i}{\hbar}
   \int_{t_0}^{t'} dt'\, \hat{H}(t'')\hat{U}(t'',t_0)\biggl]
-  \\
+  \nonumber\\
   &=
   1 - \frac{i}{\hbar} \int_{t_0}^t dt' \, \hat{H}(t') + 
   \biggl(\frac{-i}{\hbar}\biggr)^2 \int_{t_0}^t dt' \,
   \int_{t_0}^{t'} dt'' \, \hat{H}(t') \hat{H}(t'')
-  \hat{U}(t'',t_0)\\
+  \hat{U}(t'',t_0)\nonumber\\
   &=
   1 + \sum_{n=1}^{\infty} 
   \biggl(\frac{-i}{\hbar}\biggr)^n
@@ -226,7 +226,7 @@ By iteration, we can find the approximate solution
   \cdots
   \int_{t_0}^{n-1} dt_n\,
   \hat{H}(t_1) \hat{H}(t_2) \cdots \hat{H}(t_n)
-  %% todo poner 2.21
+  \label{equ:2.21}
 \end{align}
 well-known as the Dyson series.
 \subsection{Time evolution of stationary energy eigenstates}
@@ -249,28 +249,29 @@ are energy eigenstates too, whose energy eigenvalues are
 Expanding the time-evolution operator in the states $|a>$,
 we find
 %% todo areglar el alig para la numeración
-\begin{align*}
+\begin{align}
   \hat{U}(t, 0) = \exp\Big(-\frac{i}{\hbar} \hat{H}t\Big) &= 
   \sum_{a'} |a'><a'| \exp(-i \hat{H} t / \hbar) \sum_a
-  |a><a|\\
+  |a><a|\nonumber\\
   &=
-  \sum_{a,a'} |a'><a| <a'|\exp(-i\hat{H}t/\hbar) |a>\\
+  \sum_{a,a'} |a'><a| <a'|\exp(-i\hat{H}t/\hbar)
+  |a>\nonumber\\
   % todo insertar braces
   &=
   \sum_a \exp(-i E_a t /\hbar) |a><a|
-  %% todo numeración 2.23
-\end{align*}
+  \label{equ:2.23}
+\end{align}
 Now expanding $|\alpha>$ in the basis of energy eigenstates,
 we see that
 \begin{align*}
-|\alpha> &= \sum_a <a|\alpha> |a> = \sum_a c_a(t=0) |a> \\
+|\alpha> &= \sum_a <a|\alpha> |a> = \sum_a c_a(t=0) |a>
+  \nonumber\\
   \Rightarrow |\alpha;t> &= U(t,0) |\alpha> = \sum_{a'}
-  \exp\Big(-i E_{a'}t/\hbar\Big) |a'><a'|a> c_a(t=0) \\
+  \exp\Big(-i E_{a'}t/\hbar\Big) |a'><a'|a> c_a(t=0)
+  \nonumber\\
   &=
   \sum_a c_a(t= 0) \exp(-iE_a t/\hbar) |a>\\
-  % todo poner símbolo definición
-  = \sum_a c_a(t) |a>
-  % 2.24
+  &\equiv \sum_a c_a(t) |a> \label{equ:2.24}
 \end{align*}
 where we realize the time evolution of the expansion
 coefficients.
@@ -360,14 +361,14 @@ finding in a narrow region $d^3 x$ around $\vec{x}$.
 One may be interested in finding the element
 $<\beta|\hat{A}|\alpha>$ for some states $|\alpha>$,
 $|\beta>$, in the position basis
-\begin{align*}
+\begin{align}
   <\beta|\hat{A}|\alpha> &= \int d^3 x\, \int d^3 x'\,
-  <\beta|\vec{x}><\vec{x}|\hat{A}|\vec{x}'><\vec{x}'|\alpha>\\
+  <\beta|\vec{x}><\vec{x}|\hat{A}|\vec{x}'><\vec{x}'|\alpha>\nonumber\\
   &=\int d^3 x\, \int d^3 x'\,
   \psi_{\beta}^* <\vec{x}|\hat{A}|\vec{x}'>
   \psi_{\alpha}(\vec{x}')
-  %% eq 2.30
-\end{align*}
+  \label{equ:2.30}
+\end{align}
 which depends on the matrix element
 $<\vec{x}|\hat{A}|\vec{x}'>$ of $\hat{A}$. This expression
 is greatly simplified if $\vec{A}$ is a polynomial of the
@@ -379,7 +380,7 @@ in one dimension
   \hat{A} = \frac{1}{2} m \omega^2 \vec{x}^2
   \label{equ:2.31}
 \end{equation}
-In this case, the matrix element in (\ref{equ:2.30}) locks
+In this case, the matrix element in (\ref{equ:2.30}) looks
 like
 \begin{align*}
   <\vec{x}|\hat{A}|\vec{x}'> &\mapsto <x|\hat{A}|x'> =
@@ -408,23 +409,23 @@ and thus we obtain in this case
 To arrive at the wave equation proposed by Schrödinger, we
 need further consider the representation of the momentum
 operator $\hat{\vec{p}}$ in the position basis
-\begin{align*}
+\begin{align}
   <\vec{x}|\hat{\vec{p}}|\alpha> &=
   \int d^3 x' \, <\vec{x}|\vec{x}'>
   <\vec{x}'|\hat{\vec{p}}|\alpha> = 
   \int d^3 x' \, \delta^3(\vec{x}-\vec{x}')
   \int d^3 x'' \, <\vec{x}'|\hat{\vec{p}}|\vec{x}''>
-  <\vec{x}''|\alpha> \\
+  <\vec{x}''|\alpha> \nonumber\\
   &=
   \int d^3 x'' \, <\vec{x}|\hat{\vec{p}}|\vec{x}''>
-  \psi_{\alpha}(\vec{x}'')\\
+  \psi_{\alpha}(\vec{x}'')\nonumber\\
   &=
   \int d^3 x'' \delta^3(\vec{x}-\vec{x}') \bigl(-i\hbar
-  \vec{\nabla}''\bigr) \psi_{\alpha}(\vec{x}'')\\
+  \vec{\nabla}''\bigr) \psi_{\alpha}(\vec{x}'')\nonumber\\ 
   &=
   -i\hbar \vec{\nabla} \psi_{\alpha}(\vec{x})
-  % eq 2.35
-\end{align*}
+  \label{equ:2.35}
+\end{align}
 Let us now consider the Schrödinger equaiton,
 (\ref{equ:2.16}),
 $$
