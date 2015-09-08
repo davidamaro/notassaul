@@ -721,3 +721,160 @@ which coincides with the well-known continuity equation for
 a probability density $\rho$ and a probability current
 $\vec{j}$, defined respectively by (\ref{equ:2.61}) \&
 (\ref{equ:2.63})
+% new pages
+It's interesting to realize that any continuity relation
+reveals a conserved quantity. In this case, the proability
+\begin{equation}
+  P = \int d^3x \, \rho
+  \label{equ:2.65}
+\end{equation}
+is conserved (as expected):
+\begin{equation}
+  \frac{dP}{dt} = \int_{V} d^3 x \, \frac{\partial
+  p}{\partial t} = - \int_{\partial V} d\vec{S} \, \cdot
+  \vec{j} = 0
+  \label{equ:2.66}
+\end{equation}
+which vanishes on ly if (\ref{equ:2.63}) vanishes at the
+boundary $\partial V$ located infinitely far away. This
+condition is satisfied because \(\displaystyle \lim_{\vec{x}
+\to \infty} \psi_{\alpha}(\vec{x},t)  = 0\) is a condition
+of square integrability, i.e., for $P$ in (\ref{equ:2.65})
+to be finite always.
+\subsection{Elementary 1 quantum systems}
+\subsubsection{Harmonic oscillator in operator method}
+The harmonic oscillator is one of the most important quantum
+systems because any physical system is some approximation
+(around its stability point) resembles an harmonic
+oscillator. The potential of this system is give, as in
+classical mechanics, by 
+\begin{equation}
+  \hat{V}(\hat{x}) = \frac{1}{2} m \omega^2 \hat{x}^2
+  \label{equ:2.67}
+\end{equation}
+We would like to find the eigenstates of the Hamiltonian as
+a time-independent system. To do so, we shall follow the
+elegant procedure envisages by Heisenberg based on the
+non-hermitian ``ladder operators"
+\begin{subequations}
+  \begin{align}
+    \hat{a}&=\sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{x}+\frac{i\hat{p}}{m\omega}\Bigr)\label{equ:2.68a}\\
+    \hat{a}^{\dagger}&=\sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{x}-\frac{i\hat{p}}{m\omega}\Bigr)\label{equ:2.68b}
+  \end{align}
+\end{subequations}
+which let one identify the operators $\hat{x}$ ans $\hat{p}$
+as
+\begin{subequations}
+  \begin{align}
+    \hat{x} &=
+    \sqrt{\frac{\hbar}{2m\omega}}(\hat{a}+\hat{a}^{\dagger})\label{equ:2.69a}\\
+    \hat{p} &=
+    i\sqrt{\frac{m\hbar \omega}{2}}(\hat{a}^{\dagger}-i\hat{a})\label{equ:2.69b}
+  \end{align}
+\end{subequations}
+% finish page 14
+The ladder operators do not commute:
+\begin{align}
+  [\hat{a}, \hat{a}^{\dagger}] &= \frac{m\omega}{2\hbar}
+  \biggl([\hat{x},-\frac{i\hat{p}}{m\omega}]+[-\frac{i\hat{p}}{m\omega},\hat{x}]\biggr)
+  \nonumber\\
+  &= \frac{i}{2\hbar}\biggl(
+  -[\hat{x},\hat{p}]+[\hat{p},\hat{x}]
+  \biggr)\label{equ:2.70}
+\end{align}
+Defining the so-called ``number operator"
+\begin{equation}
+  \hat{N} \equiv \hat{a}\hat{a}^{\dagger}
+  \label{equ:2.71}
+\end{equation}
+it is easy to realize that in terms of $\hat{x}$ and
+$\hat{p}$
+\begin{align}
+  \hat{N} &= \frac{m\omega}{2\hbar} \biggl(\hat{x}^2 +
+  \frac{\hat{p}^2}{m^2 \omega^2}\biggr) +
+  \frac{i}{2\hbar}[\hat{x},  \hat{p}] \nonumber \\
+  &=
+  \frac{1}{\hbar\omega}\biggl(\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2
+  \hat{x}^2\biggr) - \frac{1}{2} \label{equ:2.72}
+  % poner unos braces aquí
+\end{align}
+Therefore, it follows that the Hamiltonian can be expressed
+in terms of the number operator as
+\begin{equation}
+  \hat{H} = \hbar\omega \Bigl(\hat{N}+1/2\Bigr)
+  \label{equ:2.73}
+\end{equation}
+Note that $\hat{H}$ and $\hat{N}$ are compatible (and
+hermitian) operators because
+$$
+[\hat{H},  \hat{N}] = 0;
+$$
+they can thus be simultaneously diagonalized, so that the
+eigenstates of $\hat{N}$ are also energy eigenstates.
+The eigenstates of $\hat{N}$ are defined by
+\begin{equation}
+  \hat{N} |n>= n |n>
+  \label{equ:2.74}
+\end{equation}
+where $n$ i san arbitrary real number at this point. It thn
+follows that
+\begin{equation}
+  \hat{H} |n> = \hbar\omega (n+1/2)|n>
+  \label{equ:2.75}
+\end{equation}
+% finished page 15
+Inserting (\ref{equ:2.75}) in the time-independent
+Schrödinger's equation, we identify
+$$
+E_n = \hbar\omega (n+1/2)
+$$
+as the energy asociated with the energy eigenstate $|n>$.
+We can determine the values that $n$ can take by exploring
+the action of the ladder operators on $|n>$. Note first that
+\begin{align}
+  [\hat{N}, \hat{a}^{\dagger}] &=
+  [\hat{a}^{\dagger}\hat{a},\hat{a}^{\dagger}] =
+  \hat{a}^{\dagger}[\hat{a}, \hat{a}^{\dagger}] =
+  \hat{a}^{\dagger} \nonumber\\
+  [\hat{N}, \hat{a}] &= [\hat{a}^{\dagger}\hat{a}, \hat{a}]
+  = [\hat{a}^{\dagger}, \hat{a}] \hat{a}=  - \hat{a}
+  \label{equ:2.76}
+\end{align}
+where (\ref{equ:2.70}) has been used. Applying these
+results, we readily see that
+\begin{subequations}
+  \begin{align}
+            B'&=-\nabla \times E,\\
+            E'&=\nabla \times B - 4\pi j,
+    \hat{N} (\hat{a}^{\dagger} |n>) &=
+    \Bigl([\hat{N},\hat{a}^{\dagger}]+\hat{a}^{\dagger}\hat{N}\Bigr)|n>
+    = (n+1)(\hat{a}^{\dagger} |n>) \label{equ:2.77a} \\
+    \hat{N}(\hat{a}|n>) &= \Bigl([\hat{N},
+  \hat{a}]+\hat{a}\hat{N}\Bigr) |n> = (n-1) (\hat{a}|n>)
+  \label{equ:2.77b}
+  \end{align}
+\end{subequations}
+Eq (\ref{equ:2.77a}) implies that $\hat{a}^{\dagger}|n>$ has
+the same eigenvalues as the state $|n+1>$ or, in other
+words, that the action of the operator $\hat{a}^{\dagger}$
+raises a state from $|n>$ to $|n+1>$. Analogously, $\hat{a}$
+lowers the state from $|n>$ to $|n-1>$. This is why the
+ladder operators $\hat{a}$ and $\hat{a}^{\dagger}$ are known
+as lowering and rising operators, respectively.
+It immediatly folows that the following relations must hold
+\begin{align}
+  \hat{a}|n> &= c |n-1> \nonumber\\
+  \hat{a}^{\dagger}|n> &= d |n+1> \label{equ:2.78}
+\end{align}
+where $c$ and $d$ are numbers that may be determinated by
+imposing the orthogonality (we shall impose orthonormality)
+of the eigenstates of the Hermitian operator $\hat{N}$. The
+norm of $\hat{a}|n>$ is computed as
+$$
+|c|^2 <n-1|n-1> = <n|\hat{a}^{\dagger}\hat{a}|n> = n<n|n>,
+$$
+which implies
+\begin{equation}
+  |c|^2 = n
+  \label{equ:2.79}
+\end{equation}
