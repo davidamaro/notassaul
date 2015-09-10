@@ -203,7 +203,7 @@ recalling that $\hat{U}(t_0,t_0) = 1$ we then have
 \begin{equation}
   \hat{U}(t,t_0) = 1 - \frac{i}{\hbar} \int_{t_0}^t dt' \,
   \hat{H}(t')\hat{U}(t',t_0)
-  \label{equ:2.20}
+  \label{equ:2.19}
 \end{equation}
 By iteration, we can find the approximate solution
 % todo arreglar este desmadre con la numeración
@@ -226,7 +226,7 @@ By iteration, we can find the approximate solution
   \cdots
   \int_{t_0}^{n-1} dt_n\,
   \hat{H}(t_1) \hat{H}(t_2) \cdots \hat{H}(t_n)
-  \label{equ:2.21}
+  \label{equ:2.20}
 \end{align}
 well-known as the Dyson series.
 \subsection{Time evolution of stationary energy eigenstates}
@@ -237,13 +237,13 @@ $|\alpha>$ in the basis of eigenstates $|a>$ of an operator
 $\hat{A}$, such that
 \begin{equation}
   [\hat{A}, \hat{H}] = 0
-  \label{equ:2.22}
+  \label{equ:2.21}
 \end{equation}
 i.e., compatible with $\hat{H}$. It follows that $\{|a>\}$
 are energy eigenstates too, whose energy eigenvalues are
 \begin{equation}
   \hat{H} |a> = E_a |a>
-  \label{equ:2.23}
+  \label{equ:2.22}
 \end{equation}
 
 Expanding the time-evolution operator in the states $|a>$,
@@ -502,12 +502,12 @@ As in the configuration space, we can now define the
 eigenstates of the momentum operator $\hat{\vec{p}}$ as
 \begin{equation}
   \hat{\vec{p}} |\vec{p}'> = \vec{p}' |\vec{p}'>,
-  \label{equ:equ:2.43}
+  \label{equ:2.43}
 \end{equation}
 satisfying the orthonormality condition
 \begin{equation}
   <\vec{p}|\vec{p}'> = \delta^3(\vec{p}-\vec{p}')
-  \label{equ:equ:2.44}
+  \label{equ:2.44}
 \end{equation}
 and the completeness relation
 \begin{equation}
@@ -590,7 +590,7 @@ Replacing into (\ref{equ:2.53}), we find that
   \vec{p}\cdot \vec{x}/\hbar)
   \label{equ:2.56}
 \end{equation}
-It then follows from (\ref{equ:2.49}) and (\ref{2.50}) that
+It then follows from (\ref{equ:2.49}) and (\ref{equ:2.50}) that
 $\phi_{\alpha}(\vec{p})$ is just the Fourier transform of
 $\psi_{\alpha}(\vec{x})$, and vice versa
 \begin{align}
@@ -611,10 +611,13 @@ equation in momentum space for the Hamiltonian
   \phi_{\alpha}(\vec{p},t) \equiv <\vec{p}|\alpha,t_0;t>
   \label{equ:2.58}
 \end{equation}
+
 We have
+
 \begin{align}
   i\hbar \frac{\partial}{\partial t} <\vec{p}|\alpha,t_0;t>
-  &= <\vec{p}|\frac{1}{2m}\hat{\vec{p}}^2|\alpha,t_0;t> +
+  &= <\vec{p}|\frac{1}{2m}\hat{\vec{p}}^2|\alpha,t_0;t>
+  \nonumber \\ &+
   \int d^3 p' \, <\vec{p}|\hat{V}(\hat{\vec{x}}) |\vec{p}'>
   <\vec{p}'|\alpha,t_0;t> \nonumber \\
   &=
@@ -626,7 +629,7 @@ We have
   <\vec{x}|\hat{V}(\hat{\vec{x}})|\vec{x}'><\vec{x}'|\vec{p}'>
   \phi_{\alpha}(\vec{p},t)\nonumber\\
   &=
-  \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) +
+  \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) \nonumber\\&+
   \frac{1}{(2\phi\hbar)^3}
   \int d^3 p' \,
   \int d^3 x\,
@@ -634,22 +637,25 @@ We have
   \exp(-i\vec{p}\cdot\vec{x}/\hbar)
   V(\vec{x})\delta^3(\vec{x}-\vec{x}')
   \exp(i\vec{p}'\cdot\vec{x}'/\hbar)\phi_{\alpha}(\vec{p},t)\nonumber\\
-  &= \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) +
+  &= \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t)
+  \nonumber\\&+
   \frac{1}{(2\pi\hbar)^{3/2}}
   \int d^3 p' \,
   \int \frac{d^3x}{(2\pi\hbar)^{3/2}}
   \exp(-i(\vec{p}-\vec{p}')\cdot\vec{x}/\hbar) V(\vec{x})
-  \phi(\vec{p},t)
+  \phi(\vec{p},t)\nonumber
   \intertext{which finally yields}
   i\hbar \frac{\partial}{\partial t} \phi_{\alpha}
-  (\vec{p},t) =
+  (\vec{p},t) &=
   \frac{\vec{p}^2}{2m} \phi_{\alpha} + 
   \frac{1}{(2\pi\hbar)^{3/2}}
   \int d^3 p' \,
   V(\vec{p}-\vec{p}') \phi_{\alpha} (\vec{p},t)
   \label{equ:2.59}
 \end{align}
+
 where
+
 \begin{equation}
   V(\vec{p}-\vec{p}') \equiv \frac{1}{(2\pi\hbar)^{3/2}}
   \int \, \exp(-i(\vec{p}-\vec{p}'')\cdot \vec{x}/\hbar)
