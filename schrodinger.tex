@@ -1078,3 +1078,149 @@ polynomials reads\footnote{See e.g. Arfken 1985, p.270}
   \label{equ:2.97}
 \end{equation}
 % todo arreglar paréntesis mal puestos por todos lados
+%pp 20
+Therefore, (\ref{equ:2.96}) can be rewritten as
+\begin{equation}
+  \psi_n(\tilde{x}) = \frac{1}{\sqrt{n!2^n}}
+  \Bigl(
+    \frac{\hbar \pi}{m\omega}
+    \Bigr)^{-1/4}
+    \exp(-\frac{1}{2}\tilde{x}^2)
+    H_n(\tilde{x})
+  \label{equ:2.98}
+\end{equation}
+A few observations are in order. Firstly, as depected, the
+wavefunctions are eigher symmetric or antisymmetric, but the
+probability densities $|\psi_n|^2$ are always symmetric on
+$\tilde{x}$ (or $x$). It then immediately follows that
+$<\hat{x}> = 0$. This result can be easily verified in the
+operator formalism, following our result (\ref{equ:2.87a})
+\begin{equation}
+  <\hat{x}> = <n|\hat{x}|n> = \sqrt{\frac{\hbar}{2m\omega}}
+  \Bigl(
+  \sqrt{n}\delta_{n, n-1} + \sqrt{n+1}\delta_{n, n+1}
+  \Bigr)
+  = 0
+  \label{equ:2.99}
+\end{equation}
+Similarly, from (\ref{equ:2.87b}), we find that
+\begin{equation}
+  <\hat{p}> = p
+  \label{equ:2.100}
+\end{equation}
+Furthermore, we can compute the expectation values of
+$\hat{x}^2$ \& $\hat{p}^2$ as follows
+
+\begin{subequations}
+  \begin{alignat}{4}
+    <\hat{x}^2> &= \frac{\hbar}{2m\omega}
+    <n|\bigl(\hat{a}+\hat{a}^{\dagger}\bigr)|n> &&=
+    \frac{\hbar}{2m\omega}<n|\bigl(\hat{a}^2 +
+    \hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a} +
+    \hat{a}^{\dagger}{}^2\bigr)|n> \nonumber \\
+    &{} &&= \frac{\hbar}{2m\omega}<n|(1 +
+    2\hat{a}\hat{a}^{\dagger})|n> =
+    \frac{\hbar}{2m\omega}(1+2n) \label{equ:2.101}
+  \end{alignat}
+\end{subequations}
+where we used that $<n|\hat{a}^2|n> =
+<n|(\hat{a}^{\dagger})^2 | n> = 0$ and (\ref{equ:2.70}).
+Similarly,
+\begin{equation}
+  <\hat{p}{}^2> = - \frac{m\hbar\omega}{2}
+  <n|(\hat{a}{}^{\dagger}-\hat{a})^2 |n> =
+  -\frac{m\hbar\omega}{2}
+  <n|(-\hat{a}\hat{a}{}^{\dagger}-\hat{a}\hat{a}^{\dagger})|n>
+  =
+  \frac{m\hbar\omega}{2}(1+2n)
+  \label{equ:2.102}
+\end{equation}
+Noticing now that $<(\Delta \hat{x})^2 > = <\hat{x}^2>$
+because of (\ref{equ:2.99}), and $<(\Delta \hat{p})^2> =
+<\hat{p}^2>$ because of (\ref{equ:2.100}), we find the
+uncertainty relation
+\begin{equation}
+  <(\Delta \hat{x})^2 > < (\Delta \hat{p})^2> =
+  \frac{\hbar^2}{4}(1+2n)^2,
+  \label{equ:2.102}
+\end{equation}
+%%pp 20
+which satisfies the uncertainty principle. We notice that
+the state of minimal uncertainty is precisely the ground
+state, which, as given by (\ref{equ:2.93}), has a Gaussian
+profile that are typically considered maximally coherent.
+A second observation regards the natural question of how
+these states evolve in time. In section (2.1),
+%todo label sections
+we learned that stationary states, such as $|n>$ evolve
+trivially as
+\begin{equation}
+  |n,t> = \exp(-\frac{i}{\hbar}\hat{H}t) |n> = \exp(-i\omega
+  (n+1/2)t)|n>
+  \label{equ:2.103}
+\end{equation}
+For these states, one can easely verify that
+\begin{equation}
+  <n;t|\hat{x}|n;t> = <n|\hat{a}|n> = 0 =
+  <n|\hat{p}|n> = <n;t|\hat{p}|n;t>
+  \label{equ:2.104}
+\end{equation}
+and, thus, the uncertainty relation (\ref{equ:2.102}) holds
+still. A natural puzzle is that $<\hat{x}> = 0$ even through
+the system we analize is a harmonic oscillator. From
+classical mechanics, one may have expected on oscillatory
+behavior. How come that this fails quantum-mechanically? The
+answer is trivial: we have considered only stationary
+states, which may not capture all features of the system.
+Non-stationary states fo the form
+\begin{equation}
+  |\alpha> = \sum_n c_n |n>
+  \label{equ:2.105}
+\end{equation}
+as discussed around (\ref{equ:2.27}), have a non-trivial
+evolution even if the Hamiltonian is time-independent. We
+shall shortly see that these is a special kind of
+non-stationary states that keep the nature of the classical
+harmonic oscillator, the so-called coherent states.
+A second observation conserns the method we have used to
+determine the features of the quantum harmonic oscillator.
+The method consists in defining the ladder operators subject
+to a fundamental quantum request: that the operators
+$\hat{\vec{x}}$ and $\hat{\vec{p}}$ (int the dimensionality
+of the problem) comply with $[\hat{x}_i, \hat{p}_j] = i
+\hbar \delta_{ij}$. This procedure is usually called
+canonical quantization and is applied to a great variety of
+non-relativistic quantum systems, (almost) all quantum field
+theories (or relativistic quantum systems) and even more
+complex theories, such as string theory.
+Finally, we must mention on an interpreattion of this
+canonical quantization in terms of the ladder operators
+called the second quantizaton. As we have seen, the energy
+of the harmonic oscillator is quantized as
+$$
+E_n = \hbar\omega(n + 1/2)
+$$
+which is (almost) identical to Plank's proposed quantization
+of the electromagnetic radiation $\hbar\omega n$, except for
+the conditional energy shift $\frac{1}{2}\hbar\omega$. In
+Einstein's original resolution to the photoelectric effect,
+the energy shift does not apper and the value of $n$ counts
+the number of electromagnetic-radiation quanta or photons.
+Later, Einstein himself realized that an energy shift
+proportional to $\frac{1}{2} \hbar \omega$ was needed to
+understand e.g., the puzzle of black-body radiation. This
+energy shift can be interpreted as the vacuum energy. Thus,
+in Heisenberg's formulation, $|0>$ corresponds to the vaccum
+state, while the states $|1>$,$|2>$, $|3>$, $\ldots$ may
+correspond to a physical system with one, two, three,
+$\ldots$ photons or particles, in general. Notice that in
+this interpreation $\hat{a}^{\dagger}$ and $\hat{a}$ operate
+as creation and annihilation operators
+\begin{align}
+  \hat{a}^{\dagger} |n> \mapsto |n+1> \nonumber\\
+  \hat{a} |n> \mapsto |n-1> \nonumber
+\end{align}
+creating and annihilating particles. This interpretation
+finds an appropiate environment particularly in quantum
+field theories, where such processes
+% ends pp21
