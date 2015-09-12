@@ -767,6 +767,7 @@ non-hermitian ``ladder operators"
     \hat{a}&=\sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{x}+\frac{i\hat{p}}{m\omega}\Bigr)\label{equ:2.68a}\\
     \hat{a}^{\dagger}&=\sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{x}-\frac{i\hat{p}}{m\omega}\Bigr)\label{equ:2.68b}
   \end{align}
+  \label{equ:2.68}
 \end{subequations}
 which let one identify the operators $\hat{x}$ ans $\hat{p}$
 as
@@ -850,8 +851,6 @@ where (\ref{equ:2.70}) has been used. Applying these
 results, we readily see that
 \begin{subequations}
   \begin{align}
-            B'&=-\nabla \times E,\\
-            E'&=\nabla \times B - 4\pi j,
     \hat{N} (\hat{a}^{\dagger} |n>) &=
     \Bigl([\hat{N},\hat{a}^{\dagger}]+\hat{a}^{\dagger}\hat{N}\Bigr)|n>
     = (n+1)(\hat{a}^{\dagger} |n>) \label{equ:2.77a} \\
@@ -884,3 +883,198 @@ which implies
   |c|^2 = n
   \label{equ:2.79}
 \end{equation}
+%% pp 17
+for $<n|m> = \delta_{n,m}$. Note that we can further assume
+that $c$ (and $d$) is real because
+$$
+a^{\dagger}a |n> = a^{\dagger} c_n | n-1> = c_n d_{n-1}|n> =
+n|n>
+$$
+and $n$ is real. Further we assume by convention that $c$
+(and $d$) is positive. This yield
+\begin{equation}
+  c = \sqrt{n}
+  \label{equ:2.80}
+\end{equation}
+Similarly, normalizing $\hat{a}^{\dagger} |n>$ we find
+$$
+|d|^2 <n+1|n+1> = <n|\hat{a}\hat{a}^{\dagger}|n> =
+<n|[\hat{a}, \hat{a}^{\dagger}] + \hat{a}^{\dagger}\hat{a} |
+n>  = (n+1) <n|n>
+$$
+which yields
+\begin{equation}
+  d = \sqrt{n+1}
+  \label{equ:2.81}
+\end{equation}
+We have therefore obtained
+\begin{subequations}
+  \begin{align}
+    \hat{a}|n> &= \sqrt{n}|n-1> \label{equ:2.82a} \\
+    \hat{a}^{\dagger}|n> &= \sqrt{n+1}|n+1> \label{equ:2.82b}
+  \end{align}
+\end{subequations}
+with $n \geq 0$ to provide reasonable results. Since the
+smallest value that $n$ can take is $n = 0$ and all states
+created by $\hat{a}^{\dagger}$ differ by a unit of $n$, $n$
+must be integer. Therefore, eq.~(\ref{equ:2.75}) can be
+interpreted as a rule of energy quantization.
+Notice that the sate of lowert energy satisfies
+\begin{equation}
+  \hat{a}|0> = 0
+  \label{equ:2.83}
+\end{equation}
+i.e., it is anihilated bythe lowering operator $\hat{a}$.
+Eq.~(\ref{equ:2.83}) can be considered a definition of the
+ground state. Note that the ground state has the
+non-vanishing energy $\displaystyle{\frac{1}{2}\hbar
+\omega}$.
+We can now obtain an arbitrary state $|n>$ by the repeated
+action of $\hat{a}^{\dagger}$ on $|0>$. We see that
+\begin{equation}
+  |1> = \hat{a}^{\dagger} |0>
+  \label{equ:2.84}
+\end{equation}
+and then, from (\ref{equ:2.82b})
+\begin{subequations}
+  \begin{alignat}{2}
+    |2> &= \frac{\hat{a}^{\dagger}}{\sqrt{2}} |1> &&=
+    \frac{(\hat{a}^{\dagger})^2}{\sqrt{2}} |0>
+    \label{equ:2.85a} \\
+    |3> &= \frac{\hat{a}^{\dagger}}{\sqrt{3}} |2> &&=
+    \frac{(\hat{a}^{\dagger})^3}{\sqrt{3!}} |0>
+    \label{equ:2.85b}
+  \end{alignat}
+\end{subequations}
+and so on. We find the general expression
+\begin{equation}
+  |n> = \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} |0>
+  \label{equ:2.86}
+\end{equation}
+A useful observation is that the states $\{|n>\}$ are not
+eigenstates of $\hat{x}$ and $\hat{p}$, as expected, because
+$[\hat{H},\hat{x}]$ and $[\hat{H}, \hat{p}]$ do not vanish,
+in general.
+
+We can explicitly show that neither $\hat{x}$ nor $\hat{p}$
+are diagonal in the basis of energy eigenstates:
+
+\begin{subequations}
+  \begin{alignat}{3}
+    <m|\hat{x}|n> &= \sqrt{\frac{\hbar}{2m\omega}}
+    <m|\hat{a}+ \hat{a}^{\dagger}|n> &&=
+    \sqrt{\frac{\hbar}{2m\omega}} 
+    \bigl[\sqrt{n}<m|n-1> + \sqrt{n+1}<m|n+1>\bigr]
+    \nonumber \\
+    &{}&&= \sqrt{\frac{\hbar}{2m\omega}}
+    \bigl[\sqrt{n}\delta_{m , n-1} + \sqrt{n+1}\delta_{m,
+    n+1}\bigr] \label{equ:2.87a} \\
+    <m|\hat{p}|n> &= i \sqrt{\frac{m\hbar \omega}{2}}
+    <m|\hat{a}^{\dagger} - \hat{a}|n> &&= i
+    \sqrt{\frac{m\hbar\omega}{2}}
+    \bigl[
+      \sqrt{n+1}\delta_{m,n+1} - \sqrt{n}\delta_{m,n-1}
+    \bigr]\label{equ:2.87b}
+  \end{alignat}
+\end{subequations}
+where the expresions (\ref{equ:2.68}) have been used.
+With this formalism, we can compute the energy wavefunctions
+in the position representation. Let us start by obtaining
+$\psi_0 \equiv <x|0>$. To do so, recall that the ground
+state is anihilated by $\hat{a}$, so that
+\begin{equation}
+  <x|\hat{a}|0> = \sqrt{\frac{m\omega}{2\hbar}} <x|\hat{x}+
+  \frac{i\hat{p}}{m\omega} |0> = 0
+  \label{equ:2.88}
+\end{equation}
+Inserting a unity, we have
+\begin{equation}
+  \int dx' \, <x|\hat{x} + \frac{i\hat{p}}{m\omega}|x'>
+  <x'|0> =
+  \int dx' \, \delta(x - x')
+  \Bigl(x + \frac{i}{m\omega}\bigl(-i\hbar
+  \frac{d}{dx}\bigr)\Bigr)\psi_0 = 0
+  \label{equ:2.89}
+\end{equation}
+which, after integration and rearranging the terms, yields
+\begin{equation}
+  \frac{d\psi_0(x)}{dx} = -\frac{m\omega}{\hbar} x \psi_0(x)
+  \label{equ:2.90}
+\end{equation}
+From (\ref{equ:2.90}), we realize that
+$$
+\psi_0(x) = A_0 \exp(-\frac{1}{2}\frac{m\omega}{\hbar}x^2)
+$$
+or in terms of the dimensionless coordinate $\tilde{x} =
+\sqrt{\frac{m\omega}{\hbar}}x$
+\begin{equation}
+  \psi_0(\tilde{x}) = A_0 \exp(-\frac{1}{2}\tilde{x}^2)
+  \label{equ:2.91}
+\end{equation}
+$A_0$ can be found by normalizing
+\begin{equation}
+  \int dx \, \psi_0(\tilde{x}) \psi_0(\tilde{x}) = A_0
+  \sqrt{\frac{\hbar}{m\omega}} \int d\tilde{x} \,
+  \exp(-\tilde{x}^2) = A_0^2 \sqrt{\frac{\hbar\pi}{m\omega}}
+  = 1, 
+  \label{equ:2.92}
+\end{equation}
+which leads finally to
+\begin{equation}
+  \psi_0 (\tilde{x}) =
+  \bigl(\frac{\hbar\pi}{m\omega}\bigr)^{-1/4}
+  \exp(-\frac{1}{2}\tilde{x}^2)
+  \label{equ:2.93}
+\end{equation}
+$\psi_n(\tilde{x})$ can be obtained from inspecting $<x|n>$:
+%todo arreglar el desastre de abajo
+\begin{subequations}
+  \begin{alignat}{4}
+    <x|1> &= <x|\hat{a}^{\dagger}|0> &&=
+    \sqrt{\frac{m\omega}{2\hbar}}
+    <x|\hat{x}-\frac{i\hat{p}}{m\omega}|0> &&&=
+    \sqrt{\frac{m\omega}{2\hbar}}\bigl(x -
+    \frac{\hbar}{m\omega}\frac{d}{dx}\bigr) \psi_0(x)
+    \nonumber \\
+    <x|2> &= <x|\frac{(\hat{a})^2}{\sqrt{2}}|0> &&=
+    \frac{1}{\sqrt{2}}\bigl(\sqrt{{m\omega}{2\hbar}}\bigr)^2\bigl(x
+      - \frac{\hbar}{m\omega}\bigr)^2 \psi_0(x) &&&{}\nonumber \\
+      \vdots\nonumber \\
+      <x|n> &= 
+      <x|\frac{(\hat{a})^n}{\sqrt{n!}}|0> &&=
+      \frac{1}{\sqrt{n!2^n}}
+      \frac{1}{\bigl(\frac{\hbar}{m\omega}\bigr)^n}
+      (x - \frac{\hbar}{m\omega}\frac{d}{dx})^n \psi_0(x)
+      &&&{}
+     \label{equ:2.94}
+  \end{alignat}
+\end{subequations}
+The latter can be rewritten in terms of $\tilde{x}$ as
+\begin{equation}
+  \psi_0(\tilde{x}) =
+  \frac{1}{\sqrt{n!2^n}}
+  \frac{1}{\bigl(\frac{\hbar}{m\omega}\bigr)^n}
+  \bigl(
+  \sqrt{\frac{\hbar}{m\omega}\tilde{x}-\frac{\hbar}{m\omega}}
+  \bigr)^n \psi_0(\tilde{x})
+  \label{equ:2.95}
+\end{equation}
+that is,
+\begin{equation}
+  \psi_n(\tilde{x}) = \frac{1}{\sqrt{n!2^n}}
+  \bigl(
+  \frac{\hbar\pi}{m\omega}
+  \bigr)^{-1/4}
+  \bigl(\tilde{x}-\frac{d}{d\tilde{x}}\bigr)^n
+  \exp(-\frac{1}{2}\tilde{x}^2)
+  \label{equ:2.96}
+\end{equation}
+Interestingly, the Rodrigues' formula for the Hermite
+polynomials reads\footnote{See e.g. Arfken 1985, p.270}
+\begin{equation}
+  H_n(\tilde{x}) = \exp\Bigl(\frac{1}{2}\tilde{x}^2\Bigr)
+  \Bigl(\tilde{x}-\frac{d}{d\tilde{x}}\Bigr)^n
+  \exp\Bigl(-\frac{1}{2}\tilde{x}^2\Bigr)
+  \label{equ:2.97}
+\end{equation}
+% todo arreglar paréntesis mal puestos por todos lados
