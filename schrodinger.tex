@@ -1028,35 +1028,32 @@ which leads finally to
 \end{equation}
 $\psi_n(\tilde{x})$ can be obtained from inspecting $<x|n>$:
 %todo arreglar el desastre de abajo
-\begin{subequations}
-  \begin{alignat}{4}
-    <x|1> &= <x|\hat{a}^{\dagger}|0> &&=
+  \begin{alignat}{2}
+    <x|1> &= <x|\hat{a}^{\dagger}|0> =
     \sqrt{\frac{m\omega}{2\hbar}}
-    <x|\hat{x}-\frac{i\hat{p}}{m\omega}|0> &&&=
+    <x|\hat{x}-\frac{i\hat{p}}{m\omega}|0> =
     \sqrt{\frac{m\omega}{2\hbar}}\bigl(x -
     \frac{\hbar}{m\omega}\frac{d}{dx}\bigr) \psi_0(x)
     \nonumber \\
-    <x|2> &= <x|\frac{(\hat{a})^2}{\sqrt{2}}|0> &&=
+    <x|2> &= <x|\frac{(\hat{a})^2}{\sqrt{2}}|0> =
     \frac{1}{\sqrt{2}}\bigl(\sqrt{{m\omega}{2\hbar}}\bigr)^2\bigl(x
-      - \frac{\hbar}{m\omega}\bigr)^2 \psi_0(x) &&&{}\nonumber \\
+      - \frac{\hbar}{m\omega}\bigr)^2 \psi_0(x) \nonumber \\
       \vdots\nonumber \\
       <x|n> &= 
-      <x|\frac{(\hat{a})^n}{\sqrt{n!}}|0> &&=
+      <x|\frac{(\hat{a})^n}{\sqrt{n!}}|0> =
       \frac{1}{\sqrt{n!2^n}}
       \frac{1}{\bigl(\frac{\hbar}{m\omega}\bigr)^n}
-      (x - \frac{\hbar}{m\omega}\frac{d}{dx})^n \psi_0(x)
-      &&&{}
+      \Bigl(x - \frac{\hbar}{m\omega}\frac{d}{dx}\Bigr)^n \psi_0(x)
      \label{equ:2.94}
   \end{alignat}
-\end{subequations}
 The latter can be rewritten in terms of $\tilde{x}$ as
 \begin{equation}
   \psi_0(\tilde{x}) =
   \frac{1}{\sqrt{n!2^n}}
   \frac{1}{\bigl(\frac{\hbar}{m\omega}\bigr)^n}
-  \bigl(
+  \biggl(
   \sqrt{\frac{\hbar}{m\omega}\tilde{x}-\frac{\hbar}{m\omega}}
-  \bigr)^n \psi_0(\tilde{x})
+  \biggr)^n \psi_0(\tilde{x})
   \label{equ:2.95}
 \end{equation}
 that is,
@@ -1085,7 +1082,7 @@ Therefore, (\ref{equ:2.96}) can be rewritten as
   \Bigl(
     \frac{\hbar \pi}{m\omega}
     \Bigr)^{-1/4}
-    \exp(-\frac{1}{2}\tilde{x}^2)
+    \exp\Bigl(-\frac{1}{2}\tilde{x}^2\Bigr)
     H_n(\tilde{x})
   \label{equ:2.98}
 \end{equation}
@@ -1155,7 +1152,7 @@ these states evolve in time. In section (2.1),
 we learned that stationary states, such as $|n>$ evolve
 trivially as
 \begin{equation}
-  |n,t> = \exp(-\frac{i}{\hbar}\hat{H}t) |n> = \exp(-i\omega
+  |n,t> = \exp\Bigl(-\frac{i}{\hbar}\hat{H}t\Bigr) |n> = \exp(-i\omega
   (n+1/2)t)|n>
   \label{equ:2.103}
 \end{equation}
@@ -1224,3 +1221,186 @@ creating and annihilating particles. This interpretation
 finds an appropiate environment particularly in quantum
 field theories, where such processes
 % ends pp21
+occur naturally. It is important to mention though that, as
+long as one considers the non-relativistic Schrödinger wave
+equation with a Mermitian potential $\hat{V} =
+\hat{V}^{\dagger}$, we shall be interested only in elastic
+processes, where the number of particles do not change.
+\subsubsection{Coherent states}
+We would like to identify non-stationary states of the
+harmonic oscillator that behave as much as possible like
+classical systems. Schrödinger identified this kind of
+states in 1926, searching for solutions of his wave equation
+compatible with the correspondence principle (i.e., that in
+a limit behave as classical systems). One condition on these
+states is then that they do not lose their structure as they
+evolve in time, i.e., that their dispersion keeps a minimal
+value. A clear example of such a state is the ground state
+$|0>$, which in the position space is given by the Gaussian
+profile (\ref{equ:2.91})
+$$
+ \psi_0 (\tilde{x}) = A_0 \exp(-\frac{1}{2}\tilde{x}^2)
+$$
+Note that, according to (\ref{equ:2.102}), this state has
+minimal uncertainty
+$$
+<(\Delta \hat{x}^2)><(\Delta \hat{p})^2> = \frac{\hbar^2}{4}
+$$
+For these reasons, coherent states are frequently called
+Gaussian states, minimal uncertainty states, and also
+canonical coherent states, as there are many other types of
+coherent states.
+It is possible to show that these canonical coherent states
+can be defined as the eigenstates of the annihilation
+operator $\hat{a}$
+\begin{equation}
+  \hat{a}|\alpha> = \alpha|\alpha>, \alpha \in \mathbb{C}
+  \label{equ:2.106}
+\end{equation}
+The explicit expression of $|\alpha>$ can be found from
+comparing
+
+\begin{subequations}
+  \begin{alignat}{4}
+    <n|a|\alpha> &= (<n|a)|\alpha> &&=
+    \sqrt{n+1}<n+1|\alpha>, \label{equ:2.107a}\\
+    \text{and} <n|a|\alpha> &= <n|(a|\alpha>) &&= \alpha
+    <n|\alpha>, \label{equ:2.107b}
+  \end{alignat}
+\end{subequations}
+where (\ref{equ:2.82b}) has been used. Recalling the form of
+$|\alpha>$ (\ref{equ:2.105}), we then find that
+\begin{equation}
+  c_{n+1} = \frac{\alpha}{\sqrt{n+1}}c_n
+  \label{equ:2.108}
+\end{equation}
+where, furthermore, from (\ref{equ:2.80}),
+\begin{equation}
+  c_n \equiv <n|\alpha> =
+  <0|\frac{(\hat{a})^n}{\sqrt{n!}}|\alpha> =
+  \frac{\alpha^n}{\sqrt{n!}} <0|\alpha> =
+  \frac{\alpha^n}{\sqrt{n!}}c_0
+  \label{equ:2.109}
+\end{equation}
+It then follows that
+\begin{equation}
+  |\alpha> = \sum_n c_n |n> = \sum_n
+  \frac{\alpha^n}{\sqrt{n!}}c_0
+  \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} |0> = c_0
+  \exp(\alpha \hat{a}^{\dagger}) |0>
+  \label{equ:2.110}
+\end{equation}
+(Notice that (\ref{equ:2.108}) is just a consistency check
+of (\ref{equ:2.109}).) The constant $c_0$ can be found by
+normalizing the state as follows
+  \begin{alignat}{2}
+    1 = <\alpha|\alpha> &= |c_0|^2
+    <0|\exp(\alpha^*\hat{a})\exp(\alpha\hat{a}^{\dagger})|0>
+    \nonumber\\
+    &= |c_0|^2 <0|
+    \Bigl(
+      1+\alpha^*\hat{a} + \frac{\alpha*\hat{a}^2}{2} +
+      \ldots
+    \Bigr)
+    \Bigl(
+    1+\alpha^*\hat{a}^{\dagger} + \frac{\alpha*(\hat{a}^{\dagger})^2}{2} +
+      \ldots
+    \Bigr)|0>\nonumber\\
+    &=
+    |c_0|^2<0|
+    \Bigl(
+      1+|\alpha|^2\hat{a}\hat{a}^{\dagger} +
+      \frac{(|\alpha|^2)^2}{2}\hat{a}^2(\hat{a}^{\dagger})^2
+      + \ldots
+    \Bigr)|0>\nonumber\\
+    &=|c_0|^2
+    \Bigl(
+    1+|\alpha|^2 + \frac{1}{2}(|\alpha|^2)^2 + \ldots
+    \Bigr) = |c_0|^2 \exp(|\alpha|^2) \label{equ:2.111}
+  \end{alignat}
+where in the third row we used that
+$<0|\hat{a}^n(\hat{a}^{\dagger})^m|0> = 0$ for $n \neq m$, and
+in the fourth row that $(\hat{a}\hat{a}^{\dagger})^n = (1+
+\hat{a}^{\dagger}\hat{a})^n$ and
+$<0|\hat{a}^{\dagger}\hat{a}|0> = 0$. Thus,
+eq.~(\ref{equ:110})  becomes
+\begin{equation}
+  |\alpha> = \exp(-|\alpha|^2/2)
+  \exp(\alpha\hat{a}^{\dagger})|0>
+  \label{equ:2.112}
+\end{equation}
+We may also viwe the coherent states as the ground state of
+a new set of annihilation and creation operators defined as
+\begin{equation}
+  \hat{b} = \hat{a} - \alpha \quad \text{and}\quad
+  \hat{b}^{\dagger} = \hat{a}^{\dagger} - \alpha^*
+  \label{equ:2.113}
+\end{equation}
+which implies
+\begin{equation}
+  \hat{b}|\alpha> = 0
+  \label{equ:2.114}
+\end{equation}
+
+We further observe that in configuration space, the coherent
+states are just given by a shifted harmonic-oscillator
+ground state
+\begin{equation}
+  \psi_{\alpha}(x) =
+  \Bigl(\frac{m\omega}{\pi\hbar}\Bigr)^{1/4}
+  \exp\Bigl(-\frac{m\omega}{2\hbar}(x-x_0)^2\Bigr)
+  \label{equ:2.115}
+\end{equation}
+because
+  \begin{alignat}{2}
+    <x|\hat{a}|\alpha> &= \int dx' \, <x|
+    \sqrt{\frac{m\omega}{2\hbar}} \Bigl(
+    \hat{x} + \frac{i\hat{p}}{m\omega}
+    \Bigr)|x'> <x'|\alpha>\nonumber\\
+    &=
+    \sqrt{\frac{m\omega}{2\hbar}}
+    \Bigl(
+      x + \frac{\hbar}{m\omega}\frac{d}{dx}
+    \Bigr)
+    \psi_{alpha}(x)\nonumber\\
+    &=
+    \sqrt{\frac{m\omega}{2\hbar}}
+    \Bigl(
+      x-(x-x_0)
+      \Bigr)\psi_{\alpha}(x)\nonumber\\
+      &=
+      x_0
+      \sqrt{\frac{m\omega}{2\hbar}} \psi_{\alpha}(x)
+      \label{equ:2.116}
+  \end{alignat}
+while, on the left-hand side we also have
+\begin{equation}
+  <x|\hat{a}|\alpha> = \alpha<x|\alpha> =
+  \alpha\psi_{\alpha}(x)
+  \label{equ:2.117}
+\end{equation}
+yielding
+\begin{equation}
+  x_0 = \alpha \sqrt{\frac{2\hbar}{m\omega}}
+  \label{equ:2.118}
+\end{equation}
+It is left as an exercise tot he curious reader the explicit
+computation of $<x|\alpha>$, which may be quite illustrative
+of the kind of computations one frequently finds in
+Heisenberg's formalism.
+Notice now that, as expected, the average value of $\hat{x}$
+in $\alpha>$ is shifted:
+  \begin{alignat}{2}
+    <\alpha|\hat{x}|\alpha> &= 
+    \sqrt{\frac{\hbar}{2m\omega}}
+    <\alpha|\hat{a}+\hat{a}^{\dagger}|\alpha> \nonumber\\
+    &=
+    \sqrt{\frac{\hbar}{2m\omega}}
+    (\alpha + \alpha^*) = 
+    \sqrt{\frac{\hbar}{2m\omega}} 2 \Re \alpha \nonumber\\
+    &=
+    \sqrt{\frac{\hbar}{2m\omega}}
+    2x_0 \sqrt{\frac{m\omega}{2\hbar}} = x_0,
+    \label{equ:2.119}
+  \end{alignat}
+where we have used (\ref{equ:2.118})
