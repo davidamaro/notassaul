@@ -1404,3 +1404,113 @@ in $\alpha>$ is shifted:
     \label{equ:2.119}
   \end{alignat}
 where we have used (\ref{equ:2.118})
+% pp 26
+\subsubsection{Harmonic oscillator in configuration space}
+In the configuration space, the stationary Schrödinger wave
+eq. is given by (\ref{equ:2.42}):
+$$
+E\psi(x) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} +
+\frac{1}{2}m\omega^2 x^2 \psi
+$$
+Choosing, as before, the dimensionless coordinate
+\begin{equation}
+  \tilde{x} = \sqrt{\frac{m\omega}{\hbar}} x,
+  \label{equ:2.120}
+\end{equation}
+one obtains
+$$
+-\frac{\hbar^2}{2m} \frac{m\omega}{\hbar} \frac{d^2 \psi}{d
+\tilde{x}^2} + \frac{1}{2} m \omega^2 \frac{\hbar}{m\omega}
+\tilde{x}^2 \psi = E\psi
+$$
+which implifies to
+\begin{equation}
+  \psi'' (\tilde{x}) - \tilde{x}^2 \psi(\tilde{x}) = -
+  \frac{2E}{\hbar\omega} \psi(\tilde{x})
+  \label{equ:2.121}
+\end{equation}
+Motivated by the fact that the homogeneous analog of
+(\ref{equ:2.121}) has the solution $\psi_{\text{homog}} =
+\exp\Bigl(-\frac{1}{2}\tilde{x}^2\Bigr)$, we propose the
+ansatz
+\begin{equation}
+  \psi(\tilde{x}) = A \exp(-\frac{1}{2}\tilde{x}^2)
+  u(\tilde{x})
+  \label{equ:122}
+\end{equation}
+Inserting (\ref{equ:2.122}) in (\ref{equ:2.121}), we find
+\begin{equation}
+  A \exp\Bigr(-\frac{1}{2}\tilde{x}^2\Bigl) \Bigl(
+  u'' - 2\tilde{x}u'-u+\tilde{x}u-\tilde{x}u +
+  \frac{2E}{\hbar\omega}u
+  \Bigr) = 0,
+  \label{equ:2.123}
+\end{equation}
+wich can be rewritten simply as
+\begin{equation}
+  u'' - 2\tilde{x}u' + (\lambda -1)u = 0 \quad \text{with}
+  \quad \lambda = \frac{2E}{\hbar\omega}
+  \label{equ:2.124}
+\end{equation}
+A very similar differential equation was found by Hermite:
+\begin{equation}
+  u'' - 2\tilde{x}u' + 2nu = 0,
+  \label{equ:2.125}
+\end{equation}
+who also demonstrated that $n \in \mathbb{Z}$ for
+(\ref{equ:2.125}) to have solutions\footnote{See \S 13 of
+Arfken, Math. Meth. for Physicists. 1985; app A2 of De la
+Peña, Introducción a la Mecánica Cuántica}.
+This implies that
+\begin{equation}
+  \lambda_n - 1 = 2n \Leftrightarrow
+  \frac{2E_n}{\hbar\omega} = 2n+1,\quad n \in \mathbb{Z}
+  \label{equ:2.125}
+\end{equation}
+which coincides with the result we obtained before in terms
+of the number operator. The solution of (\ref{equ:2.125})
+correspond to the Hermite polynomials, given by
+(\ref{equ:2.97}) or equivalently by
+\begin{equation}
+  u(\tilde{x}) = H_n(\tilde{x}) = (-1)^n \exp(\tilde{x}^2)
+  \frac{d^n}{d\tilde{x}^n} \exp(-\tilde{x}^2), \qquad n \in
+  \mathbb{Z}
+  \label{equ:2.126}
+\end{equation}
+From our ansatsz (\ref{equ:2.122}), we obtain
+\begin{equation}
+  \psi_n(\tilde{x}) = A_n
+  \exp(-\frac{1}{2}\tilde{x}^2)H_n(\tilde{x})
+  \label{equ:2.127}
+\end{equation}
+The normalization constants $A_n$ can be computed by
+applying the orthogonality relation of Hermite polynomials
+\begin{equation}
+  \int_{-\infty}^{\infty} d\tilde{x} \,
+  \exp(-\tilde{x}^2) H_n(\tilde{x}) H_m(\tilde{x}) = 2^n n!
+  \sqrt{\pi} \delta_{n,m},
+  \label{equ:2.128}
+\end{equation}
+as follows
+$$
+1 = \int_{-\infty}^{\infty} \psi_n^*(x) \psi_{n'} (x) =
+\sqrt{\frac{\hbar}{m\omega}} \int_{-\infty}^{\infty}
+d\tilde{x} \, |A_n|^2 \exp(-\tilde{x}^2) H_n^2(\tilde{x}) =
+|A_n|^2 \sqrt{\frac{\hbar}{m\omega}} 2^n n! \sqrt{n}
+$$
+Thus, we have
+\begin{equation}
+  A_n = \Bigl(\sqrt{\frac{\hbar \pi}{m\omega}}2^n n!\Bigr)^{-1/2}
+  \label{equ:2.129}
+\end{equation}
+up to an unphysical phase\footnote{In QM, a physical state
+is not represented by a specific normalized vector on Hilber
+space, but by a ray, i.e., a class of all vectors differeing
+only a phase factors. So, these phases are not measurable
+and thus unphysical.}. Note that eqs. (\ref{equ:2.129}) and
+(\ref{equ:2.127}) yield our previous result,
+(\ref{equ:2.96}).
+Besided the contact of this formalism with some common
+mathematical tool, it is hard to identify a reason to prefer
+this method before Heisenberg's method with Dirac's ladder
+operators.
