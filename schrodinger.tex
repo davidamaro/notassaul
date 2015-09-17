@@ -3,40 +3,40 @@
 In qm time is a parameter and not an observable/operator.
 $H$ labels a state given at a time. This implies that we may
 envirage that, if a physical system is represented by
-$|\alpha>$ at the time $t_0$, at a later time, the state may
+$\vert \alpha\rangle $ at the time $t_0$, at a later time, the state may
 differ. The new ``evolved" state from $t_0$ to $t$ can be
 denoted by
 $$
-|\alpha,t_0;t>, \quad t \geq t_0
+\vert \alpha,t_0;t\rangle , \quad t \geq t_0
 $$
 such that
 $$
-|\alpha,t_0;t_0> = |\alpha>
+\vert \alpha,t_0;t_0\rangle  = \vert \alpha\rangle 
 $$
-The transition from $|\alpha>$ to $|\alpha,t_0;t>$ is given
+The transition from $\vert \alpha\rangle $ to $\vert \alpha,t_0;t\rangle $ is given
 by the so-called time-evolution operator $\hat{U}(t,t_0)$,
 such that
 \begin{equation}
-  |\alpha,t_0;t> = \hat{U}(t,t_0) |\alpha>
+  \vert \alpha,t_0;t\rangle  = \hat{U}(t,t_0) \vert \alpha\rangle 
   \label{equ:2.1}
 \end{equation}
 The time-evolution operator has the following properties:
 \begin{itemize}
-  \item Unitarity. Suppose that at $t_0$ $|\alpha>$ is
-    expanded in terms of the (orthonormal) eigenstates $|a>$
+  \item Unitarity. Suppose that at $t_0$ $\vert \alpha\rangle $ is
+    expanded in terms of the (orthonormal) eigenstates $\vert a\rangle $
     of some observable $A$
     \begin{equation}
-      |\alpha> = \sum_a |a><a|\alpha,t_0;t> = \sum_a
-      c_a(t_0)|a>
+      \vert \alpha\rangle  = \sum_a \vert a\rangle \langle a\vert \alpha,t_0;t\rangle  = \sum_a
+      c_a(t_0)\vert a\rangle 
       \label{equ:2.2}
     \end{equation}
-    Thus, at a later time $t > t_0$ we have
+    Thus, at a later time $t \rangle  t_0$ we have
     \begin{equation}
-      |\alpha,t_0;t> = \sum_a c_a(t) |a>
+      \vert \alpha,t_0;t\rangle  = \sum_a c_a(t) \vert a\rangle 
       \label{equ:2.3}
     \end{equation}
-    where $c_a(t)$ is the prob. amp. of finding $|\alpha>$
-    at $|a>$.
+    where $c_a(t)$ is the prob. amp. of finding $\vert \alpha\rangle $
+    at $\vert a\rangle $.
     Although we expect that in general for any particular
     $a$, the prob. amplitudes differ,
     $$-
@@ -45,23 +45,23 @@ The time-evolution operator has the following properties:
     the sum of all probabilies must be unity at all times,
     i.e.,
     \begin{equation}
-      \sum_a |c_a(t)|^2 = \sum_a |c_a(t_0)|^2 = 1
+      \sum_a \vert c_a(t)\vert ^2 = \sum_a \vert c_a(t_0)\vert ^2 = 1
       \label{equ:2.4}
     \end{equation}
-    (as long as the states $|\alpha>$ and $|a>$ are
+    (as long as the states $\vert \alpha\rangle $ and $\vert a\rangle $ are
     "correctly" normalized).
     This implies that
     \begin{equation}
-      <\alpha|\alpha> = \sum_{a'} \sum_a c_{a'}^*(t_0)
-      <a'|a>  c_a(t_0) = \sum_a |c_a(t_0)|^2 = 1
+      \langle \alpha\vert \alpha\rangle  = \sum_{a'} \sum_a c_{a'}^*(t_0)
+      \langle a'\vert a\rangle   c_a(t_0) = \sum_a \vert c_a(t_0)\vert ^2 = 1
       \label{equ:2.5}
     \end{equation}
     and consequently
     \begin{equation}
-      <\alpha,t_0;t|\alpha,t_0;t> = \sum_a |c_a(t)|^2 = 1
+      \langle \alpha,t_0;t\vert \alpha,t_0;t\rangle  = \sum_a \vert c_a(t)\vert ^2 = 1
       \label{equ:2.6}
     \end{equation}
-    That is, the state $|\alpha>$ remain normalized at all
+    That is, the state $\vert \alpha\rangle $ remain normalized at all
     times. For terms of \ref{equ:2.1}, this is satisfied as
     long as
     \begin{equation}
@@ -71,13 +71,13 @@ The time-evolution operator has the following properties:
   \item Time composition:
     \begin{equation}
       \hat{U}(t_2,t_0) = \hat{U}(t_2,t_1) \hat{U}(t_1,t_0)
-      \qquad t_0 < t_1 < t_2
+      \qquad t_0 \langle  t_1 \langle  t_2
       \label{equ:2.8}
     \end{equation}
   \item Infinitesimal form. We can also propose an
     infinitesimal form for $\hat{U}(t,t_0)$, such that
     \begin{equation}
-      |\alpha,t_0;t_0 + dt> = \hat{U}(t_0+dt,t_0) |\alpha>,
+      \vert \alpha,t_0;t_0 + dt\rangle  = \hat{U}(t_0+dt,t_0) \vert \alpha\rangle ,
       \qquad \lim_{dt \to 0} \hat{U}(t_0+dt,t_0) = 1
       \label{equ:2.9}
     \end{equation}
@@ -149,16 +149,16 @@ that can be written in the differential form
 This is the Schrödinger equation for the time-evolution
 operator and is the most fundamental equation of quantum
 mechanics.
-Multiplying (\ref{equ:2.15}) by the ket $|\alpha> =
+Multiplying (\ref{equ:2.15}) by the ket $\vert \alpha\rangle  =
 %todo no entiendo que es lo que dice el antes del we find
-|\alpha,t_0;t_1>$, we find
+\vert \alpha,t_0;t_1\rangle $, we find
 $$
-i\hbar \frac{\partial}{\partial t} \hat{U}(t,t,0) |\alpha> =
-\hat{H}\hat{U}(t,t_0) |\alpha>
+i\hbar \frac{\partial}{\partial t} \hat{U}(t,t,0) \vert \alpha\rangle  =
+\hat{H}\hat{U}(t,t_0) \vert \alpha\rangle 
 $$
 \begin{equation}
-  i\hbar \frac{\partial}{\partial t} |\alpha,t_0;t> =
-  \hat{H}|\alpha,t_0;t>
+  i\hbar \frac{\partial}{\partial t} \vert \alpha,t_0;t\rangle  =
+  \hat{H}\vert \alpha,t_0;t\rangle 
   \label{equ:2.16}
 \end{equation}
 which is the Schrödinger eq. for a state.
@@ -195,7 +195,7 @@ To solve (\ref{equ:2.15}) when $[\hat{H}(t_1), \hat{H}(t_2)]
 \neq 0$, we first point out that this differential equation
 can be restated as
 $$
-\hat{U}(t,t_0) \bigg|_{t=t_0}^t = 
+\hat{U}(t,t_0) \bigg\vert _{t=t_0}^t = 
 -\frac{i}{\hbar} \int_{t_0}^t dt' \,
 \hat{H}(t')\hat{U}(t',t_0)
 $$
@@ -232,53 +232,53 @@ well-known as the Dyson series.
 \subsection{Time evolution of stationary energy eigenstates}
 Let us suppose that the Hamiltonian is time-independent. We
 would like to figure out the evolution of an arbitrary state
-$|\alpha>$. This is particularly simple if we expand
-$|\alpha>$ in the basis of eigenstates $|a>$ of an operator
+$\vert \alpha\rangle $. This is particularly simple if we expand
+$\vert \alpha\rangle $ in the basis of eigenstates $\vert a\rangle $ of an operator
 $\hat{A}$, such that
 \begin{equation}
   [\hat{A}, \hat{H}] = 0
   \label{equ:2.21}
 \end{equation}
-i.e., compatible with $\hat{H}$. It follows that $\{|a>\}$
+i.e., compatible with $\hat{H}$. It follows that $\{\vert a\rangle \}$
 are energy eigenstates too, whose energy eigenvalues are
 \begin{equation}
-  \hat{H} |a> = E_a |a>
+  \hat{H} \vert a\rangle  = E_a \vert a\rangle 
   \label{equ:2.22}
 \end{equation}
 
-Expanding the time-evolution operator in the states $|a>$,
+Expanding the time-evolution operator in the states $\vert a\rangle $,
 we find
 %% todo areglar el alig para la numeración
 \begin{align}
   \hat{U}(t, 0) = \exp\Big(-\frac{i}{\hbar} \hat{H}t\Big) &= 
-  \sum_{a'} |a'><a'| \exp(-i \hat{H} t / \hbar) \sum_a
-  |a><a|\nonumber\\
+  \sum_{a'} \vert a'\rangle \langle a'\vert  \exp(-i \hat{H} t / \hbar) \sum_a
+  \vert a\rangle \langle a\vert \nonumber\\
   &=
-  \sum_{a,a'} |a'><a| <a'|\exp(-i\hat{H}t/\hbar)
-  |a>\nonumber\\
+  \sum_{a,a'} \vert a'\rangle \langle a\vert  \langle a'\vert \exp(-i\hat{H}t/\hbar)
+  \vert a\rangle \nonumber\\
   % todo insertar braces
   &=
-  \sum_a \exp(-i E_a t /\hbar) |a><a|
+  \sum_a \exp(-i E_a t /\hbar) \vert a\rangle \langle a\vert 
   \label{equ:2.23}
 \end{align}
-Now expanding $|\alpha>$ in the basis of energy eigenstates,
+Now expanding $\vert \alpha\rangle $ in the basis of energy eigenstates,
 we see that
 \begin{align*}
-|\alpha> &= \sum_a <a|\alpha> |a> = \sum_a c_a(t=0) |a>
+\vert \alpha\rangle  &= \sum_a \langle a\vert \alpha\rangle  \vert a\rangle  = \sum_a c_a(t=0) \vert a\rangle 
   \nonumber\\
-  \Rightarrow |\alpha;t> &= U(t,0) |\alpha> = \sum_{a'}
-  \exp\Big(-i E_{a'}t/\hbar\Big) |a'><a'|a> c_a(t=0)
+  \Rightarrow \vert \alpha;t\rangle  &= U(t,0) \vert \alpha\rangle  = \sum_{a'}
+  \exp\Big(-i E_{a'}t/\hbar\Big) \vert a'\rangle \langle a'\vert a\rangle  c_a(t=0)
   \nonumber\\
   &=
-  \sum_a c_a(t= 0) \exp(-iE_a t/\hbar) |a>\\
-  &\equiv \sum_a c_a(t) |a> \label{equ:2.24}
+  \sum_a c_a(t= 0) \exp(-iE_a t/\hbar) \vert a\rangle \\
+  &\equiv \sum_a c_a(t) \vert a\rangle  \label{equ:2.24}
 \end{align*}
 where we realize the time evolution of the expansion
 coefficients.
 
-Notice that for $|\alpha> = |a>$, we find that
+Notice that for $\vert \alpha\rangle  = \vert a\rangle $, we find that
 \begin{equation}
-  |a;t> = \exp(-i E_a t/\hbar) |a>
+  \vert a;t\rangle  = \exp(-i E_a t/\hbar) \vert a\rangle 
   \label{equ:2.25}
 \end{equation}
 so that any simultaneous eigenstate of $H$ and $A$ remains
@@ -287,90 +287,90 @@ so at all time.
 We are interested in the expectation value of an observable
 $B$ in the state
 $$
-  |a;t> = \hat{U}(t,0) |a>
+  \vert a;t\rangle  = \hat{U}(t,0) \vert a\rangle 
 $$
 as given in (\ref{equ:2.26}). The expectation value is
 computed as
 $$
-<\hat{B}> = <a|\hat{U}^{\dagger}(t,0) \hat{B} \hat{U}(t,0) |a>
+\langle \hat{B}\rangle  = \langle a\vert \hat{U}^{\dagger}(t,0) \hat{B} \hat{U}(t,0) \vert a\rangle 
 = 
-<a|\exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) |a>
+\langle a\vert \exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) \vert a\rangle 
 $$
 
 Since $U(t,0)$ is a numeric phase, the result is
 \begin{equation}
-  <\hat{B}> = <a;t|\hat{B}|a;t> = <a|\hat{B}|a>
+  \langle \hat{B}\rangle  = \langle a;t\vert \hat{B}\vert a;t\rangle  = \langle a\vert \hat{B}\vert a\rangle 
   \label{equ:2.26}
 \end{equation}
-i.e., expectation values do not change in time for $|\alpha>
-= |a>$. This is why these states are called stationary.
+i.e., expectation values do not change in time for $\vert \alpha\rangle 
+= \vert a\rangle $. This is why these states are called stationary.
 
-The nonstationary states $|\alpha> = \sum_a c_a(0) |a>$ are
+The nonstationary states $\vert \alpha\rangle  = \sum_a c_a(0) \vert a\rangle $ are
 different. In this case, we have
 \begin{align*}
-  <\hat{B}> &= <\alpha;t|\hat{B}|\alpha;t> =
-  <\alpha|\hat{U}^{\dagger}(t,0)
-  \hat{B}\hat{U}(t,0)|\alpha>\\
+  \langle \hat{B}\rangle  &= \langle \alpha;t\vert \hat{B}\vert \alpha;t\rangle  =
+  \langle \alpha\vert \hat{U}^{\dagger}(t,0)
+  \hat{B}\hat{U}(t,0)\vert \alpha\rangle \\
   &=
-  \sum_a \sum_{a'} <a|c^*_a(0) \exp(i E_a t/\hbar)
-  \hat{B}c_{a'}(0)\exp(-i E_{a'} t/\hbar)|a'>\\
+  \sum_a \sum_{a'} \langle a\vert c^*_a(0) \exp(i E_a t/\hbar)
+  \hat{B}c_{a'}(0)\exp(-i E_{a'} t/\hbar)\vert a'\rangle \\
   &=
   \sum_a \sum_{a'} c_a^*(0) c_{a'}(0) \exp(-i (E_{a'}-E_a)t/
-  \hbar) <a|\hat{B}|a'>\\
+  \hbar) \langle a\vert \hat{B}\vert a'\rangle \\
   &=
   \sum_a \sum_{a'} c_a^*(0) c_{a'}(0) \exp(-i \omega_{a' a}t)
-  <a|\hat{B}|a'>
+  \langle a\vert \hat{B}\vert a'\rangle 
   % eq 2.27
 \end{align*}
 where the Bohr's frequency $w_{a'a} =
 \frac{1}{\hbar}(E_{a'}-E_a)$ is the oscillation frequency of
-the expectation value, and $<a|\hat{B}|a'>$ denote the
+the expectation value, and $\langle a\vert \hat{B}\vert a'\rangle $ denote the
 matrix elements of the observable $B$ in the basis of $A$.
 
 \subsection{Schrödinger's wave equation}
 \subsubsection{Schrödinger's equation in space
 representation}
-Let us define the position states $|\vec{x}>$ as the
+Let us define the position states $\vert \vec{x}\rangle $ as the
 eigenstates of the position operator $\hat{\vec{x}}$, such
 that
 \begin{equation}
-  \hat{\vec{x}} |\vec{x}'> = \vec{x}'|\vec{x}'>
+  \hat{\vec{x}} \vert \vec{x}'\rangle  = \vec{x}'\vert \vec{x}'\rangle 
   \label{equ:2.28}
 \end{equation}
 Thier orthonormality is given by
 \begin{equation}
-  <\vec{x}|\vec{x}'> = \delta^3(\vec{x}-\vec{x}')
+  \langle \vec{x}\vert \vec{x}'\rangle  = \delta^3(\vec{x}-\vec{x}')
   \label{equ:2.29}
   % todo al parecer de nuevo hay un desfase
 \end{equation}
 Expanded in these terms, an arbitrary physical state
-$|\alpha>$ is given by
+$\vert \alpha\rangle $ is given by
 $$
-  |\alpha> = \int d^3 x \, |\vec{x}><\vec{x}|\alpha> \equiv
-  \int d^3 \, \psi_{\alpha}(\vec{x}) |\vec{x}>
+  \vert \alpha\rangle  = \int d^3 x \, \vert \vec{x}\rangle \langle \vec{x}\vert \alpha\rangle  \equiv
+  \int d^3 \, \psi_{\alpha}(\vec{x}) \vert \vec{x}\rangle 
 $$
 where $\psi_{\alpha}(\vec{x})$ is usually called the wave
-function of the state $|\alpha>$ in the representation of
+function of the state $\vert \alpha\rangle $ in the representation of
 positions. Note that the interpretation of
 $\psi_{\alpha}(\vec{x})$ is analogous to that of the
-expansion coefficient $c_a = <a|\alpha>$ of our previous
+expansion coefficient $c_a = \langle a\vert \alpha\rangle $ of our previous
 discussion, i.e., probability amplitud, such that
-$|\psi_{\alpha}(\vec{x})|^2\, d^3x$ is the probability of
+$\vert \psi_{\alpha}(\vec{x})\vert ^2\, d^3x$ is the probability of
 finding in a narrow region $d^3 x$ around $\vec{x}$.
 
 One may be interested in finding the element
-$<\beta|\hat{A}|\alpha>$ for some states $|\alpha>$,
-$|\beta>$, in the position basis
+$\langle \beta\vert \hat{A}\vert \alpha\rangle $ for some states $\vert \alpha\rangle $,
+$\vert \beta\rangle $, in the position basis
 \begin{align}
-  <\beta|\hat{A}|\alpha> &= \int d^3 x\, \int d^3 x'\,
-  <\beta|\vec{x}><\vec{x}|\hat{A}|\vec{x}'><\vec{x}'|\alpha>\nonumber\\
+  \langle \beta\vert \hat{A}\vert \alpha\rangle  &= \int d^3 x\, \int d^3 x'\,
+  \langle \beta\vert \vec{x}\rangle \langle \vec{x}\vert \hat{A}\vert \vec{x}'\rangle \langle \vec{x}'\vert \alpha\rangle \nonumber\\
   &=\int d^3 x\, \int d^3 x'\,
-  \psi_{\beta}^* <\vec{x}|\hat{A}|\vec{x}'>
+  \psi_{\beta}^* \langle \vec{x}\vert \hat{A}\vert \vec{x}'\rangle 
   \psi_{\alpha}(\vec{x}')
   \label{equ:2.30}
 \end{align}
 which depends on the matrix element
-$<\vec{x}|\hat{A}|\vec{x}'>$ of $\hat{A}$. This expression
+$\langle \vec{x}\vert \hat{A}\vert \vec{x}'\rangle $ of $\hat{A}$. This expression
 is greatly simplified if $\vec{A}$ is a polynomial of the
 operator $\vec{x}$, for example, $\hat{A}$ can take the
 form\footnote{As we shall see, this form corresponds to the
@@ -383,11 +383,11 @@ in one dimension
 In this case, the matrix element in (\ref{equ:2.30}) looks
 like
 \begin{align*}
-  <\vec{x}|\hat{A}|\vec{x}'> &\mapsto <x|\hat{A}|x'> =
-  \frac{1}{2} m \omega^2 <x|(\hat{x}^2|x'>) \\
+  \langle \vec{x}\vert \hat{A}\vert \vec{x}'\rangle  &\mapsto \langle x\vert \hat{A}\vert x'\rangle  =
+  \frac{1}{2} m \omega^2 \langle x\vert (\hat{x}^2\vert x'\rangle ) \\
   &=
-  \frac{1}{2}m\omega^2 <x|(|x'>x'^2) = \frac{1}{2}m\omega^2
-  x'^2<x|x'>\\
+  \frac{1}{2}m\omega^2 \langle x\vert (\vert x'\rangle x'^2) = \frac{1}{2}m\omega^2
+  x'^2\langle x\vert x'\rangle \\
   &=
   \frac{1}{2}m\omega^2 x'^2 \delta(x-x')
   %eq 2.32
@@ -396,13 +396,13 @@ where we have used (\ref{equ:2.28}) and (\ref{equ:2.29}) in
 ther 1D versions. This expresion can be generalized for
 $\hat{A} = f(\hat{\vec{x}})$ to
 \begin{equation}
-  <\vec{x}|f(\hat{\vec{x}})|\vec{x}'> f(\vec{x}')\delta^3
+  \langle \vec{x}\vert f(\hat{\vec{x}})\vert \vec{x}'\rangle  f(\vec{x}')\delta^3
   (\vec{x}-\vec{x}')
   \label{equ:2.33}
 \end{equation}
 and thus we obtain in this case
 \begin{equation}
-  <\beta|\hat{A}|\alpha> = \int d^3x \, \psi_{\beta}^*
+  \langle \beta\vert \hat{A}\vert \alpha\rangle  = \int d^3x \, \psi_{\beta}^*
   f(\vec{x}) \psi_{\alpha}(\vec{x})
   \label{equ:2.34}
 \end{equation}
@@ -410,14 +410,14 @@ To arrive at the wave equation proposed by Schrödinger, we
 need further consider the representation of the momentum
 operator $\hat{\vec{p}}$ in the position basis
 \begin{align}
-  <\vec{x}|\hat{\vec{p}}|\alpha> &=
-  \int d^3 x' \, <\vec{x}|\vec{x}'>
-  <\vec{x}'|\hat{\vec{p}}|\alpha> = 
+  \langle \vec{x}\vert \hat{\vec{p}}\vert \alpha\rangle  &=
+  \int d^3 x' \, \langle \vec{x}\vert \vec{x}'\rangle 
+  \langle \vec{x}'\vert \hat{\vec{p}}\vert \alpha\rangle  = 
   \int d^3 x' \, \delta^3(\vec{x}-\vec{x}')
-  \int d^3 x'' \, <\vec{x}'|\hat{\vec{p}}|\vec{x}''>
-  <\vec{x}''|\alpha> \nonumber\\
+  \int d^3 x'' \, \langle \vec{x}'\vert \hat{\vec{p}}\vert \vec{x}''\rangle 
+  \langle \vec{x}''\vert \alpha\rangle  \nonumber\\
   &=
-  \int d^3 x'' \, <\vec{x}|\hat{\vec{p}}|\vec{x}''>
+  \int d^3 x'' \, \langle \vec{x}\vert \hat{\vec{p}}\vert \vec{x}''\rangle 
   \psi_{\alpha}(\vec{x}'')\nonumber\\
   &=
   \int d^3 x'' \delta^3(\vec{x}-\vec{x}') \bigl(-i\hbar
@@ -429,8 +429,8 @@ operator $\hat{\vec{p}}$ in the position basis
 Let us now consider the Schrödinger equaiton,
 (\ref{equ:2.16}),
 $$
-  i\hbar \frac{\partial}{\partial t} |\alpha,t_0;t> =
-  \hat{H}|\alpha,t_0;t>
+  i\hbar \frac{\partial}{\partial t} \vert \alpha,t_0;t\rangle  =
+  \hat{H}\vert \alpha,t_0;t\rangle 
 $$
 in the position representation, with a Hamiltonian operator
 given by
@@ -440,29 +440,29 @@ given by
   \label{equ:2.36}
 \end{equation}
 where $\hat{V}(\hat{\vec{x}})$ is a polynomial function of
-$\hat{\vec{x}}$ and, thush, a Hamiltonian operator. From
+$\hat{\vec{x}}$ and, thus, a Hamiltonian operator. From
 (\ref{equ:2.35}), we see that
 \begin{equation}
-  <\vec{x}|\hat{V}(\hat{\vec{x}})|\vec{x}'> =
+  \langle \vec{x}\vert \hat{V}(\hat{\vec{x}})\vert \vec{x}'\rangle  =
   V(\vec{x}'')\delta^3(\vec{x}-\vec{x}')
   \label{equ:2.37}
 \end{equation}
 Multiplying the Schrödinger equation for states
-(\ref{equ:2.16}) by the bra $<\vec{x}|$ we find
+(\ref{equ:2.16}) by the bra $\langle \vec{x}\vert $ we find
 \begin{align}
-  i\hbar \frac{\partial}{\partial t} <\vec{x}|\alpha,t_0;t>
+  i\hbar \frac{\partial}{\partial t} \langle \vec{x}\vert \alpha,t_0;t\rangle 
   &=
-  <\vec{x}|\frac{1}{2m} \hat{\vec{p}}^2 |\alpha,t_0;t> +
-  <\vec{x}|\hat{V}(\hat{\vec{x}})|\alpha,t_0;t>\nonumber\\
+  \langle \vec{x}\vert \frac{1}{2m} \hat{\vec{p}}^2 \vert \alpha,t_0;t\rangle  +
+  \langle \vec{x}\vert \hat{V}(\hat{\vec{x}})\vert \alpha,t_0;t\rangle \nonumber\\
   &=
   \frac{1}{2m}(-i\hbar \vec{\nabla})^2
-  <\vec{x}|\alpha,t_0;t> + V(\vec{x}) <\vec{x}|\alpha,t_0;t>
+  \langle \vec{x}\vert \alpha,t_0;t\rangle  + V(\vec{x}) \langle \vec{x}\vert \alpha,t_0;t\rangle 
   \label{equ:2.38}
 \end{align}
 where we have used (\ref{equ:2.35}) and (\ref{equ:2.34})
-with $<\beta| = <\vec{x}|$. Defining
+with $\langle \beta\vert  = \langle \vec{x}\vert $. Defining
 \begin{equation}
-  \psi_{\alpha} (\vec{x},t) \equiv <\vec{x}|\alpha,t_0;t>,
+  \psi_{\alpha} (\vec{x},t) \equiv \langle \vec{x}\vert \alpha,t_0;t\rangle ,
   \label{equ:2.39}
 \end{equation}
 we obtain the time-dependent Schrödinger's wave equation
@@ -474,19 +474,19 @@ we obtain the time-dependent Schrödinger's wave equation
   V(\vec{x}) \psi_{\alpha}(\vec{x},t)
   \label{equ:2.40}
 \end{equation}
-The stationary wave equation is obtained when $|\alpha> =
-|a>$ is an energy eigenstate and thus stationary. From
+The stationary wave equation is obtained when $\vert \alpha\rangle  =
+\vert a\rangle $ is an energy eigenstate and thus stationary. From
 (\ref{equ:2.25}) we have that
 \begin{align}
-  <\vec{x}|\alpha;t> = <\vec{x}|a;t> = \exp(-i E_a t/\hbar)
-  <\vec{x}|a> = \exp(-i E_{\alpha}t /\hbar)
-  <\vec{x}|\alpha>\nonumber\\
+  \langle \vec{x}\vert \alpha;t\rangle  = \langle \vec{x}\vert a;t\rangle  = \exp(-i E_a t/\hbar)
+  \langle \vec{x}\vert a\rangle  = \exp(-i E_{\alpha}t /\hbar)
+  \langle \vec{x}\vert \alpha\rangle \nonumber\\
   \Leftrightarrow \psi_{\alpha}(\vec{x},t) = \exp(-i
   E_{\alpha} t/\hbar) \psi_{\alpha}(\vec{x})
   \label{equ:2.41}
 \end{align}
 where we have defined $\psi_{\alpha}(\vec{x}) \equiv
-<\vec{x}|\alpha>$ in analogy with (\ref{equ:2.39}).
+\langle \vec{x}\vert \alpha\rangle $ in analogy with (\ref{equ:2.39}).
 It then follows that (\ref{equ:2.40}) becomes
 \begin{equation}
   E_{\alpha} \psi_{\alpha} (\vec{x}) = - \frac{\hbar^2}{2m}
@@ -501,75 +501,75 @@ representation}
 As in the configuration space, we can now define the
 eigenstates of the momentum operator $\hat{\vec{p}}$ as
 \begin{equation}
-  \hat{\vec{p}} |\vec{p}'> = \vec{p}' |\vec{p}'>,
+  \hat{\vec{p}} \vert \vec{p}'\rangle  = \vec{p}' \vert \vec{p}'\rangle ,
   \label{equ:2.43}
 \end{equation}
 satisfying the orthonormality condition
 \begin{equation}
-  <\vec{p}|\vec{p}'> = \delta^3(\vec{p}-\vec{p}')
+  \langle \vec{p}\vert \vec{p}'\rangle  = \delta^3(\vec{p}-\vec{p}')
   \label{equ:2.44}
 \end{equation}
 and the completeness relation
 \begin{equation}
-  1 = \int d^3 p |\vec{p}><\vec{p}|
+  1 = \int d^3 p \vert \vec{p}\rangle \langle \vec{p}\vert 
   \label{equ:2.45}
 \end{equation}
 An arbitrary state in the basis reads
 \begin{equation}
-  |\alpha> = \int d^3\, p |\vec{p}><\vec{p}|\alpha> = \int d^3 |,
-  \phi_{\alpha(\vec{p})}|\vec{p}>
+  \vert \alpha\rangle  = \int d^3\, p \vert \vec{p}\rangle \langle \vec{p}\vert \alpha\rangle  = \int d^3 \vert ,
+  \phi_{\alpha(\vec{p})}\vert \vec{p}\rangle 
   \label{equ:2.46}
 \end{equation}
 where we have defined the momentum-space wave function
 \begin{equation}
-  \phi_{\alpha} (\vec{p}) \equiv <\vec{p}|\alpha>
+  \phi_{\alpha} (\vec{p}) \equiv \langle \vec{p}\vert \alpha\rangle 
   \label{equ:2.47}
 \end{equation}
 normalized as
 \begin{equation}
-  \int d^3p \, |\phi_{\alpha}(\vec{p})|^2 = \int d^3p \,
-  <\alpha|\vec{p}><\vec{p}|\alpha> = <\alpha|\alpha> = 1
+  \int d^3p \, \vert \phi_{\alpha}(\vec{p})\vert ^2 = \int d^3p \,
+  \langle \alpha\vert \vec{p}\rangle \langle \vec{p}\vert \alpha\rangle  = \langle \alpha\vert \alpha\rangle  = 1
   \label{equ:2.48}
 \end{equation}
-if $|\alpha>$ is correctly normalized.
+if $\vert \alpha\rangle $ is correctly normalized.
 The wave function $\phi_{\alpha} (\vec{p})$ is related to
 $\psi_{\alpha}(\vec{x})$ by
 \begin{equation}
-  \phi_{\alpha}(\vec{p}) = <\vec{p}|\alpha> = \int d^3x \,
-  <\vec{p}|\vec{x}><\vec{x}|\alpha> = \int d^3 x\,
-  <\vec{p}|\vec{x}>\psi_{\alpha}(\vec{x})
+  \phi_{\alpha}(\vec{p}) = \langle \vec{p}\vert \alpha\rangle  = \int d^3x \,
+  \langle \vec{p}\vert \vec{x}\rangle \langle \vec{x}\vert \alpha\rangle  = \int d^3 x\,
+  \langle \vec{p}\vert \vec{x}\rangle \psi_{\alpha}(\vec{x})
   \label{equ:2.49}
 \end{equation}
 and conversely
 \begin{equation}
-  \psi_{\alpha}(\vec{x}) = \int d^3 x\, <\vec{x}|\vec{p}>
+  \psi_{\alpha}(\vec{x}) = \int d^3 x\, \langle \vec{x}\vert \vec{p}\rangle 
   \phi_{\alpha}(\vec{p})
   \label{equ:2.50}
 \end{equation}
-where $<\vec{p}|\vec{x}> = <\vec{x}|\vec{p}>^*$ is yet
-unknown. To figure out $<\vec{p}|\vec{x}>$, let us compute
+where $\langle \vec{p}\vert \vec{x}\rangle  = \langle \vec{x}\vert \vec{p}\rangle ^*$ is yet
+unknown. To figure out $\langle \vec{p}\vert \vec{x}\rangle $, let us compute
 \begin{align}
-  <\vec{x}|\hat{\vec{p}}|\vec{p}> &= \int d^3 x' \,
-  <\vec{x}|\hat{\vec{p}}|\vec{x}'>
-  <\vec{x}'|\vec{p}>\nonumber\\
-  &= -i\hbar \vec{\nabla} <\vec{x}|\vec{p}> \label{equ:2.51}
+  \langle \vec{x}\vert \hat{\vec{p}}\vert \vec{p}\rangle  &= \int d^3 x' \,
+  \langle \vec{x}\vert \hat{\vec{p}}\vert \vec{x}'\rangle 
+  \langle \vec{x}'\vert \vec{p}\rangle \nonumber\\
+  &= -i\hbar \vec{\nabla} \langle \vec{x}\vert \vec{p}\rangle  \label{equ:2.51}
 \end{align}
 which, using (\ref{equ:2.43}), implies
 \begin{equation}
-  \vec{p} <\vec{x}|\vec{p}> = -i \hbar
-  \vec{\nabla}<\vec{x}|\vec{p}>
+  \vec{p} \langle \vec{x}\vert \vec{p}\rangle  = -i \hbar
+  \vec{\nabla}\langle \vec{x}\vert \vec{p}\rangle 
   \label{equ:2.52}
 \end{equation}
 whose solution reads
 \begin{equation}
-  <\vec{x}|\vec{p}> = N \exp(i \vec{p} \cdot \vec{x}/\hbar)
+  \langle \vec{x}\vert \vec{p}\rangle  = N \exp(i \vec{p} \cdot \vec{x}/\hbar)
   \label{equ:2.53}
 \end{equation}
 
 The normalization factor can easily be found by computing
 \begin{align}
-  <\vec{x}|\vec{x}'> &= \int d^3 p \, <\vec{x}|\vec{p}>
-  <\vec{p}|\vec{x}'>\nonumber\\
+  \langle \vec{x}\vert \vec{x}'\rangle  &= \int d^3 p \, \langle \vec{x}\vert \vec{p}\rangle 
+  \langle \vec{p}\vert \vec{x}'\rangle \nonumber\\
   &= N^2 \int d^3 p\, \exp\Bigl(-i \vec{p}\cdot
   (\vec{x}-\vec{x}')/\hbar\Bigr) \nonumber\\
   &=
@@ -586,7 +586,7 @@ lead to
 \end{equation}
 Replacing into (\ref{equ:2.53}), we find that
 \begin{equation}
-  <\vec{x}|\vec{p}> = \frac{1}{(2\pi\hbar)^{3/2}} \exp(i
+  \langle \vec{x}\vert \vec{p}\rangle  = \frac{1}{(2\pi\hbar)^{3/2}} \exp(i
   \vec{p}\cdot \vec{x}/\hbar)
   \label{equ:2.56}
 \end{equation}
@@ -608,25 +608,25 @@ Let us use these results to find the Schrödinger's wave
 equation in momentum space for the Hamiltonian
 (\ref{equ:2.36}), defining additionally
 \begin{equation}
-  \phi_{\alpha}(\vec{p},t) \equiv <\vec{p}|\alpha,t_0;t>
+  \phi_{\alpha}(\vec{p},t) \equiv \langle \vec{p}\vert \alpha,t_0;t\rangle 
   \label{equ:2.58}
 \end{equation}
 
 We have
 
 \begin{align}
-  i\hbar \frac{\partial}{\partial t} <\vec{p}|\alpha,t_0;t>
-  &= <\vec{p}|\frac{1}{2m}\hat{\vec{p}}^2|\alpha,t_0;t>
+  i\hbar \frac{\partial}{\partial t} \langle \vec{p}\vert \alpha,t_0;t\rangle 
+  &= \langle \vec{p}\vert \frac{1}{2m}\hat{\vec{p}}^2\vert \alpha,t_0;t\rangle 
   \nonumber \\ &+
-  \int d^3 p' \, <\vec{p}|\hat{V}(\hat{\vec{x}}) |\vec{p}'>
-  <\vec{p}'|\alpha,t_0;t> \nonumber \\
+  \int d^3 p' \, \langle \vec{p}\vert \hat{V}(\hat{\vec{x}}) \vert \vec{p}'\rangle 
+  \langle \vec{p}'\vert \alpha,t_0;t\rangle  \nonumber \\
   &=
   \frac{1}{2m} \vec{p}^2 \phi_{\alpha}(\vec{p},t) +
   \int d^3 p' \,
   \int d^3 x\,
   \int d^3 x'\,
-  <\vec{p}|\vec{x}>
-  <\vec{x}|\hat{V}(\hat{\vec{x}})|\vec{x}'><\vec{x}'|\vec{p}'>
+  \langle \vec{p}\vert \vec{x}\rangle 
+  \langle \vec{x}\vert \hat{V}(\hat{\vec{x}})\vert \vec{x}'\rangle \langle \vec{x}'\vert \vec{p}'\rangle 
   \phi_{\alpha}(\vec{p},t)\nonumber\\
   &=
   \frac{\vec{p}^2}{2m} \phi_{\alpha}(\vec{p},t) \nonumber\\&+
@@ -820,13 +820,13 @@ they can thus be simultaneously diagonalized, so that the
 eigenstates of $\hat{N}$ are also energy eigenstates.
 The eigenstates of $\hat{N}$ are defined by
 \begin{equation}
-  \hat{N} |n>= n |n>
+  \hat{N} \vert n\rangle = n \vert n\rangle 
   \label{equ:2.74}
 \end{equation}
 where $n$ i san arbitrary real number at this point. It thn
 follows that
 \begin{equation}
-  \hat{H} |n> = \hbar\omega (n+1/2)|n>
+  \hat{H} \vert n\rangle  = \hbar\omega (n+1/2)\vert n\rangle 
   \label{equ:2.75}
 \end{equation}
 % finished page 15
@@ -835,9 +835,9 @@ Schrödinger's equation, we identify
 $$
 E_n = \hbar\omega (n+1/2)
 $$
-as the energy asociated with the energy eigenstate $|n>$.
+as the energy asociated with the energy eigenstate $\vert n\rangle $.
 We can determine the values that $n$ can take by exploring
-the action of the ladder operators on $|n>$. Note first that
+the action of the ladder operators on $\vert n\rangle $. Note first that
 \begin{align}
   [\hat{N}, \hat{a}^{\dagger}] &=
   [\hat{a}^{\dagger}\hat{a},\hat{a}^{\dagger}] =
@@ -851,44 +851,44 @@ where (\ref{equ:2.70}) has been used. Applying these
 results, we readily see that
 \begin{subequations}
   \begin{align}
-    \hat{N} (\hat{a}^{\dagger} |n>) &=
-    \Bigl([\hat{N},\hat{a}^{\dagger}]+\hat{a}^{\dagger}\hat{N}\Bigr)|n>
-    = (n+1)(\hat{a}^{\dagger} |n>) \label{equ:2.77a} \\
-    \hat{N}(\hat{a}|n>) &= \Bigl([\hat{N},
-  \hat{a}]+\hat{a}\hat{N}\Bigr) |n> = (n-1) (\hat{a}|n>)
+    \hat{N} (\hat{a}^{\dagger} \vert n\rangle ) &=
+    \Bigl([\hat{N},\hat{a}^{\dagger}]+\hat{a}^{\dagger}\hat{N}\Bigr)\vert n\rangle 
+    = (n+1)(\hat{a}^{\dagger} \vert n\rangle ) \label{equ:2.77a} \\
+    \hat{N}(\hat{a}\vert n\rangle ) &= \Bigl([\hat{N},
+  \hat{a}]+\hat{a}\hat{N}\Bigr) \vert n\rangle  = (n-1) (\hat{a}\vert n\rangle )
   \label{equ:2.77b}
   \end{align}
 \end{subequations}
-Eq (\ref{equ:2.77a}) implies that $\hat{a}^{\dagger}|n>$ has
-the same eigenvalues as the state $|n+1>$ or, in other
+Eq (\ref{equ:2.77a}) implies that $\hat{a}^{\dagger}\vert n\rangle $ has
+the same eigenvalues as the state $\vert n+1\rangle $ or, in other
 words, that the action of the operator $\hat{a}^{\dagger}$
-raises a state from $|n>$ to $|n+1>$. Analogously, $\hat{a}$
-lowers the state from $|n>$ to $|n-1>$. This is why the
+raises a state from $\vert n\rangle $ to $\vert n+1\rangle $. Analogously, $\hat{a}$
+lowers the state from $\vert n\rangle $ to $\vert n-1\rangle $. This is why the
 ladder operators $\hat{a}$ and $\hat{a}^{\dagger}$ are known
 as lowering and rising operators, respectively.
 It immediatly folows that the following relations must hold
 \begin{align}
-  \hat{a}|n> &= c |n-1> \nonumber\\
-  \hat{a}^{\dagger}|n> &= d |n+1> \label{equ:2.78}
+  \hat{a}\vert n\rangle  &= c \vert n-1\rangle  \nonumber\\
+  \hat{a}^{\dagger}\vert n\rangle  &= d \vert n+1\rangle  \label{equ:2.78}
 \end{align}
 where $c$ and $d$ are numbers that may be determinated by
 imposing the orthogonality (we shall impose orthonormality)
 of the eigenstates of the Hermitian operator $\hat{N}$. The
-norm of $\hat{a}|n>$ is computed as
+norm of $\hat{a}\vert n\rangle $ is computed as
 $$
-|c|^2 <n-1|n-1> = <n|\hat{a}^{\dagger}\hat{a}|n> = n<n|n>,
+\vert c\vert ^2 \langle n-1\vert n-1\rangle  = \langle n\vert \hat{a}^{\dagger}\hat{a}\vert n\rangle  = n\langle n\vert n\rangle ,
 $$
 which implies
 \begin{equation}
-  |c|^2 = n
+  \vert c\vert ^2 = n
   \label{equ:2.79}
 \end{equation}
 %% pp 17
-for $<n|m> = \delta_{n,m}$. Note that we can further assume
+for $\langle n\vert m\rangle  = \delta_{n,m}$. Note that we can further assume
 that $c$ (and $d$) is real because
 $$
-a^{\dagger}a |n> = a^{\dagger} c_n | n-1> = c_n d_{n-1}|n> =
-n|n>
+a^{\dagger}a \vert n\rangle  = a^{\dagger} c_n \vert  n-1\rangle  = c_n d_{n-1}\vert n\rangle  =
+n\vert n\rangle 
 $$
 and $n$ is real. Further we assume by convention that $c$
 (and $d$) is positive. This yield
@@ -896,11 +896,11 @@ and $n$ is real. Further we assume by convention that $c$
   c = \sqrt{n}
   \label{equ:2.80}
 \end{equation}
-Similarly, normalizing $\hat{a}^{\dagger} |n>$ we find
+Similarly, normalizing $\hat{a}^{\dagger} \vert n\rangle $ we find
 $$
-|d|^2 <n+1|n+1> = <n|\hat{a}\hat{a}^{\dagger}|n> =
-<n|[\hat{a}, \hat{a}^{\dagger}] + \hat{a}^{\dagger}\hat{a} |
-n>  = (n+1) <n|n>
+\vert d\vert ^2 \langle n+1\vert n+1\rangle  = \langle n\vert \hat{a}\hat{a}^{\dagger}\vert n\rangle  =
+\langle n\vert [\hat{a}, \hat{a}^{\dagger}] + \hat{a}^{\dagger}\hat{a} \vert 
+n\rangle   = (n+1) \langle n\vert n\rangle 
 $$
 which yields
 \begin{equation}
@@ -910,8 +910,8 @@ which yields
 We have therefore obtained
 \begin{subequations}
   \begin{align}
-    \hat{a}|n> &= \sqrt{n}|n-1> \label{equ:2.82a} \\
-    \hat{a}^{\dagger}|n> &= \sqrt{n+1}|n+1> \label{equ:2.82b}
+    \hat{a}\vert n\rangle  &= \sqrt{n}\vert n-1\rangle  \label{equ:2.82a} \\
+    \hat{a}^{\dagger}\vert n\rangle  &= \sqrt{n+1}\vert n+1\rangle  \label{equ:2.82b}
   \end{align}
 \end{subequations}
 with $n \geq 0$ to provide reasonable results. Since the
@@ -921,7 +921,7 @@ must be integer. Therefore, eq.~(\ref{equ:2.75}) can be
 interpreted as a rule of energy quantization.
 Notice that the sate of lowert energy satisfies
 \begin{equation}
-  \hat{a}|0> = 0
+  \hat{a}\vert 0\rangle  = 0
   \label{equ:2.83}
 \end{equation}
 i.e., it is anihilated bythe lowering operator $\hat{a}$.
@@ -929,29 +929,29 @@ Eq.~(\ref{equ:2.83}) can be considered a definition of the
 ground state. Note that the ground state has the
 non-vanishing energy $\displaystyle{\frac{1}{2}\hbar
 \omega}$.
-We can now obtain an arbitrary state $|n>$ by the repeated
-action of $\hat{a}^{\dagger}$ on $|0>$. We see that
+We can now obtain an arbitrary state $\vert n\rangle $ by the repeated
+action of $\hat{a}^{\dagger}$ on $\vert 0\rangle $. We see that
 \begin{equation}
-  |1> = \hat{a}^{\dagger} |0>
+  \vert 1\rangle  = \hat{a}^{\dagger} \vert 0\rangle 
   \label{equ:2.84}
 \end{equation}
 and then, from (\ref{equ:2.82b})
 \begin{subequations}
   \begin{alignat}{2}
-    |2> &= \frac{\hat{a}^{\dagger}}{\sqrt{2}} |1> &&=
-    \frac{(\hat{a}^{\dagger})^2}{\sqrt{2}} |0>
+    \vert 2\rangle  &= \frac{\hat{a}^{\dagger}}{\sqrt{2}} \vert 1\rangle  &&=
+    \frac{(\hat{a}^{\dagger})^2}{\sqrt{2}} \vert 0\rangle 
     \label{equ:2.85a} \\
-    |3> &= \frac{\hat{a}^{\dagger}}{\sqrt{3}} |2> &&=
-    \frac{(\hat{a}^{\dagger})^3}{\sqrt{3!}} |0>
+    \vert 3\rangle  &= \frac{\hat{a}^{\dagger}}{\sqrt{3}} \vert 2\rangle  &&=
+    \frac{(\hat{a}^{\dagger})^3}{\sqrt{3!}} \vert 0\rangle 
     \label{equ:2.85b}
   \end{alignat}
 \end{subequations}
 and so on. We find the general expression
 \begin{equation}
-  |n> = \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} |0>
+  \vert n\rangle  = \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} \vert 0\rangle 
   \label{equ:2.86}
 \end{equation}
-A useful observation is that the states $\{|n>\}$ are not
+A useful observation is that the states $\{\vert n\rangle \}$ are not
 eigenstates of $\hat{x}$ and $\hat{p}$, as expected, because
 $[\hat{H},\hat{x}]$ and $[\hat{H}, \hat{p}]$ do not vanish,
 in general.
@@ -961,16 +961,16 @@ are diagonal in the basis of energy eigenstates:
 
 \begin{subequations}
   \begin{alignat}{3}
-    <m|\hat{x}|n> &= \sqrt{\frac{\hbar}{2m\omega}}
-    <m|\hat{a}+ \hat{a}^{\dagger}|n> &&=
+    \langle m\vert \hat{x}\vert n\rangle  &= \sqrt{\frac{\hbar}{2m\omega}}
+    \langle m\vert \hat{a}+ \hat{a}^{\dagger}\vert n\rangle  &&=
     \sqrt{\frac{\hbar}{2m\omega}} 
-    \bigl[\sqrt{n}<m|n-1> + \sqrt{n+1}<m|n+1>\bigr]
+    \bigl[\sqrt{n}\langle m\vert n-1\rangle  + \sqrt{n+1}\langle m\vert n+1\rangle \bigr]
     \nonumber \\
     &{}&&= \sqrt{\frac{\hbar}{2m\omega}}
     \bigl[\sqrt{n}\delta_{m , n-1} + \sqrt{n+1}\delta_{m,
     n+1}\bigr] \label{equ:2.87a} \\
-    <m|\hat{p}|n> &= i \sqrt{\frac{m\hbar \omega}{2}}
-    <m|\hat{a}^{\dagger} - \hat{a}|n> &&= i
+    \langle m\vert \hat{p}\vert n\rangle  &= i \sqrt{\frac{m\hbar \omega}{2}}
+    \langle m\vert \hat{a}^{\dagger} - \hat{a}\vert n\rangle  &&= i
     \sqrt{\frac{m\hbar\omega}{2}}
     \bigl[
       \sqrt{n+1}\delta_{m,n+1} - \sqrt{n}\delta_{m,n-1}
@@ -980,17 +980,17 @@ are diagonal in the basis of energy eigenstates:
 where the expresions (\ref{equ:2.68}) have been used.
 With this formalism, we can compute the energy wavefunctions
 in the position representation. Let us start by obtaining
-$\psi_0 \equiv <x|0>$. To do so, recall that the ground
+$\psi_0 \equiv \langle x\vert 0\rangle $. To do so, recall that the ground
 state is anihilated by $\hat{a}$, so that
 \begin{equation}
-  <x|\hat{a}|0> = \sqrt{\frac{m\omega}{2\hbar}} <x|\hat{x}+
-  \frac{i\hat{p}}{m\omega} |0> = 0
+  \langle x\vert \hat{a}\vert 0\rangle  = \sqrt{\frac{m\omega}{2\hbar}} \langle x\vert \hat{x}+
+  \frac{i\hat{p}}{m\omega} \vert 0\rangle  = 0
   \label{equ:2.88}
 \end{equation}
 Inserting a unity, we have
 \begin{equation}
-  \int dx' \, <x|\hat{x} + \frac{i\hat{p}}{m\omega}|x'>
-  <x'|0> =
+  \int dx' \, \langle x\vert \hat{x} + \frac{i\hat{p}}{m\omega}\vert x'\rangle 
+  \langle x'\vert 0\rangle  =
   \int dx' \, \delta(x - x')
   \Bigl(x + \frac{i}{m\omega}\bigl(-i\hbar
   \frac{d}{dx}\bigr)\Bigr)\psi_0 = 0
@@ -1026,21 +1026,21 @@ which leads finally to
   \exp(-\frac{1}{2}\tilde{x}^2)
   \label{equ:2.93}
 \end{equation}
-$\psi_n(\tilde{x})$ can be obtained from inspecting $<x|n>$:
+$\psi_n(\tilde{x})$ can be obtained from inspecting $\langle x\vert n\rangle $:
 %todo arreglar el desastre de abajo
   \begin{alignat}{2}
-    <x|1> &= <x|\hat{a}^{\dagger}|0> =
+    \langle x\vert 1\rangle  &= \langle x\vert \hat{a}^{\dagger}\vert 0\rangle  =
     \sqrt{\frac{m\omega}{2\hbar}}
-    <x|\hat{x}-\frac{i\hat{p}}{m\omega}|0> =
+    \langle x\vert \hat{x}-\frac{i\hat{p}}{m\omega}\vert 0\rangle  =
     \sqrt{\frac{m\omega}{2\hbar}}\bigl(x -
     \frac{\hbar}{m\omega}\frac{d}{dx}\bigr) \psi_0(x)
     \nonumber \\
-    <x|2> &= <x|\frac{(\hat{a})^2}{\sqrt{2}}|0> =
+    \langle x\vert 2\rangle  &= \langle x\vert \frac{(\hat{a})^2}{\sqrt{2}}\vert 0\rangle  =
     \frac{1}{\sqrt{2}}\bigl(\sqrt{{m\omega}{2\hbar}}\bigr)^2\bigl(x
       - \frac{\hbar}{m\omega}\bigr)^2 \psi_0(x) \nonumber \\
       \vdots\nonumber \\
-      <x|n> &= 
-      <x|\frac{(\hat{a})^n}{\sqrt{n!}}|0> =
+      \langle x\vert n\rangle  &= 
+      \langle x\vert \frac{(\hat{a})^n}{\sqrt{n!}}\vert 0\rangle  =
       \frac{1}{\sqrt{n!2^n}}
       \frac{1}{\bigl(\frac{\hbar}{m\omega}\bigr)^n}
       \Bigl(x - \frac{\hbar}{m\omega}\frac{d}{dx}\Bigr)^n \psi_0(x)
@@ -1088,12 +1088,12 @@ Therefore, (\ref{equ:2.96}) can be rewritten as
 \end{equation}
 A few observations are in order. Firstly, as depected, the
 wavefunctions are eigher symmetric or antisymmetric, but the
-probability densities $|\psi_n|^2$ are always symmetric on
+probability densities $\vert \psi_n\vert ^2$ are always symmetric on
 $\tilde{x}$ (or $x$). It then immediately follows that
-$<\hat{x}> = 0$. This result can be easily verified in the
+$\langle \hat{x}\rangle  = 0$. This result can be easily verified in the
 operator formalism, following our result (\ref{equ:2.87a})
 \begin{equation}
-  <\hat{x}> = <n|\hat{x}|n> = \sqrt{\frac{\hbar}{2m\omega}}
+  \langle \hat{x}\rangle  = \langle n\vert \hat{x}\vert n\rangle  = \sqrt{\frac{\hbar}{2m\omega}}
   \Bigl(
   \sqrt{n}\delta_{n, n-1} + \sqrt{n+1}\delta_{n, n+1}
   \Bigr)
@@ -1102,7 +1102,7 @@ operator formalism, following our result (\ref{equ:2.87a})
 \end{equation}
 Similarly, from (\ref{equ:2.87b}), we find that
 \begin{equation}
-  <\hat{p}> = p
+  \langle \hat{p}\rangle  = p
   \label{equ:2.100}
 \end{equation}
 Furthermore, we can compute the expectation values of
@@ -1110,34 +1110,34 @@ $\hat{x}^2$ \& $\hat{p}^2$ as follows
 
 \begin{subequations}
   \begin{alignat}{4}
-    <\hat{x}^2> &= \frac{\hbar}{2m\omega}
-    <n|\bigl(\hat{a}+\hat{a}^{\dagger}\bigr)|n> &&=
-    \frac{\hbar}{2m\omega}<n|\bigl(\hat{a}^2 +
+    \langle \hat{x}^2\rangle  &= \frac{\hbar}{2m\omega}
+    \langle n\vert \bigl(\hat{a}+\hat{a}^{\dagger}\bigr)\vert n\rangle  &&=
+    \frac{\hbar}{2m\omega}\langle n\vert \bigl(\hat{a}^2 +
     \hat{a}\hat{a}^{\dagger} + \hat{a}^{\dagger}\hat{a} +
-    \hat{a}^{\dagger}{}^2\bigr)|n> \nonumber \\
-    &{} &&= \frac{\hbar}{2m\omega}<n|(1 +
-    2\hat{a}\hat{a}^{\dagger})|n> =
+    \hat{a}^{\dagger}{}^2\bigr)\vert n\rangle  \nonumber \\
+    &{} &&= \frac{\hbar}{2m\omega}\langle n\vert (1 +
+    2\hat{a}\hat{a}^{\dagger})\vert n\rangle  =
     \frac{\hbar}{2m\omega}(1+2n) \label{equ:2.101}
   \end{alignat}
 \end{subequations}
-where we used that $<n|\hat{a}^2|n> =
-<n|(\hat{a}^{\dagger})^2 | n> = 0$ and (\ref{equ:2.70}).
+where we used that $\langle n\vert \hat{a}^2\vert n\rangle  =
+\langle n\vert (\hat{a}^{\dagger})^2 \vert  n\rangle  = 0$ and (\ref{equ:2.70}).
 Similarly,
 \begin{equation}
-  <\hat{p}{}^2> = - \frac{m\hbar\omega}{2}
-  <n|(\hat{a}{}^{\dagger}-\hat{a})^2 |n> =
+  \langle \hat{p}{}^2\rangle  = - \frac{m\hbar\omega}{2}
+  \langle n\vert (\hat{a}{}^{\dagger}-\hat{a})^2 \vert n\rangle  =
   -\frac{m\hbar\omega}{2}
-  <n|(-\hat{a}\hat{a}{}^{\dagger}-\hat{a}\hat{a}^{\dagger})|n>
+  \langle n\vert (-\hat{a}\hat{a}{}^{\dagger}-\hat{a}\hat{a}^{\dagger})\vert n\rangle 
   =
   \frac{m\hbar\omega}{2}(1+2n)
   \label{equ:2.102}
 \end{equation}
-Noticing now that $<(\Delta \hat{x})^2 > = <\hat{x}^2>$
-because of (\ref{equ:2.99}), and $<(\Delta \hat{p})^2> =
-<\hat{p}^2>$ because of (\ref{equ:2.100}), we find the
+Noticing now that $\langle (\Delta \hat{x})^2 \rangle  = \langle \hat{x}^2\rangle $
+because of (\ref{equ:2.99}), and $\langle (\Delta \hat{p})^2\rangle  =
+\langle \hat{p}^2\rangle $ because of (\ref{equ:2.100}), we find the
 uncertainty relation
 \begin{equation}
-  <(\Delta \hat{x})^2 > < (\Delta \hat{p})^2> =
+  \langle (\Delta \hat{x})^2 \rangle  \langle  (\Delta \hat{p})^2\rangle  =
   \frac{\hbar^2}{4}(1+2n)^2,
   \label{equ:2.102}
 \end{equation}
@@ -1149,21 +1149,21 @@ profile that are typically considered maximally coherent.
 A second observation regards the natural question of how
 these states evolve in time. In section (2.1),
 %todo label sections
-we learned that stationary states, such as $|n>$ evolve
+we learned that stationary states, such as $\vert n\rangle $ evolve
 trivially as
 \begin{equation}
-  |n,t> = \exp\Bigl(-\frac{i}{\hbar}\hat{H}t\Bigr) |n> = \exp(-i\omega
-  (n+1/2)t)|n>
+  \vert n,t\rangle  = \exp\Bigl(-\frac{i}{\hbar}\hat{H}t\Bigr) \vert n\rangle  = \exp(-i\omega
+  (n+1/2)t)\vert n\rangle 
   \label{equ:2.103}
 \end{equation}
 For these states, one can easely verify that
 \begin{equation}
-  <n;t|\hat{x}|n;t> = <n|\hat{a}|n> = 0 =
-  <n|\hat{p}|n> = <n;t|\hat{p}|n;t>
+  \langle n;t\vert \hat{x}\vert n;t\rangle  = \langle n\vert \hat{a}\vert n\rangle  = 0 =
+  \langle n\vert \hat{p}\vert n\rangle  = \langle n;t\vert \hat{p}\vert n;t\rangle 
   \label{equ:2.104}
 \end{equation}
 and, thus, the uncertainty relation (\ref{equ:2.102}) holds
-still. A natural puzzle is that $<\hat{x}> = 0$ even through
+still. A natural puzzle is that $\langle \hat{x}\rangle  = 0$ even through
 the system we analize is a harmonic oscillator. From
 classical mechanics, one may have expected on oscillatory
 behavior. How come that this fails quantum-mechanically? The
@@ -1171,7 +1171,7 @@ answer is trivial: we have considered only stationary
 states, which may not capture all features of the system.
 Non-stationary states fo the form
 \begin{equation}
-  |\alpha> = \sum_n c_n |n>
+  \vert \alpha\rangle  = \sum_n c_n \vert n\rangle 
   \label{equ:2.105}
 \end{equation}
 as discussed around (\ref{equ:2.27}), have a non-trivial
@@ -1207,15 +1207,15 @@ Later, Einstein himself realized that an energy shift
 proportional to $\frac{1}{2} \hbar \omega$ was needed to
 understand e.g., the puzzle of black-body radiation. This
 energy shift can be interpreted as the vacuum energy. Thus,
-in Heisenberg's formulation, $|0>$ corresponds to the vaccum
-state, while the states $|1>$,$|2>$, $|3>$, $\ldots$ may
+in Heisenberg's formulation, $\vert 0\rangle $ corresponds to the vaccum
+state, while the states $\vert 1\rangle $,$\vert 2\rangle $, $\vert 3\rangle $, $\ldots$ may
 correspond to a physical system with one, two, three,
 $\ldots$ photons or particles, in general. Notice that in
 this interpreation $\hat{a}^{\dagger}$ and $\hat{a}$ operate
 as creation and annihilation operators
 \begin{align}
-  \hat{a}^{\dagger} |n> \mapsto |n+1> \nonumber\\
-  \hat{a} |n> \mapsto |n-1> \nonumber
+  \hat{a}^{\dagger} \vert n\rangle  \mapsto \vert n+1\rangle  \nonumber\\
+  \hat{a} \vert n\rangle  \mapsto \vert n-1\rangle  \nonumber
 \end{align}
 creating and annihilating particles. This interpretation
 finds an appropiate environment particularly in quantum
@@ -1236,7 +1236,7 @@ a limit behave as classical systems). One condition on these
 states is then that they do not lose their structure as they
 evolve in time, i.e., that their dispersion keeps a minimal
 value. A clear example of such a state is the ground state
-$|0>$, which in the position space is given by the Gaussian
+$\vert 0\rangle $, which in the position space is given by the Gaussian
 profile (\ref{equ:2.91})
 $$
  \psi_0 (\tilde{x}) = A_0 \exp(-\frac{1}{2}\tilde{x}^2)
@@ -1244,7 +1244,7 @@ $$
 Note that, according to (\ref{equ:2.102}), this state has
 minimal uncertainty
 $$
-<(\Delta \hat{x}^2)><(\Delta \hat{p})^2> = \frac{\hbar^2}{4}
+\langle (\Delta \hat{x}^2)\rangle \langle (\Delta \hat{p})^2\rangle  = \frac{\hbar^2}{4}
 $$
 For these reasons, coherent states are frequently called
 Gaussian states, minimal uncertainty states, and also
@@ -1254,50 +1254,50 @@ It is possible to show that these canonical coherent states
 can be defined as the eigenstates of the annihilation
 operator $\hat{a}$
 \begin{equation}
-  \hat{a}|\alpha> = \alpha|\alpha>, \alpha \in \mathbb{C}
+  \hat{a}\vert \alpha\rangle  = \alpha\vert \alpha\rangle , \alpha \in \mathbb{C}
   \label{equ:2.106}
 \end{equation}
-The explicit expression of $|\alpha>$ can be found from
+The explicit expression of $\vert \alpha\rangle $ can be found from
 comparing
 
 \begin{subequations}
   \begin{alignat}{4}
-    <n|a|\alpha> &= (<n|a)|\alpha> &&=
-    \sqrt{n+1}<n+1|\alpha>, \label{equ:2.107a}\\
-    \text{and} <n|a|\alpha> &= <n|(a|\alpha>) &&= \alpha
-    <n|\alpha>, \label{equ:2.107b}
+    \langle n\vert a\vert \alpha\rangle  &= (\langle n\vert a)\vert \alpha\rangle  &&=
+    \sqrt{n+1}\langle n+1\vert \alpha\rangle , \label{equ:2.107a}\\
+    \text{and} \langle n\vert a\vert \alpha\rangle  &= \langle n\vert (a\vert \alpha\rangle ) &&= \alpha
+    \langle n\vert \alpha\rangle , \label{equ:2.107b}
   \end{alignat}
 \end{subequations}
 where (\ref{equ:2.82b}) has been used. Recalling the form of
-$|\alpha>$ (\ref{equ:2.105}), we then find that
+$\vert \alpha\rangle $ (\ref{equ:2.105}), we then find that
 \begin{equation}
   c_{n+1} = \frac{\alpha}{\sqrt{n+1}}c_n
   \label{equ:2.108}
 \end{equation}
 where, furthermore, from (\ref{equ:2.80}),
 \begin{equation}
-  c_n \equiv <n|\alpha> =
-  <0|\frac{(\hat{a})^n}{\sqrt{n!}}|\alpha> =
-  \frac{\alpha^n}{\sqrt{n!}} <0|\alpha> =
+  c_n \equiv \langle n\vert \alpha\rangle  =
+  \langle 0\vert \frac{(\hat{a})^n}{\sqrt{n!}}\vert \alpha\rangle  =
+  \frac{\alpha^n}{\sqrt{n!}} \langle 0\vert \alpha\rangle  =
   \frac{\alpha^n}{\sqrt{n!}}c_0
   \label{equ:2.109}
 \end{equation}
 It then follows that
 \begin{equation}
-  |\alpha> = \sum_n c_n |n> = \sum_n
+  \vert \alpha\rangle  = \sum_n c_n \vert n\rangle  = \sum_n
   \frac{\alpha^n}{\sqrt{n!}}c_0
-  \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} |0> = c_0
-  \exp(\alpha \hat{a}^{\dagger}) |0>
+  \frac{(\hat{a}^{\dagger})^n}{\sqrt{n!}} \vert 0\rangle  = c_0
+  \exp(\alpha \hat{a}^{\dagger}) \vert 0\rangle 
   \label{equ:2.110}
 \end{equation}
 (Notice that (\ref{equ:2.108}) is just a consistency check
 of (\ref{equ:2.109}).) The constant $c_0$ can be found by
 normalizing the state as follows
   \begin{alignat}{2}
-    1 = <\alpha|\alpha> &= |c_0|^2
-    <0|\exp(\alpha^*\hat{a})\exp(\alpha\hat{a}^{\dagger})|0>
+    1 = \langle \alpha\vert \alpha\rangle  &= \vert c_0\vert ^2
+    \langle 0\vert \exp(\alpha^*\hat{a})\exp(\alpha\hat{a}^{\dagger})\vert 0\rangle 
     \nonumber\\
-    &= |c_0|^2 <0|
+    &= \vert c_0\vert ^2 \langle 0\vert 
     \Bigl(
       1+\alpha^*\hat{a} + \frac{\alpha*\hat{a}^2}{2} +
       \ldots
@@ -1305,28 +1305,28 @@ normalizing the state as follows
     \Bigl(
     1+\alpha^*\hat{a}^{\dagger} + \frac{\alpha*(\hat{a}^{\dagger})^2}{2} +
       \ldots
-    \Bigr)|0>\nonumber\\
+    \Bigr)\vert 0\rangle \nonumber\\
     &=
-    |c_0|^2<0|
+    \vert c_0\vert ^2\langle 0\vert 
     \Bigl(
-      1+|\alpha|^2\hat{a}\hat{a}^{\dagger} +
-      \frac{(|\alpha|^2)^2}{2}\hat{a}^2(\hat{a}^{\dagger})^2
+      1+\vert \alpha\vert ^2\hat{a}\hat{a}^{\dagger} +
+      \frac{(\vert \alpha\vert ^2)^2}{2}\hat{a}^2(\hat{a}^{\dagger})^2
       + \ldots
-    \Bigr)|0>\nonumber\\
-    &=|c_0|^2
+    \Bigr)\vert 0\rangle \nonumber\\
+    &=\vert c_0\vert ^2
     \Bigl(
-    1+|\alpha|^2 + \frac{1}{2}(|\alpha|^2)^2 + \ldots
-    \Bigr) = |c_0|^2 \exp(|\alpha|^2) \label{equ:2.111}
+    1+\vert \alpha\vert ^2 + \frac{1}{2}(\vert \alpha\vert ^2)^2 + \ldots
+    \Bigr) = \vert c_0\vert ^2 \exp(\vert \alpha\vert ^2) \label{equ:2.111}
   \end{alignat}
 where in the third row we used that
-$<0|\hat{a}^n(\hat{a}^{\dagger})^m|0> = 0$ for $n \neq m$, and
+$\langle 0\vert \hat{a}^n(\hat{a}^{\dagger})^m\vert 0\rangle  = 0$ for $n \neq m$, and
 in the fourth row that $(\hat{a}\hat{a}^{\dagger})^n = (1+
 \hat{a}^{\dagger}\hat{a})^n$ and
-$<0|\hat{a}^{\dagger}\hat{a}|0> = 0$. Thus,
+$\langle 0\vert \hat{a}^{\dagger}\hat{a}\vert 0\rangle  = 0$. Thus,
 eq.~(\ref{equ:110})  becomes
 \begin{equation}
-  |\alpha> = \exp(-|\alpha|^2/2)
-  \exp(\alpha\hat{a}^{\dagger})|0>
+  \vert \alpha\rangle  = \exp(-\vert \alpha\vert ^2/2)
+  \exp(\alpha\hat{a}^{\dagger})\vert 0\rangle 
   \label{equ:2.112}
 \end{equation}
 We may also viwe the coherent states as the ground state of
@@ -1338,7 +1338,7 @@ a new set of annihilation and creation operators defined as
 \end{equation}
 which implies
 \begin{equation}
-  \hat{b}|\alpha> = 0
+  \hat{b}\vert \alpha\rangle  = 0
   \label{equ:2.114}
 \end{equation}
 
@@ -1353,10 +1353,10 @@ ground state
 \end{equation}
 because
   \begin{alignat}{2}
-    <x|\hat{a}|\alpha> &= \int dx' \, <x|
+    \langle x\vert \hat{a}\vert \alpha\rangle  &= \int dx' \, \langle x\vert 
     \sqrt{\frac{m\omega}{2\hbar}} \Bigl(
     \hat{x} + \frac{i\hat{p}}{m\omega}
-    \Bigr)|x'> <x'|\alpha>\nonumber\\
+    \Bigr)\vert x'\rangle  \langle x'\vert \alpha\rangle \nonumber\\
     &=
     \sqrt{\frac{m\omega}{2\hbar}}
     \Bigl(
@@ -1375,7 +1375,7 @@ because
   \end{alignat}
 while, on the left-hand side we also have
 \begin{equation}
-  <x|\hat{a}|\alpha> = \alpha<x|\alpha> =
+  \langle x\vert \hat{a}\vert \alpha\rangle  = \alpha\langle x\vert \alpha\rangle  =
   \alpha\psi_{\alpha}(x)
   \label{equ:2.117}
 \end{equation}
@@ -1385,15 +1385,15 @@ yielding
   \label{equ:2.118}
 \end{equation}
 It is left as an exercise tot he curious reader the explicit
-computation of $<x|\alpha>$, which may be quite illustrative
+computation of $\langle x\vert \alpha\rangle $, which may be quite illustrative
 of the kind of computations one frequently finds in
 Heisenberg's formalism.
 Notice now that, as expected, the average value of $\hat{x}$
-in $\alpha>$ is shifted:
+in $\alpha\rangle $ is shifted:
   \begin{alignat}{2}
-    <\alpha|\hat{x}|\alpha> &= 
+    \langle \alpha\vert \hat{x}\vert \alpha\rangle  &= 
     \sqrt{\frac{\hbar}{2m\omega}}
-    <\alpha|\hat{a}+\hat{a}^{\dagger}|\alpha> \nonumber\\
+    \langle \alpha\vert \hat{a}+\hat{a}^{\dagger}\vert \alpha\rangle  \nonumber\\
     &=
     \sqrt{\frac{\hbar}{2m\omega}}
     (\alpha + \alpha^*) = 
@@ -1495,8 +1495,8 @@ as follows
 $$
 1 = \int_{-\infty}^{\infty} \psi_n^*(x) \psi_{n'} (x) =
 \sqrt{\frac{\hbar}{m\omega}} \int_{-\infty}^{\infty}
-d\tilde{x} \, |A_n|^2 \exp(-\tilde{x}^2) H_n^2(\tilde{x}) =
-|A_n|^2 \sqrt{\frac{\hbar}{m\omega}} 2^n n! \sqrt{n}
+d\tilde{x} \, \vert A_n\vert ^2 \exp(-\tilde{x}^2) H_n^2(\tilde{x}) =
+\vert A_n\vert ^2 \sqrt{\frac{\hbar}{m\omega}} 2^n n! \sqrt{n}
 $$
 Thus, we have
 \begin{equation}
