@@ -1528,7 +1528,7 @@ The Schrödinger's wave eq. is
 \end{equation}
 We can define the wave number
 \begin{equation}
-  k^2 = \frac{2mE}{\hbar^2} > 0,
+  k^2 = \frac{2mE}{\hbar^2} \rangle  0,
   \label{equ:1.131}
 \end{equation}
 which simplifies (\ref{equ:2.130}) to
@@ -1589,8 +1589,8 @@ where the index $p$ labels the solution with momentum $p$.
 Let us compute
 \begin{equation}
   \int_{-\infty}^{\infty} \psi_p^*(x) \psi_{p'}(x) \, dx =
-  |A|^2 \int_{-\infty}^{\infty}
-  \exp\Bigl(\frac{i}{\hbar}x(p'-p)\Bigr) \, dx = |A|^2
+  \vert A\vert ^2 \int_{-\infty}^{\infty}
+  \exp\Bigl(\frac{i}{\hbar}x(p'-p)\Bigr) \, dx = \vert A\vert ^2
   (2\pi\hbar)\delta(p'-p)
   \label{equ:2.138}
 \end{equation}
@@ -1605,16 +1605,16 @@ for the left-moving part of $\psi(x)$. We obtain then
 \begin{equation}
   \psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}}
   \Bigl[
-    \exp\bigl(i(kx-\omegat)\bigr) +
-    \exp\bigl(-i(kx+\omegat)\bigr)
+    \exp\bigl(i(kx-\omega t)\bigr) +
+    \exp\bigl(-i(kx+\omega t)\bigr)
   \Bigr]
   \label{equ:2.140}
 \end{equation}
 It is interesting to solve the problem in the momentum
 space. Recalling that (or simply using (\ref{equ:2.59}))
 \begin{equation}
-  <p|\frac{\hat{p}^2}{2m}|\alpha> =
-  \frac{p^2}{2m} <p|\alpha> = \frac{p^2}{2m} \phi_{\alpha}(p)
+  \langle p\vert \frac{\hat{p}^2}{2m}\vert \alpha\rangle  =
+  \frac{p^2}{2m} \langle p\vert \alpha\rangle  = \frac{p^2}{2m} \phi_{\alpha}(p)
   \label{equ:2.141}
 \end{equation}
 we find that the Schrödinger's wave equation to consider
@@ -1634,7 +1634,7 @@ when $p = \pm \sqrt{2mE} = \pm \hbar k$, coinciding with
 Notice that this result can equally be obtained by applying
 (\ref{equ:2.57b}) to (\ref{equ:2.133}) with the normalizatio
 constant (\ref{equ:2.139})
-  \begin{alignate}{2}
+  \begin{alignat}{2}
     \phi(p) &= \int dx \frac{1}{\sqrt{2\pi\hbar}}
     \exp(-ipx/\hbar) \frac{1}{\sqrt{2\pi\hbar}}
     \Bigl[\exp(ikx) + \exp(-ikx)\Bigr] \\
@@ -1645,8 +1645,8 @@ constant (\ref{equ:2.139})
       \exp\Bigl(-\frac{i}{\hbar}(p+k\hbar)x\Bigr)
     \biggr]\\
     &=
-    \delta(p - k\hbar) + \del(p + k\hbar)
-  \end{alignate}
+    \delta(p - k\hbar) + \delta(p + k\hbar)
+  \end{alignat}
 and thus in the momentum representation, the wave function
 is
 \begin{equation}
@@ -1667,7 +1667,7 @@ corresponds to
   \exp\bigl(-i(p-p')x/\hbar\bigr) V_0 = V_0 \delta(p-p')
   \label{equ:2.146}
 \end{equation}
-which yelds the wave equation
+which yields the wave equation
 $$
 \frac{p^2}{2m} \phi(p) + \int dp' \,
 \frac{1}{\sqrt{2\pi\hbar}} V_0 \delta(p-p') \phi(p') =
@@ -1678,3 +1678,127 @@ that simplifies to
   \frac{p^2}{2m} \phi(p) + V_0 \phi(p) = E\phi(p)
   \label{equ:2.147}
 \end{equation}
+Remark that (\ref{equ:2.147}) is very close to the analogous
+equation in the configuration space:
+\begin{equation}
+  -\frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi(x) + V_0 \psi(x)
+  = E \psi(x)
+  \label{equ:2.148}
+\end{equation}
+\subsubsection{Linear potential}
+Let us study now a potential, whose solution will be useful
+whe dealing with approximative methods, such as the WKB
+approximation that we shall study latter. The linear
+potential is given by
+\begin{equation}
+  V(x) = k|x
+  \label{equ:2.149}
+\end{equation}
+and is depicted in the figure %todo add figure
+This potential is symmetric, i.e., invariant under space
+invsersion
+$$
+x \to -x
+$$
+which can be written in terms of the unitary parity operator
+$\hat{P}$ such that, in terms of operators,
+\begin{equation}
+  \hat{P}^{-1} \hat{x} \hat{P} = - \hat{x}
+  \label{equ:2.150}
+\end{equation}
+and clearly satisfies
+\begin{equation}
+  \hat{P}^2 = \mathbb{1} \qquad\Rightarrow\qquad
+  \hat{P}^{-1} = \hat{P}
+  \label{equ:2.151}
+\end{equation}
+An operator $\hat{A}$, such that
+\begin{equation}
+  \hat{P}\hat{A}\hat{P} = -\hat{A}
+  \label{equ:2.152}
+\end{equation}
+is said to be odd under parity. If $\hat{A}$ is left invariant
+under the action of $\hat{P}$, then $\hat{A}$ is even. The
+position operator is odd.
+One can further conceive the eigenstates of $\hat{P}$ as
+\begin{equation}
+  \hat{P} \vert \pm | \rangle = \pm 1 \vert \pm | \rangle
+  \label{equ:2.153}
+\end{equation}
+where, an analogy with the operators, or state $\vert -1
+\rangle$ ($\vert + 1 \rangle$) is said to be odd (even)
+under parity.
+In the special situation when the Hamiltonian is parity
+invariant
+\begin{equation}
+  \hat{P} \hat{H} \hat{P} = \hat{H} \qquad \Rightarrow \qquad
+  [\hat{P}, \hat{H}] = 0,
+  \label{equ:2.154}
+\end{equation}
+that is, the (even or odd) eigenstates of $\hat{P}$ are also
+energy eigenstates.
+Furthermore, as we shall se in the next session, $[\hat{P},
+\hat{P}] = 0$ implies thath parity is conserved. It then
+follows that stationary states of an even
+parity/parity-invariant Hamiltonian are eiger even or odd.
+For the Hamiltonian
+$$
+\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(|\hat{x}|),
+$$
+we can see that (\ref{equ:2.152}) is satisfied independently
+of the parity of $\hat{p}$. However, as we shall also see in
+the next section, for a large class of models
+\begin{equation}
+  \hat{p} = \frac{im}{\hbar}[\hat{H}, \hat{x}]
+  \label{equ:2.155}
+\end{equation}
+from which we observe that
+\begin{equation}
+  \hat{P} \hat{p} \hat{P} = \frac{im}{\hbar}
+  \hat{P}[\hat{H}, \hat{x}] \hat{P} =
+  \frac{im}{\hbar} [\hat{H}, \hat{P}\hat{x}\hat{P}] =
+  -\hat{p}
+  \label{equ:2.156}
+\end{equation}
+Turning back to our problem, with the potential
+(\ref{equ:2.149}), we can focus separately in even and odd
+solution $\psi(x)$ of
+\begin{equation}
+  -\frac{\hbar^2}{2m} \frac{d^2 \psi(x)}{dx^2} + k|x|\psi(x)
+  = E \psi(x)
+  \label{equ:2.157}
+\end{equation}
+Besides demanding that $\psi(x \to \infty) = 0$, we impose
+for odd solutions that
+\begin{subequations}
+\begin{alignat}{2}
+  \psi(0) &= 0 \qquad \text{because} \quad \psi(0) = -
+  \psi(-0)
+  \label{equ:2.158a}\\
+  \intertext{and for even solutions that}
+  \psi'(x = 0) &= 0 \qquad \text{because} \quad \psi'(0) =
+  \lim_{\varepsilon \to 0}
+  \frac{\psi(\varepsilon)-\psi(-\varepsilon)}{\varepsilon} =
+  0
+  \label{equ:2.158b}
+\end{alignat}
+\end{subequations}
+for an infinitesimally small $\varepsilon$.
+We can rewrite (\ref{equ:2.157}) in terms of the
+dimensionless coordinate and energy
+\begin{equation}
+  \tilde{x} = \Bigl(\frac{\hbar^2}{mk}\Bigr)^{-1/3}x, \quad
+  \tilde{E} = \Bigl(\frac{\hbar^2 k^2}{m}\Bigr)^{-1/3} E,
+  \label{equ:2.159}
+\end{equation}
+as
+\[
+  -\frac{\hbar^2}{2m}
+  \Bigl(\frac{\hbar^2}{mk}\Bigr)^{-2/3}
+  \frac{d^2 \psi}{d\tilde{x}^2}
+  +
+  \Bigl(\frac{\hbar^2}{mk}\Bigr)^{1/3}k|\tilde{x}| \psi
+  =
+  \Bigl(\frac{\hbar^2 k^2}{m}\Bigr)^{1/3}\tilde{E} \psi
+\]
+%ends 32
