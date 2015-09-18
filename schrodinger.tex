@@ -776,7 +776,7 @@ as
     \hat{x} &=
     \sqrt{\frac{\hbar}{2m\omega}}(\hat{a}+\hat{a}^{\dagger})\label{equ:2.69a}\\
     \hat{p} &=
-    i\sqrt{\frac{m\hbar \omega}{2}}(\hat{a}-\hat{a}^{\dagger})\label{equ:2.69b}
+    i\sqrt{\frac{m\hbar \omega}{2}}(\hat{a}^{\dagger}-\hat{a})\label{equ:2.69b}
   \end{align}
 \end{subequations}
 % finish page 14
@@ -1514,3 +1514,167 @@ Besided the contact of this formalism with some common
 mathematical tool, it is hard to identify a reason to prefer
 this method before Heisenberg's method with Dirac's ladder
 operators.
+%
+\subsubsection{Free particle in one dimension}
+In contrast to the harmonic oscillator, a free particle has
+no potential bo bind it. Thus, it cannot be confined and can
+therefore have arbitrary energy. This is the simplest
+quantum system, but it is useful to make a couple of
+remarks.
+The Schrödinger's wave eq. is
+\begin{equation}
+  \frac{d^2 \psi}{d x^2} + \frac{2m}{\hbar^2} E \psi = 0
+  \label{equ:2.130}
+\end{equation}
+We can define the wave number
+\begin{equation}
+  k^2 = \frac{2mE}{\hbar^2} > 0,
+  \label{equ:1.131}
+\end{equation}
+which simplifies (\ref{equ:2.130}) to
+\begin{equation}
+  \frac{d^2 \psi}{dx^2 } + k^2 \psi = 0,
+  \label{equ:1.132}
+\end{equation}
+whose solution is
+\begin{equation}
+  \psi(x) = A \exp(ikx) + B \exp(-ikx)
+  \label{equ:2.133}
+\end{equation}
+From (\ref{equ:2.41}), we can easily obtain the time
+dependence of the wave-function as
+\begin{equation}
+  \psi(x,t) = \exp(-i\omega t) \psi(x) = A
+  \exp\Bigl(i(kx-\omega t)\Bigr)
+  +
+  B
+  \exp\Bigl(-i(kx+\omega t)\Bigr)
+  \label{equ:2.134}
+\end{equation}
+where we defined $\omega = E/\hbar$ in agreement with
+Plack's hypothesis.
+We realize that the first term is right-moving ``plane"-wave
+with phase velocity $\omega / k$ whereas the second term
+corresponds to a left-moving ``plane"-wave. Clearly, left
+and right waves can be treated independently, reason why
+many authors disregard one of both waves.
+Let us now compute the momentum associated with $\psi(x)$ in
+(\ref{equ:2.133}). In the configuration space, we have
+\begin{equation}
+  -i\hbar \frac{d}{dx} \psi(x) = -i\hbar(ik) \Bigl(A
+  \exp(ikx) - B\exp(-ikx)\Bigr)
+  \label{equ:2.135}
+\end{equation}
+where, as expected, we see that the momentum of the  first
+term is opposite to the one of the second term, and we
+identify the relation
+\begin{equation}
+  p = \pm \hbar k \pm \sqrt{2mE}
+  \label{equ:2.136}
+\end{equation}
+where the sign depends on the motion of the wave.
+Clearly, the normalization of the solution (\ref{equ:2.133})
+cannot be done in a traditional from by simply setting
+$$
+\int_{-\infty}^{\infty} \psi^*(x) \psi(x)\, dx = 1
+$$
+Dirac suggested to normalize by using a sort of
+orthonormality realtion. For simplicity, let us consider
+only a right-moving wave rewritten as
+\begin{equation}
+  \psi_p(x) = A \exp\Bigl(\frac{i}{\hbar}px\Bigr)
+  \label{equ:2.137}
+\end{equation}
+where the index $p$ labels the solution with momentum $p$.
+Let us compute
+\begin{equation}
+  \int_{-\infty}^{\infty} \psi_p^*(x) \psi_{p'}(x) \, dx =
+  |A|^2 \int_{-\infty}^{\infty}
+  \exp\Bigl(\frac{i}{\hbar}x(p'-p)\Bigr) \, dx = |A|^2
+  (2\pi\hbar)\delta(p'-p)
+  \label{equ:2.138}
+\end{equation}
+If we wish this eq. to be an orthonormality relation, the
+result should be $\delta(p'-p)$. Therefore, we identify
+\begin{equation}
+  A = \frac{1}{\sqrt{2\pi\hbar}}
+  \label{equ:2.139}
+\end{equation}
+up to an unphysical phase. A similar discussion can be done
+for the left-moving part of $\psi(x)$. We obtain then
+\begin{equation}
+  \psi(x,t) = \frac{1}{\sqrt{2\pi\hbar}}
+  \Bigl[
+    \exp\bigl(i(kx-\omegat)\bigr) +
+    \exp\bigl(-i(kx+\omegat)\bigr)
+  \Bigr]
+  \label{equ:2.140}
+\end{equation}
+It is interesting to solve the problem in the momentum
+space. Recalling that (or simply using (\ref{equ:2.59}))
+\begin{equation}
+  <p|\frac{\hat{p}^2}{2m}|\alpha> =
+  \frac{p^2}{2m} <p|\alpha> = \frac{p^2}{2m} \phi_{\alpha}(p)
+  \label{equ:2.141}
+\end{equation}
+we find that the Schrödinger's wave equation to consider
+reads
+\begin{equation}
+  \Bigl(\frac{p^2}{2m}-E\Bigr)
+  \phi(p) = 0
+  \label{equ:2.142}
+\end{equation}
+It is clear then that $\phi(p) = 0$ for all $p$, excepting
+when $p = \pm \sqrt{2mE} = \pm \hbar k$, coinciding with
+(\ref{equ:2.136}). That is,
+\begin{equation}
+  \phi(p) = a \delta(p - \hbar k) + b \delta (p+k\hbar)
+  \label{equ:2.143}
+\end{equation}
+Notice that this result can equally be obtained by applying
+(\ref{equ:2.57b}) to (\ref{equ:2.133}) with the normalizatio
+constant (\ref{equ:2.139})
+  \begin{alignate}{2}
+    \phi(p) &= \int dx \frac{1}{\sqrt{2\pi\hbar}}
+    \exp(-ipx/\hbar) \frac{1}{\sqrt{2\pi\hbar}}
+    \Bigl[\exp(ikx) + \exp(-ikx)\Bigr] \\
+    &=
+    \frac{1}{2\pi\hbar} \int dx \,
+    \biggl[
+      \exp\Bigl(-\frac{i}{\hbar}(p-k\hbar)x\Bigr)+
+      \exp\Bigl(-\frac{i}{\hbar}(p+k\hbar)x\Bigr)
+    \biggr]\\
+    &=
+    \delta(p - k\hbar) + \del(p + k\hbar)
+  \end{alignate}
+and thus in the momentum representation, the wave function
+is
+\begin{equation}
+  \phi(p,t) = \exp(-i\omega t) \Bigl[\delta(p - k\hbar) +
+  \delta(p+k\hbar)\Bigr]
+  \label{equ:2.145}
+\end{equation}
+A final remark on the one-dimensional free particle concerns
+the equivalence of different potentials. It is evident that
+in the configuration space a constant shift in the energy by
+$V(x) = V_0 \in \mathbb{R}$ yields the same physics.
+According to (\ref{equ:2.60}), in the momentum space,
+although $V(x) = 0$ corresponds to $V(p) = 0$, $V(x) = V_0$
+corresponds to
+\begin{equation}
+  V(p-p') = \frac{1}{\sqrt{2\phi\hbar}}
+  \int dx\,
+  \exp\bigl(-i(p-p')x/\hbar\bigr) V_0 = V_0 \delta(p-p')
+  \label{equ:2.146}
+\end{equation}
+which yelds the wave equation
+$$
+\frac{p^2}{2m} \phi(p) + \int dp' \,
+\frac{1}{\sqrt{2\pi\hbar}} V_0 \delta(p-p') \phi(p') =
+E\phi(p),
+$$
+that simplifies to
+\begin{equation}
+  \frac{p^2}{2m} \phi(p) + V_0 \phi(p) = E\phi(p)
+  \label{equ:2.147}
+\end{equation}
