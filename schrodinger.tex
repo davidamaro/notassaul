@@ -1874,3 +1874,68 @@ especally in the study of a bound system composed of a quark
 and an antiquark, called quarkonian, where $x$ is
 interpreted as the distance between these fundamental
 particles.
+% begins pg 35
+\subsection{Heisenberg and Schrödinger pictures}
+\subsubsection{Unitary operators and symmetry
+transformations}
+A symmetry principle is the statement that when we change
+our point of view in certain ways, the laws of nature do not
+change. Since states do not characterize any law of nature
+as they are not observed quantities, they can change.
+A state, under the action of a symmetry operator $\hat{U}$,
+is transformed as
+\begin{equation}
+  \vert \alpha \rangle \mapsto \hat{U}\vert \alpha \rangle
+  \label{equ:2.167}
+\end{equation}
+Since physical laws must not change, in particular
+transition amplitudes and probability densities must remain
+invariante:
+\begin{equation}
+  \langle \beta \vert \alpha \rangle \to  \Bigl(\langle
+  \beta\vert \hat{U}\Bigr)
+  \Bigl(
+  \hat{U}\vert \alpha \rangle
+  \Bigr)
+  = \langle \beta \vert \hat{U}^{\dagger} \hat{U} \vert
+  \alpha \rangle = \langle \beta \vert \alpha \rangle
+  \label{equ:2.168}
+\end{equation}
+The invariance condition requires then that
+\begin{equation}
+  \hat{U}^{\dagger}\hat{U} = 1,
+  \label{equ:2.169}
+\end{equation}
+i.e., that $\hat{U}$ be unitary. We already know three of
+this kind of ops.
+\begin{subequations}
+  \begin{alignat}{2}
+    \hat{U} &= \exp(-i\hat{\vec{p}}\cdot \vec{x}/\hbar),
+    \qquad \text{translation operator,} \label{equ:2.170a}\\
+    \hat{U} &= \hat{U}(t,t_0) = \exp(-i \hat{H}t /\hbar),
+    \qquad \text{time-evolution},\label{equ:2.170b}\\
+    \hat{U} &= \hat{P}, \qquad \text{parity operator},
+    \label{equ:2.170c}
+  \end{alignat}
+\end{subequations}
+Under the symmetry transformation (\ref{equ:2.167}), the
+expectation value of the operator $\hat{A}$ is subject to
+the transformation
+\begin{equation}
+  \langle \hat{A} \rangle \mapsto \langle \alpha \vert
+  \hat{U}^{\dagger} \hat{A} \hat{U} \vert \alpha \rangle
+  \label{equ:2.171}
+\end{equation}
+Note that this expression allows for two interpretations:
+either
+\begin{itemize}
+  \item the state is transformed as (\ref{equ:2.167})
+    prescribes while the operator $\hat{A}$ is unchanged; or
+  \item the state $\vert \alpha \rangle$ remains invariant
+    while the op. $\hat{A}$ transforms as
+    \begin{equation}
+      \hat{A} \mapsto \hat{U}^{\dagger}\hat{A}\hat{U}
+      \label{equ:2.172}
+    \end{equation}
+\end{itemize}
+% ends page 35
