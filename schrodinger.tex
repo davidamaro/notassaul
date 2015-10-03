@@ -2037,3 +2037,178 @@ pictures:
  that the Schrödinger equation for the time evolution
  operator reads:
  % ends page 37
+ \begin{equation}
+   i\hbar \frac{\partial \hat{U}}{\partial t} =
+   \hat{H}\hat{U},
+   \label{equ:2.178}
+ \end{equation}
+ Let us compute the derivative of $\hat{A}_H$
+ \begin{alignat}{2}
+   \frac{d}{dt} \hat{A}_H = \frac{d}{dt}
+   \Bigl(\hat{U}^{\dagger}\hat{A}_S \hat{U}\Bigr) &=
+   \Bigl(\frac{\partial \hat{U}^{\dagger}}{\partial
+   t}\Bigr) \hat{A}_S + \hat{U}^{\dagger}\hat{A}_S
+   \Bigl(\frac{\partial \hat{U}}{\partial t}\Bigr) +
+   \hat{U}^{\dagger} \frac{\partial \hat{A}_S}{\partial t}
+   \hat{U} \nonumber\\
+   &=
+   - \frac{1}{i\hbar} \hat{U}^{\dagger}\hat{H}\hat{A}_S
+   \hat{U} + \frac{1}{i\hbar} \hat{U}^{\dagger}\hat{A}_S
+   \hat{H}\hat{U} + \hat{U}^{\dagger}\frac{\partial
+   \hat{A}_S}{\partial t}\hat{U},\label{eq:2.149}
+ \end{alignat}
+ where we have used (\ref{equ:2.178}) and its conjugate.
+ Since $\hat{U}$ is unitary,
+ \begin{equation}
+   \hat{U}^{\dagger}\hat{H}\hat{A}_S \hat{U} =
+   \hat{U}^{\dagger} \hat{H} \hat{U} \hat{U}^{\dagger}
+   \hat{A}_S \hat{U} =
+   \hat{U}^{\dagger}\hat{H}\hat{U}\hat{A}_H(t) = \hat{H}
+   \hat{A}_H(t)
+   \label{equ:2.180}
+ \end{equation}
+ wgere we have used the fact that $\hat{U}(t,t_0)$ commutes
+ with $\hat{H}$. Repeating those steps for the second term
+ in (\ref{equ:2.179}), we obtain
+ \begin{equation}
+   \frac{d}{dt} \hat{A}_H = \frac{1}{i\hbar}
+   \Bigl[\hat{A}_H(t), \hat{H}\Bigr] + \hat{U}^{\dagger}
+   \frac{\partial \hat{A}_S}{\partial t} \hat{U}
+   \label{equ:2.181}
+ \end{equation}
+ This is the celebrated Heisenberg equation of motion, which
+ governs the time-evolution of a quantum system in the
+ Heisenberg picture.
+ 
+ In the most common text-book cases, $\hat{A}_S$ does not
+ depend on time. Thus, the Heisenberg equation reduces to
+ \begin{equation}
+   i\hbar \frac{d}{dt} \hat{A}_H = \Bigl[\hat{A}_H, \hat{H}\Bigr]
+   \label{equ:2.182}
+ \end{equation}
+Note the enormous similarity with the classical Hamilton's
+equation
+\begin{equation}
+  \frac{d}{dt} \hat{A}(p,q,t) = \Bigl\{A(p,q,t), H\Bigr\} +
+  \frac{\partial A}{\partial t}
+  \label{equ:2.183}
+\end{equation}
+in terms of the Poisson bracket
+\begin{equation}
+  \Bigl\{A,H\Bigr\} = \frac{\partial A}{\partial q}
+  \frac{\partial H}{\partial p} - \frac{\partial A}{\partial
+  p} \frac{\partial H}{\partial q}
+  \label{equ:2.184}
+\end{equation}
+for $A = A(p,q,t)$ an arbitrary function of the canonical
+coordinates $(p,q)$ and time, and the classical Hamiltonian
+$H$. For some applications, it turns out to be useful that
+in comparing (\ref{equ:2.181}) and (\ref{equ:2.183}), it
+%ends page 38
+seems that they can be related to each other by replacing
+the Poisson bracket by the commutator, up to a factor
+$i\hbar$:
+\begin{equation}
+  \overset{\Bigl\{,\Bigr\}}{\text{classical}}
+  \leftrightarrow
+  \overset{\frac{1}{i\hbar} \Bigl[,\Bigr]}{\text{quantum}}
+  \label{equ:2.185}
+\end{equation}
+It can easily be tested by noticing that $\{x,p\} = 1$ while
+$[\hat{x}, \hat{p}] = i\hbar$.
+\subsection*{The Ehrenfest theorem}
+Let us consider again the simplest time-idependent
+Hamiltonian
+\[\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(\hat{x})\]
+The position operator $\hat{x}$ commutes with
+$\hat{V}(\hat{x})$, but does not commute with $\hat{p}^2$.
+Thus, the commutator of $\hat{x}$ with $\hat{H}$ reads
+\begin{equation}
+  \Bigl[\hat{x}, \hat{H}\Bigr] = \frac{1}{2m} \bigl[\hat{x},
+  \hat{p}\bigr] = \frac{1}{2m} \Bigl(
+  \bigl[\hat{x}, \hat{p}\bigr] \hat{p} + \hat{p}
+  \bigl[\hat{x}, \hat{p}\bigr]
+  \Bigr)
+  = \frac{i\hbar}{m} \hat{p}
+  \label{equ:2.186}
+\end{equation}
+Hence, the equation of motion for $\hat{x}$ in the
+Heisenberg picture is given by
+\begin{equation}
+  m \frac{d \hat{x}_H}{dt} = \hat{p}_H,
+  \label{equ:2.187}
+\end{equation}
+which resembles the clasical relation. Further, we can
+determine the Heisenberg equation for $\hat{p}$ by realizing
+e.g. in the configuration space that
+\begin{equation}
+  \Bigl[\hat{p}, f(\hat{x})\Bigr] = -i \hbar f'(\hat{x})
+  \label{equ:2.188}
+\end{equation}
+Therefore, we have
+\begin{equation}
+  \Bigl[\hat{p}, \hat{H}\Bigr] = \Bigl[\hat{p},
+  \hat{V}(\hat{x})\Bigr] = -i\hbar \hat{V}',
+  \label{equ:2.189}
+\end{equation}
+whence
+\begin{equation}
+  \frac{d \hat{p}_H}{dt} = - \hat{V}',
+  \label{equ:2.190}
+\end{equation}
+where the prime denotes the derivative w.r.t. $\hat{x}$.
+Putting together (\ref{equ:2.187}) and (\ref{equ:2.190}) we
+find a well-known relation
+\begin{equation}
+  m \frac{d^2 \hat{x}_H}{dt^2} = - \hat{V}',
+  \label{equ:2.191}
+\end{equation}
+which represents the quantum analogous of Newton's second
+law.
+
+We can generalize (\ref{equ:2.191}) in 3D to yeld
+\begin{equation}
+  m \frac{d \hat{\vec{x}}_H}{dt^2} =- \bar{\nabla}
+  \hat{V}(\hat{\vec{x}}).
+  \label{equ:2.192}
+\end{equation}
+ This relation is valid in the Heisenberg picture. To obtain
+ a more general equation, let us take the expectation values
+ in a general state $\vert \alpha \rangle$ in the Heisenberg
+ picture. Note first that
+ \begin{equation}
+   \langle \alpha \vert m \frac{d^2 \hat{\vec{x}}}{dt^2}
+   \vert \alpha \rangle = m \frac{d^2}{dt^2} \langle \alpha
+   \vert \hat{\vec{x}} \vert \alpha \rangle = m \frac{d^2
+   \langle \hat{x} \rangle}{dt^2},
+   \label{equ:2.193}
+ \end{equation}
+ and thus
+ \begin{equation}
+   m \frac{d^2 \langle \hat{x} \rangle}{dt^2} = - \bigl\langle
+   \vec{\nabla} V \bigl(\hat{\vec{x}}\bigr)\bigr\rangle.
+   \label{equ:2.194}
+ \end{equation}
+
+ Eq.~(\ref{equ:2.194}) is know as the Ehrenfest theorem.
+ Since expectation values coincide in Schrödinger and
+ Heisenberg pictures, the Ehrenfest theorem is valid in
+ general, despite the fact that we deduced it in a specific
+ picture. Note that a similarly general result can be
+ achieved by averaging Heisenberg equation (\ref{equ:2.182})
+ \begin{equation}
+   i\hbar \frac{d}{dt} \langle \hat{A} \rangle = \Bigr\langle
+   \Bigl[\hat{A}, \hat{H}\Bigr] \Bigr\rangle.
+   \label{equ:2.195}
+ \end{equation}
+ \subsection*{Time evolution of the harmonic oscillator in
+ 1D}
+ By applying the Heisenberg equation with the potential
+ (\ref{equ:2.67})
+ \[\hat{V}(\hat{x}) = \frac{1}{2}m\omega^2 \hat{x}^2,\]
+ we find
+ \begin{equation}
+   \frac{d\hat{p}}{dt} = - \frac{d\hat{V}}{d\hat{x}} = -
+   m\omega^2 \hat{x}.
+   \label{equ:2.196}
+ \end{equation}
