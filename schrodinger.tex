@@ -2117,7 +2117,7 @@ $i\hbar$:
 It can easily be tested by noticing that $\{x,p\} = 1$ while
 $[\hat{x}, \hat{p}] = i\hbar$.
 \subsection*{The Ehrenfest theorem}
-Let us consider again the simplest time-idependent
+Let us consider again the simplest time-independent
 Hamiltonian
 \[\hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(\hat{x})\]
 The position operator $\hat{x}$ commutes with
@@ -2212,3 +2212,189 @@ We can generalize (\ref{equ:2.191}) in 3D to yeld
    m\omega^2 \hat{x}.
    \label{equ:2.196}
  \end{equation}
+ %ends page 40
+ The Heisenberg equation for $\hat{x}$ is still given by
+ (\ref{equ:2.187})
+ \begin{equation}
+   m \frac{d}{dt} \hat{x} = \hat{p},
+   \label{equ:2.197}
+ \end{equation}
+ Solving (\ref{equ:2.196}) and (\ref{equ:2.197}) simplifies
+ greatly by using once again the formalism of Dirac's
+ operators (\ref{equ:2.68}). From the definition of the
+ annihilation operator
+ \[\hat{a} = 
+ \sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{x}+\frac{i\hat{p}}{m\omega}\Bigr), \]
+ we see in the Heisenberg picture that
+ \begin{align}
+   \frac{d\hat{a}}{dt} &= \sqrt{\frac{m\omega}{2\hbar}}
+   \Bigl(
+   \frac{d\hat{x}}{dt} +
+   \frac{i}{m\omega}\frac{d\hat{p}}{dt} =
+   \sqrt{\frac{m\omega}{2\hbar}}\Bigl(\frac{\hat{p}}{m}-\frac{i}{m\omega}m\omega^2\hat{x}\Bigr)
+   \nonumber\\
+   &=
+   \sqrt{\frac{m\omega}{2\hbar}}\Bigl(\hat{p}{m}-i\omega\hat{x}\Bigr)
+   = -i\omega \hat{a}   \Bigr),\label{equ:2.198}
+ \end{align}
+from which trivially follows
+\begin{equation}
+  \frac{d\hat{a}^{\dagger}}{dt} = i\omega \hat{a}^{\dagger}.
+  \label{equ:2.199}
+\end{equation}
+We have now a system of decoupled differential equations,
+whose solutions are
+\begin{equation}
+  \hat{a}(t) = \hat{a}(0) \exp(-i\omega t), \qquad
+  \hat{a}^{\dagger}(0) = \hat{a}^{\dagger}(0) \exp(i\omega t)
+  \label{equ:2.200}
+\end{equation}
+Notice that the number operator
+\[\hat{N}(t) = \hat{a}^{\dagger}(t)\hat{a}(t) =
+\hat{a}^{\dagger}(0)\hat{a}(t)\]
+is time-independent, as expected because the Hamiltonian
+does not depend on time. (Recall that $\hat{H} =
+\hbar\omega(\hat{N}+1/2)$.)
+
+Writing $\hat{x}(t)$ in terms of $\hat{a}(t)$ and
+$\hat{a}^{\dagger}(t)$, we obtain
+\begin{align}
+  \hat{x}(t) &= \sqrt{\frac{\hbar}{2m\omega}}
+  \Bigl[\hat{a}(t) + \hat{a}^{\dagger}(t)\Bigr] =
+  \sqrt{\frac{\hbar}{2m\omega}} \Bigl[
+    \hat{a}(0) \exp(-i\omega t) +
+    \hat{a}^{\dagger}(0)\exp(i\omega t) \Bigr] \nonumber \\
+    &=\sqrt{\frac{\hbar}{2m\omega}} \Bigl[
+    \bigl(\hat{a}(0)+\hat{a}^{\dagger}(0)\bigr)\cos \omega t
+    +i\bigl(
+      \hat{a}^{\dagger}(0) - \hat{a}(0)
+    \bigr)\sin \omega t\Bigr] \nonumber \\
+    &=\sqrt{\frac{\hbar}{2m\omega}} \biggl[
+    \sqrt{\frac{2m\omega}{\hbar}}\hat{x}(0) \cos \omega t +
+    \sqrt{\frac{2}{m\hbar\omega}} \hat{p}(0) \sin \omega t
+  \biggr].\nonumber
+\end{align}
+% ends page 41
+which is simplified to
+\begin{equation}
+  \hat{x}(t) = \hat{x}(0) \cos \omega t +
+  \frac{\hat{p}(0)}{m\omega} \sin \omega t.
+  \label{equ:2.201}
+\end{equation}
+Analogously, one can verify that
+\begin{equation}
+  \hat{p}(t) = \hat{p}(0) \cos \omega t - m \omega
+  \hat{x}(0) \sin \omega t.
+  \label{equ:2.202}
+\end{equation}
+Let us now figure out the time evolution of canonical
+coherent states. Recall that from their definition
+(\ref{equ:2.106}), they are eigenstates of the annihilation
+operator, satisfying at $t_0 = 0$
+\begin{equation}
+  \hat{a}(0) \vert \alpha \rangle = \alpha \vert \alpha
+  \rangle
+  \label{equ:2.203}
+\end{equation}
+It then follows thath the expected value of $\hat{x}(t)$ is
+\begin{align}
+  \langle \hat{x}(t) \rangle_{\alpha} = \langle \alpha \vert
+  \hat{x}(t) \vert \alpha \rangle &=
+  \sqrt{\frac{\hbar}{2m\omega}} \langle \alpha \vert
+  \hat{a}(0) \exp(-i\omega t) + \hat{a}^{\dagger}(0)
+  \exp(i\omega t) \vert \alpha \rangle \nonumber\\
+  &= \sqrt{\frac{\hbar}{2m\omega}} \Bigl(\alpha
+  \exp(-i\omega t) + \alpha^* \exp(i\omega t)\Bigr)
+  \nonumber\\
+  &= \sqrt{\frac{\hbar}{2m\omega}} 2 \Re \alpha \cos \omega
+  t \nonumber \\
+  &= x_0 \cos \omega t,\label{equ:2.204}
+\end{align}
+where we have adopted the result obtained in %2.3.2 todo fix
+%reference
+\begin{equation}
+  \alpha = x_0 \sqrt{\frac{m\omega}{2\hbar}} \in \mathbb{R}.
+  \label{equ:2.205}
+\end{equation}
+Note that the oscillating behavior $\langle \hat{x}(t)
+\rangle_{\alpha}$ mathces the classical result, displaying
+again the characteristic features of coherent states.
+
+We are now in position to compute the wave function of
+canonical coherent states including their time evolution.
+Notice first that (\ref{equ:2.203}) can be rewritten as
+\begin{equation}
+  \hat{a}(0) \vert \alpha \rangle = \hat{a}(t) \exp(i\omega
+  t) \vert \alpha \rangle = \sqrt{\frac{m\omega}{2\hbar}}
+  x_0 \vert \alpha \rangle,
+  \label{equ:2.206}
+\end{equation}
+where we have used (\ref{equ:2.205}).
+
+In the configuration space, (\ref{equ:2.206}) yields
+\begin{equation}
+  \exp(i\omega t) \langle x \vert a(t) \vert \alpha \rangle
+  = x_0 \sqrt{\frac{m\omega}{2\hbar}} \langle x \vert \alpha
+  \rangle .
+  \label{equ:2.207}
+\end{equation}
+
+The left-hand side of (\ref{equ:2.207}) multiplied by $\omega
+\exp(-i\omega t)$ leads to
+\begin{align}
+  \omega \langle x \vert \sqrt{\frac{m\omega}{2\hbar}}
+  \Bigl(
+    \hat{x}(t) + \frac{i\hat{p}(t)}{m\omega} \vert \alpha
+    \rangle = \omega \int dx' \, \langle x \vert
+    \Bigl(\hat{x}+\frac{i\hat{p}}{m\omega}\Bigr) \vert x'
+    \rangle \langle x' \vert \alpha \rangle
+    \sqrt{\frac{m\omega}{1\hbar}} \nonumber \\
+    = \omega \Bigl(x +
+    \frac{\hbar}{m\omega}{\frac{d}{dt}}\Bigr) \langle x
+    \vert \alpha \rangle \sqrt{\frac{m\omega}{2\hbar}}
+    \Bigr)\label{equ:2.208}
+\end{align}
+where we omit the time dependence of $\hat{x}$ and $\hat{p}$
+to simplify the notation.
+
+Defining $\psi_{\alpha} (x,t) \equiv \langle x \vert \alpha
+\rangle$ and multiplying by $\omega \exp(-i\omega t)$ also
+the right hand side of (\ref{equ:2.207}), we obtain
+\begin{equation}
+  \omega \Bigl(x + \frac{\hbar}{m\omega}\frac{d}{dx}\Bigr)
+  \psi_{\alpha} (x,t) = \omega x_0 \exp(-i\omega t)
+  \psi_{\alpha} (x,t),
+  \label{equ:2.209}
+\end{equation}
+which, rewritten in the form
+\begin{equation}
+  \frac{d}{dx} \psi_{\alpha}(x,t) = - \frac{m\omega}{\hbar}
+  (x - x_0 \exp(-i\omega t))\psi_{\alpha}(x,t)
+  \label{equ:2.210}
+\end{equation}
+has the direct solution
+\begin{equation}
+  \psi_{\alpha} = A(t) \exp^{-\frac{m\omega}{2\hbar}(x-x_0
+  \exp(-i\omega t))^2}
+  \label{equ:2.211}
+\end{equation}
+
+Note that (\ref{equ:2.211}) is very similar to the
+time-independent solution (\ref{equ:2.115}). The difference
+is now that the shift of the Gaussian is time-dependent.
+
+This is easily explained considering that the expected value
+of $\hat{x}$ in the state described by (\ref{equ:2.115}) is
+$\langle \hat{x} \rangle = x_0$ (c.f. (\ref{equ:2.119})),
+whereas in the time-dependent solution (\ref{equ:2.211}) it
+is $\langle \hat{x}(t) \rangle = x_0 \cos \omega t$,
+(\ref{equ:2.204}). However, (\ref{equ:2.211}) is shifted by
+more than only $\langle \hat{x} \rangle$; it contains one
+additional shift by $i x_0 \sin \omega t$. Rewritting the
+exponent in (\ref{equ:2.211}) in terms of the expected values
+(\ref{equ:2.204}) and
+\begin{equation}
+  \langle \hat{p}(t) \rangle_{\alpha} = - m\omega x_0 \sin
+  \omega t,
+  \label{equ:2.212}
+\end{equation}
