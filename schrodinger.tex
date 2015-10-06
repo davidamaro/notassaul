@@ -6,13 +6,9 @@ envirage that, if a physical system is represented by
 $\vert \alpha\rangle $ at the time $t_0$, at a later time, the state may
 differ. The new ``evolved" state from $t_0$ to $t$ can be
 denoted by
-$$
-\vert \alpha,t_0;t\rangle , \quad t \geq t_0
-$$
+\[\vert \alpha,t_0;t\rangle , \quad t \geq t_0\]
 such that
-$$
-\vert \alpha,t_0;t_0\rangle  = \vert \alpha\rangle 
-$$
+\[\vert \alpha,t_0;t_0\rangle  = \vert \alpha\rangle \]
 The transition from $\vert \alpha\rangle $ to $\vert \alpha,t_0;t\rangle $ is given
 by the so-called time-evolution operator $\hat{U}(t,t_0)$,
 such that
@@ -39,9 +35,7 @@ The time-evolution operator has the following properties:
     at $\vert a\rangle $.
     Although we expect that in general for any particular
     $a$, the prob. amplitudes differ,
-    $$-
-      c_a(t) \neq c_a(t_0)
-    $$
+    \[c_a(t) \neq c_a(t_0)\]
     the sum of all probabilies must be unity at all times,
     i.e.,
     \begin{equation}
@@ -136,10 +130,9 @@ Note now that
   \label{equ:2.14}
 \end{equation}
 which implies
-$$
+\[
 i\hbar \frac{\hat{U}(t+dt,t_0)-\hat{U}(t,t_0)}{dt} =
-\hat{H}\hat{U}(t,t_0)
-$$
+\hat{H}\hat{U}(t,t_0)\]
 that can be written in the differential form
 \begin{equation}
   i\hbar \frac{\partial}{\partial t}\hat{U}(t_0,t) = \hat{H}
@@ -152,10 +145,8 @@ mechanics.
 Multiplying (\ref{equ:2.15}) by the ket $\vert \alpha\rangle  =
 %todo no entiendo que es lo que dice el antes del we find
 \vert \alpha,t_0;t_1\rangle $, we find
-$$
-i\hbar \frac{\partial}{\partial t} \hat{U}(t,t,0) \vert \alpha\rangle  =
-\hat{H}\hat{U}(t,t_0) \vert \alpha\rangle 
-$$
+\[ i\hbar \frac{\partial}{\partial t} \hat{U}(t,t,0) \vert \alpha\rangle  =
+\hat{H}\hat{U}(t,t_0) \vert \alpha\rangle\]
 \begin{equation}
   i\hbar \frac{\partial}{\partial t} \vert \alpha,t_0;t\rangle  =
   \hat{H}\vert \alpha,t_0;t\rangle 
@@ -194,11 +185,11 @@ In the former case, the solution of (\ref{equ:2.15}) reads
 To solve (\ref{equ:2.15}) when $[\hat{H}(t_1), \hat{H}(t_2)]
 \neq 0$, we first point out that this differential equation
 can be restated as
-$$
+\[
 \hat{U}(t,t_0) \bigg\vert _{t=t_0}^t = 
 -\frac{i}{\hbar} \int_{t_0}^t dt' \,
 \hat{H}(t')\hat{U}(t',t_0)
-$$
+\]
 recalling that $\hat{U}(t_0,t_0) = 1$ we then have
 \begin{equation}
   \hat{U}(t,t_0) = 1 - \frac{i}{\hbar} \int_{t_0}^t dt' \,
@@ -286,16 +277,16 @@ so at all time.
 \subsection{Expectation values}
 We are interested in the expectation value of an observable
 $B$ in the state
-$$
+\[
   \vert a;t\rangle  = \hat{U}(t,0) \vert a\rangle 
-$$
+\]
 as given in (\ref{equ:2.26}). The expectation value is
 computed as
-$$
+\[
 \langle \hat{B}\rangle  = \langle a\vert \hat{U}^{\dagger}(t,0) \hat{B} \hat{U}(t,0) \vert a\rangle 
 = 
 \langle a\vert \exp(iE_a t/\hbar) \hat{B} \exp(-i E_a t/\hbar) \vert a\rangle 
-$$
+\]
 
 Since $U(t,0)$ is a numeric phase, the result is
 \begin{equation}
@@ -346,10 +337,10 @@ Thier orthonormality is given by
 \end{equation}
 Expanded in these terms, an arbitrary physical state
 $\vert \alpha\rangle $ is given by
-$$
+\[
   \vert \alpha\rangle  = \int d^3 x \, \vert \vec{x}\rangle \langle \vec{x}\vert \alpha\rangle  \equiv
   \int d^3 \, \psi_{\alpha}(\vec{x}) \vert \vec{x}\rangle 
-$$
+\]
 where $\psi_{\alpha}(\vec{x})$ is usually called the wave
 function of the state $\vert \alpha\rangle $ in the representation of
 positions. Note that the interpretation of
@@ -429,10 +420,10 @@ operator $\hat{\vec{p}}$ in the position basis
 \end{align}
 Let us now consider the Schrödinger equaiton,
 (\ref{equ:2.16}),
-$$
+\[
   i\hbar \frac{\partial}{\partial t} \vert \alpha,t_0;t\rangle  =
   \hat{H}\vert \alpha,t_0;t\rangle 
-$$
+\]
 in the position representation, with a Hamiltonian operator
 given by
 \begin{equation}
@@ -816,9 +807,9 @@ in terms of the number operator as
 \end{equation}
 Note that $\hat{H}$ and $\hat{N}$ are compatible (and
 hermitian) operators because
-$$
+\[
 [\hat{H},  \hat{N}] = 0;
-$$
+\]
 they can thus be simultaneously diagonalized, so that the
 eigenstates of $\hat{N}$ are also energy eigenstates.
 The eigenstates of $\hat{N}$ are defined by
@@ -835,9 +826,9 @@ follows that
 % finished page 15
 Inserting (\ref{equ:2.75}) in the time-independent
 Schrödinger's equation, we identify
-$$
+\[
 E_n = \hbar\omega (n+1/2)
-$$
+\]
 as the energy asociated with the energy eigenstate $\vert n\rangle $.
 We can determine the values that $n$ can take by exploring
 the action of the ladder operators on $\vert n\rangle $. Note first that
@@ -878,9 +869,9 @@ where $c$ and $d$ are numbers that may be determinated by
 imposing the orthogonality (we shall impose orthonormality)
 of the eigenstates of the Hermitian operator $\hat{N}$. The
 norm of $\hat{a}\vert n\rangle $ is computed as
-$$
+\[
 \vert c\vert ^2 \langle n-1\vert n-1\rangle  = \langle n\vert \hat{a}^{\dagger}\hat{a}\vert n\rangle  = n\langle n\vert n\rangle ,
-$$
+\]
 which implies
 \begin{equation}
   \vert c\vert ^2 = n
@@ -889,10 +880,10 @@ which implies
 %% pp 17
 for $\langle n\vert m\rangle  = \delta_{n,m}$. Note that we can further assume
 that $c$ (and $d$) is real because
-$$
+\[
 a^{\dagger}a \vert n\rangle  = a^{\dagger} c_n \vert  n-1\rangle  = c_n d_{n-1}\vert n\rangle  =
 n\vert n\rangle 
-$$
+\]
 and $n$ is real. Further we assume by convention that $c$
 (and $d$) is positive. This yield
 \begin{equation}
@@ -900,11 +891,11 @@ and $n$ is real. Further we assume by convention that $c$
   \label{equ:2.80}
 \end{equation}
 Similarly, normalizing $\hat{a}^{\dagger} \vert n\rangle $ we find
-$$
+\[
 \vert d\vert ^2 \langle n+1\vert n+1\rangle  = \langle n\vert \hat{a}\hat{a}^{\dagger}\vert n\rangle  =
 \langle n\vert [\hat{a}, \hat{a}^{\dagger}] + \hat{a}^{\dagger}\hat{a} \vert 
 n\rangle   = (n+1) \langle n\vert n\rangle 
-$$
+\]
 which yields
 \begin{equation}
   d = \sqrt{n+1}
@@ -1005,9 +996,9 @@ which, after integration and rearranging the terms, yields
   \label{equ:2.90}
 \end{equation}
 From (\ref{equ:2.90}), we realize that
-$$
+\[
 \psi_0(x) = A_0 \exp(-\frac{1}{2}\frac{m\omega}{\hbar}x^2)
-$$
+\]
 or in terms of the dimensionless coordinate $\tilde{x} =
 \sqrt{\frac{m\omega}{\hbar}}x$
 \begin{equation}
@@ -1197,9 +1188,9 @@ Finally, we must mention on an interpreattion of this
 canonical quantization in terms of the ladder operators
 called the second quantizaton. As we have seen, the energy
 of the harmonic oscillator is quantized as
-$$
+\[
 E_n = \hbar\omega(n + 1/2)
-$$
+\]
 which is (almost) identical to Plank's proposed quantization
 of the electromagnetic radiation $\hbar\omega n$, except for
 the conditional energy shift $\frac{1}{2}\hbar\omega$. In
@@ -1241,14 +1232,14 @@ evolve in time, i.e., that their dispersion keeps a minimal
 value. A clear example of such a state is the ground state
 $\vert 0\rangle $, which in the position space is given by the Gaussian
 profile (\ref{equ:2.91})
-$$
+\[
  \psi_0 (\tilde{x}) = A_0 \exp(-\frac{1}{2}\tilde{x}^2)
-$$
+\]
 Note that, according to (\ref{equ:2.102}), this state has
 minimal uncertainty
-$$
+\[
 \langle (\Delta \hat{x}^2)\rangle \langle (\Delta \hat{p})^2\rangle  = \frac{\hbar^2}{4}
-$$
+\]
 For these reasons, coherent states are frequently called
 Gaussian states, minimal uncertainty states, and also
 canonical coherent states, as there are many other types of
@@ -1411,21 +1402,21 @@ where we have used (\ref{equ:2.118})
 \subsubsection{Harmonic oscillator in configuration space}
 In the configuration space, the stationary Schrödinger wave
 eq. is given by (\ref{equ:2.42}):
-$$
+\[
 E\psi(x) = - \frac{\hbar^2}{2m} \frac{d^2 \psi}{dx^2} +
 \frac{1}{2}m\omega^2 x^2 \psi
-$$
+\]
 Choosing, as before, the dimensionless coordinate
 \begin{equation}
   \tilde{x} = \sqrt{\frac{m\omega}{\hbar}} x,
   \label{equ:2.120}
 \end{equation}
 one obtains
-$$
+\[
 -\frac{\hbar^2}{2m} \frac{m\omega}{\hbar} \frac{d^2 \psi}{d
 \tilde{x}^2} + \frac{1}{2} m \omega^2 \frac{\hbar}{m\omega}
 \tilde{x}^2 \psi = E\psi
-$$
+\]
 which implifies to
 \begin{equation}
   \psi'' (\tilde{x}) - \tilde{x}^2 \psi(\tilde{x}) = -
@@ -1495,12 +1486,12 @@ applying the orthogonality relation of Hermite polynomials
   \label{equ:2.128}
 \end{equation}
 as follows
-$$
+\[
 1 = \int_{-\infty}^{\infty} \psi_n^*(x) \psi_{n'} (x) =
 \sqrt{\frac{\hbar}{m\omega}} \int_{-\infty}^{\infty}
 d\tilde{x} \, \vert A_n\vert ^2 \exp(-\tilde{x}^2) H_n^2(\tilde{x}) =
 \vert A_n\vert ^2 \sqrt{\frac{\hbar}{m\omega}} 2^n n! \sqrt{n}
-$$
+\]
 Thus, we have
 \begin{equation}
   A_n = \Bigl(\sqrt{\frac{\hbar \pi}{m\omega}}2^n n!\Bigr)^{-1/2}
@@ -1578,9 +1569,9 @@ identify the relation
 where the sign depends on the motion of the wave.
 Clearly, the normalization of the solution (\ref{equ:2.133})
 cannot be done in a traditional from by simply setting
-$$
+\[
 \int_{-\infty}^{\infty} \psi^*(x) \psi(x)\, dx = 1
-$$
+\]
 Dirac suggested to normalize by using a sort of
 orthonormality realtion. For simplicity, let us consider
 only a right-moving wave rewritten as
@@ -1671,11 +1662,11 @@ corresponds to
   \label{equ:2.146}
 \end{equation}
 which yields the wave equation
-$$
+\[
 \frac{p^2}{2m} \phi(p) + \int dp' \,
 \frac{1}{\sqrt{2\pi\hbar}} V_0 \delta(p-p') \phi(p') =
 E\phi(p),
-$$
+\]
 that simplifies to
 \begin{equation}
   \frac{p^2}{2m} \phi(p) + V_0 \phi(p) = E\phi(p)
@@ -1700,9 +1691,9 @@ potential is given by
 and is depicted in the figure %todo add figure
 This potential is symmetric, i.e., invariant under space
 invsersion
-$$
+\[
 x \to -x
-$$
+\]
 which can be written in terms of the unitary parity operator
 $\hat{P}$ such that, in terms of operators,
 \begin{equation}
@@ -1745,9 +1736,9 @@ Furthermore, as we shall se in the next session, $[\hat{P},
 follows that stationary states of an even
 parity/parity-invariant Hamiltonian are eiger even or odd.
 For the Hamiltonian
-$$
+\[
 \hat{H} = \frac{\hat{p}^2}{2m} + \hat{V}(|\hat{x}|),
-$$
+\]
 we can see that (\ref{equ:2.152}) is satisfied independently
 of the parity of $\hat{p}$. However, as we shall also see in
 the next section, for a large class of models
@@ -1977,10 +1968,10 @@ The interpretations of (\ref{equ:2.171}) lead to two
 system called pictures. The \underline{Schrödinger picture}
 associates the dynamics of a system to the state, as
 described by (\ref{equ:2.1})
-$$
+\[
 \vert \alpha, t_0 ; t \rangle = \hat{U} (t,t_0) \vert
 \alpha \rangle,
-$$
+\]
 i.e., it's the frame we have used so far. In the Schrödinger
 picture, the operators associated to observables
 \underline{do not evolve} in time.
